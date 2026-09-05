@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Bell, User } from "lucide-react";
 import Logo from "./Logo";
 
 const NAV = [
   { label: "Home", to: "/" },
   { label: "Events", to: "/events" },
-  { label: "Membership", to: "/membership" },
-  { label: "About", to: "/about" },
+  { label: "Members", to: "/members" },
   { label: "Contact", to: "/contact" },
+];
+
+const NOTIFICATIONS = [
+  { title: "Sanskriti Divas", text: "Join us September 13th for our flagship cultural night.", date: "Aug 28" },
+  { title: "Navratri Passes", text: "Pass bookings are now open for Navratri & Garba.", date: "Aug 20" },
+  { title: "Membership 2026", text: "Membership renewal is now open for 2026.", date: "Aug 15" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [notifOpen, setNotifOpen] = useState(false);
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/15">
@@ -22,7 +28,7 @@ export default function Navbar() {
           <span className="hidden sm:flex flex-col leading-tight">
             <span className="font-display text-lg text-primary">SFVGA</span>
             <span className="font-body text-[10px] tracking-[0.18em] uppercase text-foreground/60">
-              Est. 1984
+              Est. 1978
             </span>
           </span>
         </Link>
@@ -39,12 +45,60 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link
-          to="/membership"
-          className="hidden md:inline-flex bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
-        >
-          Become a Member
-        </Link>
+        <div className="hidden md:flex items-center gap-3">
+          <div className="relative">
+            <button
+              onClick={() => setNotifOpen((v) => !v)}
+              className="relative p-2 rounded-full hover:bg-primary/10 transition-colors"
+              aria-label="Notifications"
+            >
+              <Bell className="h-5 w-5 text-foreground/70" />
+              <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-accent" />
+            </button>
+            {notifOpen && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setNotifOpen(false)} />
+                <div className="absolute right-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-xl z-50 overflow-hidden">
+                  <div className="px-4 py-3 border-b border-border bg-muted/50">
+                    <p className="font-body text-sm font-semibold">Notifications</p>
+                  </div>
+                  <ul className="max-h-80 overflow-y-auto">
+                    {NOTIFICATIONS.map((n) => (
+                      <li
+                        key={n.title}
+                        className="px-4 py-3 border-b border-border/50 hover:bg-muted/30"
+                      >
+                        <div className="flex justify-between items-start">
+                          <p className="font-body text-sm font-medium text-foreground">
+                            {n.title}
+                          </p>
+                          <span className="font-body text-[10px] text-foreground/50">
+                            {n.date}
+                          </span>
+                        </div>
+                        <p className="font-body text-xs text-foreground/70 mt-1">{n.text}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/events"
+                    onClick={() => setNotifOpen(false)}
+                    className="block px-4 py-3 text-center font-body text-xs font-medium text-primary hover:bg-muted/30"
+                  >
+                    View all updates
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
+          <Link
+            to="/login"
+            className="inline-flex items-center gap-2 border border-primary/30 text-primary font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <User className="h-4 w-4" />
+            Member Login
+          </Link>
+        </div>
 
         <button
           className="md:hidden p-2 -mr-2 text-foreground"
@@ -69,11 +123,11 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              to="/membership"
+              to="/login"
               onClick={() => setOpen(false)}
               className="mt-4 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full text-center"
             >
-              Become a Member
+              Member Login
             </Link>
           </div>
         </div>

@@ -8,15 +8,16 @@ const GROUPS = [
     links: [
       { label: "Home", to: "/" },
       { label: "Events", to: "/events" },
-      { label: "About Us", to: "/about" },
+      { label: "Members", to: "/members" },
+      { label: "Contact", to: "/contact" },
     ],
   },
   {
     title: "Get Involved",
     links: [
-      { label: "Membership", to: "/membership" },
-      { label: "Volunteer", to: "/about" },
-      { label: "Contact", to: "/contact" },
+      { label: "Become a Member", to: "/members" },
+      { label: "Member Login", to: "/login" },
+      { label: "Volunteer", to: "/members" },
     ],
   },
 ];

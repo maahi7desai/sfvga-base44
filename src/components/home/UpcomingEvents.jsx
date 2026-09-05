@@ -1,30 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Image } from "@/components/ui/image";
+import { CalendarDays, MapPin } from "lucide-react";
 
 const EVENTS = [
   {
     name: "Sanskriti Divas",
-    date: "September 13",
-    desc: "A grand celebration of Gujarati culture, music, and heritage.",
+    date: "September 13, 2026",
+    location: "Chatsworth, CA",
+    desc: "Our flagship cultural night — performances, traditional food, and community celebration.",
     img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/f7a1e1efd_generated_image.png",
   },
   {
-    name: "Sanskriti thi Startup sudhi",
-    date: "September 13",
-    desc: "Cultural festivities leading into youth and startup showcases.",
-    img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/06a0c2f32_generated_image.png",
-  },
-  {
-    name: "Navratri",
-    date: "October 17",
-    desc: "Nine nights of Garba and Dandiya Raas under the stars.",
+    name: "Navratri & Garba",
+    date: "October 17, 2026",
+    location: "Chatsworth, CA",
+    desc: "Nine nights of Garba and Dandiya Raas under the stars in traditional festive attire.",
     img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/06a0c2f32_generated_image.png",
   },
   {
     name: "Dipotsav (Diwali)",
-    date: "November 14",
-    desc: "The festival of lights — diyas, dhol, and community feasts.",
+    date: "November 14, 2026",
+    location: "Chatsworth, CA",
+    desc: "The festival of lights — diyas, dhol, rangoli, and community feasts.",
     img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/f25ab77b3_generated_image.png",
   },
 ];
@@ -42,11 +40,11 @@ export default function UpcomingEvents() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {EVENTS.map((e) => (
             <article
               key={e.name}
-              className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow"
+              className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow flex flex-col"
             >
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <Image
@@ -56,14 +54,25 @@ export default function UpcomingEvents() {
                   fittingType="fill"
                 />
               </div>
-              <div className="p-5">
-                <p className="font-body text-xs tracking-wide uppercase text-accent font-medium mb-1">
-                  {e.date}
-                </p>
+              <div className="p-5 flex flex-col flex-1">
+                <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
+                  <CalendarDays className="h-3.5 w-3.5" />
+                  <span className="font-body">{e.date}</span>
+                </div>
                 <h3 className="font-display text-xl text-foreground mb-2">{e.name}</h3>
-                <p className="font-body text-sm text-foreground/70 leading-relaxed">
+                <div className="flex items-center gap-1.5 text-xs text-foreground/60 mb-3">
+                  <MapPin className="h-3.5 w-3.5" />
+                  <span className="font-body">{e.location}</span>
+                </div>
+                <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
                   {e.desc}
                 </p>
+                <Link
+                  to="/events"
+                  className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  Register / RSVP
+                </Link>
               </div>
             </article>
           ))}
@@ -74,7 +83,7 @@ export default function UpcomingEvents() {
             to="/events"
             className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
           >
-            View all events
+            View all events →
           </Link>
         </div>
       </div>

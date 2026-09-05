@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FileText, FileCheck, CreditCard, Users } from "lucide-react";
+import { FileText, FileCheck, CreditCard, Users, UserCircle, RefreshCw, Heart, BookOpen } from "lucide-react";
 
 const PLANS = [
   { name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
@@ -28,7 +28,34 @@ const STEPS = [
   },
 ];
 
-export default function Membership() {
+const DASHBOARD = [
+  {
+    icon: UserCircle,
+    title: "Member Profile",
+    desc: "Manage your account details, view membership status, and update family information.",
+    cta: "Access Profile",
+  },
+  {
+    icon: RefreshCw,
+    title: "Renewal & Signup",
+    desc: "Renew your membership or sign up new members with our online payment gateway.",
+    cta: "Renew Membership",
+  },
+  {
+    icon: Heart,
+    title: "Youth & Volunteer Portal",
+    desc: "Sign up for youth initiatives and volunteer for event committees.",
+    cta: "Get Involved",
+  },
+  {
+    icon: BookOpen,
+    title: "Community Directory",
+    desc: "Connect with fellow members through our member-only networking directory.",
+    cta: "View Directory",
+  },
+];
+
+export default function Members() {
   return (
     <div className="pt-20">
       <section className="bg-secondary text-secondary-foreground py-16 md:py-24">
@@ -41,8 +68,22 @@ export default function Membership() {
         </div>
       </section>
 
+      {/* Value Proposition */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-[1000px] px-5 sm:px-8 text-center">
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6 text-balance">
+            Be part of a vibrant community
+          </h2>
+          <p className="font-body text-foreground/75 leading-relaxed max-w-2xl mx-auto">
+            Current members are requested to be active within the association and
+            invite new members to have their families enjoy the benefits of our
+            culture, food, festivals, friendship, and fun with us.
+          </p>
+        </div>
+      </section>
+
       {/* How to become a member */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
           <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-12">
             To Become a Member
@@ -70,8 +111,8 @@ export default function Membership() {
         </div>
       </section>
 
-      {/* Membership types */}
-      <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
+      {/* Membership Types */}
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
           <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-4">
             Membership Types &amp; Annual Dues
@@ -99,6 +140,42 @@ export default function Membership() {
             <p>• Married children must obtain a separate Membership.</p>
             <p>• Unmarried children are considered part of Membership.</p>
             <p>• Parents and unmarried family members living under the same roof are part of Membership.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Member Dashboard Components */}
+      <section className="py-16 md:py-24 bg-muted/40">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+          <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-4">
+            Member Resources
+          </h2>
+          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
+            Manage your membership, get involved, and connect with the community.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {DASHBOARD.map((d) => (
+              <div
+                key={d.title}
+                className="bg-card border border-border rounded-lg p-7 flex items-start gap-5"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
+                  <d.icon className="h-6 w-6" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-display text-xl text-foreground mb-2">{d.title}</h3>
+                  <p className="font-body text-sm text-foreground/70 leading-relaxed mb-4">
+                    {d.desc}
+                  </p>
+                  <Link
+                    to="/login"
+                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
+                  >
+                    {d.cta} →
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

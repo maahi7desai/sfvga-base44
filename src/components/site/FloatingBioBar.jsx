@@ -4,7 +4,7 @@ import { CalendarDays, UserPlus, Phone } from "lucide-react";
 
 const ITEMS = [
   { icon: CalendarDays, label: "Events", to: "/events" },
-  { icon: UserPlus, label: "Join", to: "/membership" },
+  { icon: UserPlus, label: "Members", to: "/members" },
   { icon: Phone, label: "Contact", to: "/contact" },
 ];
 

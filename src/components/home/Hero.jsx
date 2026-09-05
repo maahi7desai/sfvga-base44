@@ -36,17 +36,17 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Link
-              to="/membership"
+              to="/events"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-7 py-3.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
             >
-              Become a Member
+              View Events
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              to="/events"
+              to="/members"
               className="inline-flex items-center justify-center gap-2 border border-secondary-foreground/50 text-secondary-foreground font-body font-medium px-7 py-3.5 rounded-full hover:bg-secondary-foreground/10 transition-colors"
             >
-              Upcoming Events
+              Become a Member
             </Link>
           </div>
         </div>
