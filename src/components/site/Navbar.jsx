@@ -91,13 +91,13 @@ export default function Navbar() {
               </>
             }
           </div>
-          <Link
-            to="/login"
-            className="inline-flex items-center gap-2 border border-primary/30 text-primary font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors hidden">
-            
-            <User className="h-4 w-4" />
-            Member Login
-          </Link>
+          
+
+
+
+
+
+          
         </div>
 
         <button
