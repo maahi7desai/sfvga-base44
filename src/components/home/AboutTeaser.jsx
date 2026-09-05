@@ -23,19 +23,17 @@ export default function AboutTeaser() {
               Welcome to SFVGA
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-foreground leading-tight mb-6 text-balance">
-              A community bound by culture, food, and friendship.
+              We are proud of our extended family.
             </h2>
             <p className="font-body text-foreground/75 leading-relaxed mb-4">
-              Founded in 1984, the San Fernando Valley Gujarati Association brings
-              together Gujarati families across Southern California to celebrate
-              our shared heritage. Through festivals, cultural programs, and
-              community service, we keep our traditions alive for the next
-              generation.
+              We, friendly and accomplished Gujarati families living in the San
+              Fernando Valley of Southern California, have created and are proud of
+              our extended family — our SFVGA.
             </p>
             <p className="font-body text-foreground/75 leading-relaxed mb-8">
-              From Sanskriti Divas to Navratri and Dipotsav, every gathering is a
-              chance to reconnect, volunteer, and enjoy the richness of Gujarati
-              culture together.
+              Our mission is to preserve the cultural, social, and religious values
+              and promote the educational, recreational, and heritage of the Gujarati
+              people living in Southern California — since 1978.
             </p>
             <Link
               to="/about"

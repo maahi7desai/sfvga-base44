@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="font-body text-sm opacity-80 max-w-sm leading-relaxed">
-              Preserving heritage and promoting culture since 1984. A vibrant
+              A Southern California non-profit organization since 1978. A vibrant
               Gujarati community in the heart of Southern California.
             </p>
             <p className="font-body text-sm mt-4 opacity-80">

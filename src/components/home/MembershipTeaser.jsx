@@ -5,8 +5,9 @@ import { ArrowRight } from "lucide-react";
 const PLANS = [
   { name: "New Family Membership", price: "$200", note: "For new families" },
   { name: "Family Membership Renewal", price: "$140", note: "Annual renewal" },
-  { name: "Individual Membership", price: "$75", note: "Per individual" },
-  { name: "Student Membership", price: "$75", note: "With valid student ID" },
+  { name: "Age 75+ Renewal", price: "$100", note: "Members aged 75+" },
+  { name: "Individual Renewal", price: "$75", note: "Per individual" },
+  { name: "Student Renewal", price: "$75", note: "With valid student ID" },
 ];
 
 export default function MembershipTeaser() {
@@ -26,7 +27,7 @@ export default function MembershipTeaser() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
           {PLANS.map((p) => (
             <div
               key={p.name}

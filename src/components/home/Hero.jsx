@@ -28,11 +28,11 @@ export default function Hero() {
             <span className="block text-accent">Gujarati Association</span>
           </h1>
           <p className="font-body text-lg md:text-xl mt-4 opacity-90 tracking-wide">
-            Preserve Heritage &amp; Promote Culture
+            A Southern California non-profit organization, since 1978
           </p>
           <p className="font-body text-base mt-6 opacity-85 max-w-md leading-relaxed">
-            A vibrant Gujarati community in the heart of SoCal — celebrating our
-            festivals, food, and friendship since 1984.
+            Join a vibrant Gujarati community in the heart of SoCal — celebrating
+            our festivals, food, and friendship for over four decades.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Link
