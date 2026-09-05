@@ -3,48 +3,48 @@ import { Link } from "react-router-dom";
 import { Users, UserCircle, RefreshCw, Heart, BookOpen } from "lucide-react";
 
 const PLANS = [
-  { name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
-  { name: "Family Membership Renewal", price: "$140", note: "Annual renewal for existing families" },
-  { name: "Age 75+ Membership Renewal", price: "$100", note: "For members aged 75 and above" },
-  { name: "Individual Membership Renewal", price: "$75", note: "For individual members" },
-  { name: "Student Membership Renewal", price: "$75", note: "With a valid student ID" },
-];
+{ name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
+{ name: "Family Membership Renewal", price: "$140", note: "Annual renewal for existing families" },
+{ name: "Age 75+ Membership Renewal", price: "$100", note: "For members aged 75 and above" },
+{ name: "Individual Membership Renewal", price: "$75", note: "For individual members" },
+{ name: "Student Membership Renewal", price: "$75", note: "With a valid student ID" }];
+
 
 const DASHBOARD = [
-  {
-    icon: UserCircle,
-    title: "Member Profile",
-    desc: "Manage your account details, view membership status, and update family information.",
-    cta: "Access Profile",
-    to: "/login",
-  },
-  {
-    icon: RefreshCw,
-    title: "Membership Renewal",
-    desc: "Review the terms and conditions and renew your membership online.",
-    cta: "Renew Membership",
-    to: "/renew",
-  },
-  {
-    icon: Heart,
-    title: "Youth & Volunteer Portal",
-    desc: "Sign up for youth initiatives and volunteer for event committees.",
-    cta: "Get Involved",
-    to: "/login",
-  },
-  {
-    icon: BookOpen,
-    title: "Community Directory",
-    desc: "Connect with fellow members through our member-only networking directory.",
-    cta: "View Directory",
-    to: "/login",
-  },
-];
+{
+  icon: UserCircle,
+  title: "Member Profile",
+  desc: "Manage your account details, view membership status, and update family information.",
+  cta: "Access Profile",
+  to: "/login"
+},
+{
+  icon: RefreshCw,
+  title: "Membership Renewal",
+  desc: "Review the terms and conditions and renew your membership online.",
+  cta: "Renew Membership",
+  to: "/renew"
+},
+{
+  icon: Heart,
+  title: "Youth & Volunteer Portal",
+  desc: "Sign up for youth initiatives and volunteer for event committees.",
+  cta: "Get Involved",
+  to: "/login"
+},
+{
+  icon: BookOpen,
+  title: "Community Directory",
+  desc: "Connect with fellow members through our member-only networking directory.",
+  cta: "View Directory",
+  to: "/login"
+}];
+
 
 export default function Members() {
   return (
     <div className="pt-20">
-      <section className="bg-secondary text-secondary-foreground py-16 md:py-24">
+      <section className="bg-secondary text-secondary-foreground py-16 md:py-24 hidden">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8 text-center">
           <h1 className="font-display text-4xl md:text-6xl mb-4">SFVGA Membership</h1>
           <p className="font-body text-lg opacity-85 max-w-2xl mx-auto">
@@ -89,8 +89,8 @@ export default function Members() {
                 href="https://sfvga.org/membership"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
+                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+                
                 Apply on SFVGA.org →
               </a>
             </div>
@@ -102,8 +102,8 @@ export default function Members() {
               </p>
               <Link
                 to="/renew"
-                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
+                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+                
                 Renew Online →
               </Link>
             </div>
@@ -121,18 +121,18 @@ export default function Members() {
             Preferred payment method: Zelle to sfvgabod@gmail.com
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {PLANS.map((p) => (
-              <div
-                key={p.name}
-                className="bg-card border border-border rounded-lg p-7 flex flex-col"
-              >
+            {PLANS.map((p) =>
+            <div
+              key={p.name}
+              className="bg-card border border-border rounded-lg p-7 flex flex-col">
+              
                 <p className="font-body text-xs text-foreground/60 mb-2">{p.note}</p>
                 <p className="font-display text-4xl text-primary mb-2">{p.price}</p>
                 <h3 className="font-body text-base font-medium text-foreground">
                   {p.name}
                 </h3>
               </div>
-            ))}
+            )}
           </div>
           <div className="mt-10 max-w-2xl mx-auto bg-card border border-border rounded-lg p-6 text-sm text-foreground/70 space-y-2">
             <p>• For membership form/dues postmarked after Nov 30th, include an additional $25.</p>
@@ -154,11 +154,11 @@ export default function Members() {
             Manage your membership, get involved, and connect with the community.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {DASHBOARD.map((d) => (
-              <div
-                key={d.title}
-                className="bg-card border border-border rounded-lg p-7 flex items-start gap-5"
-              >
+            {DASHBOARD.map((d) =>
+            <div
+              key={d.title}
+              className="bg-card border border-border rounded-lg p-7 flex items-start gap-5">
+              
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
                   <d.icon className="h-6 w-6" />
                 </div>
@@ -168,14 +168,14 @@ export default function Members() {
                     {d.desc}
                   </p>
                   <Link
-                    to={d.to}
-                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
-                  >
+                  to={d.to}
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+                  
                     {d.cta} →
                   </Link>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -234,19 +234,19 @@ export default function Members() {
               href="https://sfvga.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors"
-            >
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors">
+              
               New Member Application
             </a>
             <Link
               to="/renew"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors"
-            >
+              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors">
+              
               Renew Membership
             </Link>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }

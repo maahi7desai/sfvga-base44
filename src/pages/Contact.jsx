@@ -3,47 +3,47 @@ import { Image } from "@/components/ui/image";
 import { Mail, MapPin, Phone, Send, Users, HelpCircle, Scale } from "lucide-react";
 
 const BOARD = [
-  { role: "President", name: "Jaymeen Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/65ec64e6-bb01-4c9a-b080-75a8576e182d/WhatsApp+Image+2026-01-11+at+8.59.10+PM.jpeg" },
-  { role: "Vice President", name: "Monika Patel", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/9cd10f67-c5b8-4e93-a30b-a5db8f92303a/WhatsApp+Image+2026-01-11+at+8.55.58+PM.jpeg" },
-  { role: "Secretary", name: "Bhavin Shah", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/2cd5cdbd-d702-4dc7-8398-f7731d798ecf/WhatsApp+Image+2026-01-11+at+8.57.06+PM.jpeg" },
-  { role: "Treasurer", name: "Mayank Shah", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/f2447547-4095-48a0-964f-0715ad790187/WhatsApp+Image+2025-01-21+at+2.49.44+AM.jpeg" },
-  { role: "Youth Champion", name: "Pinal Kantawala", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a2c19622-2da2-48c3-98f5-61432a20ce6b/WhatsApp+Image+2026-01-11+at+10.47.52+PM.jpeg" },
-  { role: "Director", name: "Ami Dave", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/40ec5886-304c-45c4-96b2-ab8600eb3e5d/WhatsApp+Image+2025-05-07+at+11.27.40+AM.jpeg" },
-  { role: "Director", name: "Bhakti Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a73b9e08-af65-4723-8f0a-8548a73c438b/WhatsApp+Image+2026-01-12+at+5.13.52+AM.jpeg" },
-  { role: "Honorary CPA", name: "Mike Taylor", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636073183062-AVSVGQDQXUOZK7IN0QBM/Male+Stock+Anonymous.png" },
-];
+{ role: "President", name: "Jaymeen Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/65ec64e6-bb01-4c9a-b080-75a8576e182d/WhatsApp+Image+2026-01-11+at+8.59.10+PM.jpeg" },
+{ role: "Vice President", name: "Monika Patel", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/9cd10f67-c5b8-4e93-a30b-a5db8f92303a/WhatsApp+Image+2026-01-11+at+8.55.58+PM.jpeg" },
+{ role: "Secretary", name: "Bhavin Shah", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/2cd5cdbd-d702-4dc7-8398-f7731d798ecf/WhatsApp+Image+2026-01-11+at+8.57.06+PM.jpeg" },
+{ role: "Treasurer", name: "Mayank Shah", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/f2447547-4095-48a0-964f-0715ad790187/WhatsApp+Image+2025-01-21+at+2.49.44+AM.jpeg" },
+{ role: "Youth Champion", name: "Pinal Kantawala", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a2c19622-2da2-48c3-98f5-61432a20ce6b/WhatsApp+Image+2026-01-11+at+10.47.52+PM.jpeg" },
+{ role: "Director", name: "Ami Dave", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/40ec5886-304c-45c4-96b2-ab8600eb3e5d/WhatsApp+Image+2025-05-07+at+11.27.40+AM.jpeg" },
+{ role: "Director", name: "Bhakti Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a73b9e08-af65-4723-8f0a-8548a73c438b/WhatsApp+Image+2026-01-12+at+5.13.52+AM.jpeg" },
+{ role: "Honorary CPA", name: "Mike Taylor", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636073183062-AVSVGQDQXUOZK7IN0QBM/Male+Stock+Anonymous.png" }];
+
 
 const FAQS = [
-  {
-    q: "How do I become a member?",
-    a: "SFVGA membership is available to anyone who is referred by an existing member. Review the by-laws, fill out the membership form, and send dues via Zelle to sfvgabod@gmail.com.",
-  },
-  {
-    q: "What are the membership dues?",
-    a: "New Family Membership is $200, Family Renewal is $140, Age 75+ Renewal is $100, and Individual/Student Renewal is $75 per calendar year.",
-  },
-  {
-    q: "When is membership valid?",
-    a: "Membership is valid for the current calendar year. You can join any time during the year. Forms postmarked after Nov 30th require an additional $25, and no forms are accepted after Dec 31st.",
-  },
-  {
-    q: "Can I bring guests to events?",
-    a: "Events are for members and invited guests. Membership is required to participate in most events.",
-  },
-  {
-    q: "How are events organized?",
-    a: "Seven board members are elected annually. They finalize 8–12 events and form committees of 5–10 members each. Every member family joins at least one committee.",
-  },
-];
+{
+  q: "How do I become a member?",
+  a: "SFVGA membership is available to anyone who is referred by an existing member. Review the by-laws, fill out the membership form, and send dues via Zelle to sfvgabod@gmail.com."
+},
+{
+  q: "What are the membership dues?",
+  a: "New Family Membership is $200, Family Renewal is $140, Age 75+ Renewal is $100, and Individual/Student Renewal is $75 per calendar year."
+},
+{
+  q: "When is membership valid?",
+  a: "Membership is valid for the current calendar year. You can join any time during the year. Forms postmarked after Nov 30th require an additional $25, and no forms are accepted after Dec 31st."
+},
+{
+  q: "Can I bring guests to events?",
+  a: "Events are for members and invited guests. Membership is required to participate in most events."
+},
+{
+  q: "How are events organized?",
+  a: "Seven board members are elected annually. They finalize 8–12 events and form committees of 5–10 members each. Every member family joins at least one committee."
+}];
+
 
 const BYLAWS = [
-  "Association By-Laws govern the structure, elections, and operations of SFVGA.",
-  "Seven board members are elected or nominated at the year-end general meeting.",
-  "The board finalizes events, budget, and committees for the coming year.",
-  "Every member family participates in at least one event committee.",
-  "Membership is by referral and valid for the calendar year.",
-  "General meetings and minutes are shared with members periodically.",
-];
+"Association By-Laws govern the structure, elections, and operations of SFVGA.",
+"Seven board members are elected or nominated at the year-end general meeting.",
+"The board finalizes events, budget, and committees for the coming year.",
+"Every member family participates in at least one event committee.",
+"Membership is by referral and valid for the calendar year.",
+"General meetings and minutes are shared with members periodically."];
+
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -55,7 +55,7 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      <section className="bg-secondary text-secondary-foreground py-16 md:py-24">
+      <section className="bg-secondary text-secondary-foreground py-16 md:py-24 hidden">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8 text-center">
           <h1 className="font-display text-4xl md:text-6xl mb-4">Contact Us</h1>
           <p className="font-body text-lg opacity-85 max-w-2xl mx-auto">
@@ -113,8 +113,8 @@ export default function Contact() {
             </div>
 
             <div>
-              {sent ? (
-                <div className="bg-card border border-border rounded-lg p-8 text-center">
+              {sent ?
+              <div className="bg-card border border-border rounded-lg p-8 text-center">
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4">
                     <Send className="h-6 w-6" />
                   </div>
@@ -123,63 +123,63 @@ export default function Contact() {
                     Your message has been received. We'll get back to you shortly.
                   </p>
                   <button
-                    onClick={() => setSent(false)}
-                    className="mt-6 font-body text-sm font-medium text-primary hover:text-accent"
-                  >
+                  onClick={() => setSent(false)}
+                  className="mt-6 font-body text-sm font-medium text-primary hover:text-accent">
+                  
                     Send another message
                   </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
+                </div> :
+
+              <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
                   <h2 className="font-display text-2xl text-foreground mb-2">Send a Message</h2>
                   <div>
                     <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                       Name
                     </label>
                     <input
-                      required
-                      type="text"
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
+                    required
+                    type="text"
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  
                   </div>
                   <div>
                     <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                       Email
                     </label>
                     <input
-                      required
-                      type="email"
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
+                    required
+                    type="email"
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  
                   </div>
                   <div>
                     <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                       Subject
                     </label>
                     <input
-                      type="text"
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
+                    type="text"
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  
                   </div>
                   <div>
                     <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                       Message
                     </label>
                     <textarea
-                      required
-                      rows={4}
-                      className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                    />
+                    required
+                    rows={4}
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  
                   </div>
                   <button
-                    type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
+                  type="submit"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+                  
                     <Send className="h-4 w-4" />
                     Send Message
                   </button>
                 </form>
-              )}
+              }
             </div>
           </div>
         </div>
@@ -199,25 +199,25 @@ export default function Contact() {
             SFVGA and organize our events.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {BOARD.map((b) => (
-              <div
-                key={b.role + b.name}
-                className="bg-card border border-border rounded-lg p-6 text-center"
-              >
+            {BOARD.map((b) =>
+            <div
+              key={b.role + b.name}
+              className="bg-card border border-border rounded-lg p-6 text-center">
+              
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-primary/10">
                   <Image
-                    src={b.img}
-                    alt={b.name}
-                    className="w-full h-full"
-                    fittingType="fill"
-                  />
+                  src={b.img}
+                  alt={b.name}
+                  className="w-full h-full"
+                  fittingType="fill" />
+                
                 </div>
                 <p className="font-body text-xs tracking-wide uppercase text-accent font-medium mb-1">
                   {b.role}
                 </p>
                 <p className="font-body text-sm font-medium text-foreground">{b.name}</p>
               </div>
-            ))}
+            )}
           </div>
           <p className="font-body text-xs text-foreground/50 text-center mt-8">
             Board of Directors — 2026. The SFVGA is managed by a volunteer Board of Directors.
@@ -238,12 +238,12 @@ export default function Contact() {
             Common questions regarding membership, event rules, and tickets.
           </p>
           <div className="space-y-4">
-            {FAQS.map((f) => (
-              <div key={f.q} className="bg-card border border-border rounded-lg p-6">
+            {FAQS.map((f) =>
+            <div key={f.q} className="bg-card border border-border rounded-lg p-6">
                 <h3 className="font-body font-medium text-foreground mb-2">{f.q}</h3>
                 <p className="font-body text-sm text-foreground/70 leading-relaxed">{f.a}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -261,18 +261,18 @@ export default function Contact() {
             Association by-laws and public meeting updates.
           </p>
           <ul className="space-y-4">
-            {BYLAWS.map((point) => (
-              <li
-                key={point}
-                className="flex items-start gap-3 font-body text-foreground/80 leading-relaxed"
-              >
+            {BYLAWS.map((point) =>
+            <li
+              key={point}
+              className="flex items-start gap-3 font-body text-foreground/80 leading-relaxed">
+              
                 <span className="mt-2 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
                 {point}
               </li>
-            ))}
+            )}
           </ul>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
