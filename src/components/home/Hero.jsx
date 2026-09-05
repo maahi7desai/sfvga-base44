@@ -9,12 +9,12 @@ const HERO_IMG =
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex items-center overflow-hidden -mt-20 pt-20">
-      <div className="absolute inset-0">
+    <section className="relative min-h-[100vh] flex items-center overflow-hidden -mt-20 pt-20 hidden">
+      <div className="absolute inset-0 hidden">
         <Image
           src={HERO_IMG}
           alt="Dandiya Raas dancers celebrating Gujarati culture"
-          className="w-full h-full"
+          className="w-full h-full hidden"
           fittingType="fill" />
         
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/85 via-secondary/55 to-secondary/20 hidden" />
