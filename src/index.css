@@ -5,42 +5,42 @@
 @layer base {
   :root {
     --background: 48 80% 98%;
-    --foreground: 100 6% 10%;
+    --foreground: 196 33% 15%;
     --card: 48 60% 99%;
-    --card-foreground: 100 6% 10%;
+    --card-foreground: 196 33% 15%;
     --popover: 48 80% 98%;
-    --popover-foreground: 100 6% 10%;
-    --primary: 185 100% 23%;
+    --popover-foreground: 196 33% 15%;
+    --primary: 19 74% 48%;
     --primary-foreground: 48 80% 98%;
-    --secondary: 185 30% 94%;
-    --secondary-foreground: 185 80% 20%;
-    --muted: 185 20% 95%;
-    --muted-foreground: 185 30% 35%;
-    --accent: 84 81% 44%;
-    --accent-foreground: 100 6% 10%;
+    --secondary: 186 82% 30%;
+    --secondary-foreground: 48 80% 98%;
+    --muted: 33 40% 95%;
+    --muted-foreground: 196 25% 40%;
+    --accent: 33 93% 62%;
+    --accent-foreground: 196 33% 15%;
     --destructive: 0 72% 45%;
     --destructive-foreground: 48 80% 98%;
-    --border: 185 20% 90%;
-    --input: 185 25% 88%;
-    --ring: 185 100% 23%;
-    --chart-1: 185 100% 23%;
-    --chart-2: 84 81% 44%;
-    --chart-3: 35 85% 55%;
-    --chart-4: 200 70% 45%;
-    --chart-5: 100 6% 30%;
-    --radius: 0.25rem;
-    --font-heading: "Instrument Serif", ui-serif, Georgia, serif;
-    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
-    --font-display: "Instrument Serif", ui-serif, Georgia, serif;
-    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-    --sidebar-background: 100 6% 10%;
+    --border: 33 35% 88%;
+    --input: 33 30% 90%;
+    --ring: 19 74% 48%;
+    --chart-1: 19 74% 48%;
+    --chart-2: 186 82% 30%;
+    --chart-3: 33 93% 62%;
+    --chart-4: 196 33% 30%;
+    --chart-5: 280 50% 45%;
+    --radius: 0.125rem;
+    --font-heading: "Playfair Display", ui-serif, Georgia, serif;
+    --font-body: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Playfair Display", ui-serif, Georgia, serif;
+    --font-mono: "Poppins", ui-monospace, monospace;
+    --sidebar-background: 196 33% 15%;
     --sidebar-foreground: 48 80% 98%;
-    --sidebar-primary: 84 81% 44%;
-    --sidebar-primary-foreground: 100 6% 10%;
-    --sidebar-accent: 185 40% 18%;
+    --sidebar-primary: 33 93% 62%;
+    --sidebar-primary-foreground: 196 33% 15%;
+    --sidebar-accent: 19 60% 38%;
     --sidebar-accent-foreground: 48 80% 98%;
-    --sidebar-border: 185 30% 20%;
-    --sidebar-ring: 84 81% 44%;
+    --sidebar-border: 196 30% 25%;
+    --sidebar-ring: 33 93% 62%;
   }
 }
 
@@ -66,66 +66,21 @@
   .font-display {
     font-family: var(--font-display);
   }
-  .font-mono {
-    font-family: var(--font-mono);
-  }
-  .glass {
-    background: hsl(var(--background) / 0.55);
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border: 1px solid hsl(var(--foreground) / 0.08);
-  }
-  .glass-dark {
-    background: hsl(100 6% 10% / 0.5);
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border: 1px solid hsl(0 0% 100% / 0.1);
-  }
   .text-balance {
     text-wrap: balance;
   }
-  .horizon-rule {
-    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), transparent);
+  .pattern-diya {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.08) 1px, transparent 0);
+    background-size: 24px 24px;
   }
 }
 
-@keyframes bloom-in {
-  from {
-    opacity: 0;
-    transform: translateY(24px) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-@keyframes horizon-shift {
-  0%, 100% {
-    transform: scaleX(0.6);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-
-@keyframes drift {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-bloom {
-  animation: bloom-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.animate-drift {
-  animation: drift 40s linear infinite;
+.animate-fade-in {
+  animation: fade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 html {

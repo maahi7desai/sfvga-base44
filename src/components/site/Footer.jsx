@@ -1,45 +1,67 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
-import HorizonRule from "./HorizonRule";
 
 const GROUPS = [
   {
-    title: "Impact Engine",
-    links: ["Community Gardens", "Water Conservation", "Urban Forestry", "Policy Advocacy"],
+    title: "Explore",
+    links: [
+      { label: "Home", to: "/" },
+      { label: "Events", to: "/events" },
+      { label: "About Us", to: "/about" },
+    ],
   },
   {
-    title: "Alliance Portal",
-    links: ["Our Mission", "Board of Directors", "Partners & Affiliates", "Financial Transparency"],
-  },
-  {
-    title: "Activation Hub",
-    links: ["Volunteer Registration", "Upcoming Events", "Membership Portal"],
-  },
-  {
-    title: "Intel Archive",
-    links: ["Environmental News", "Local Resources", "FAQ", "Contact"],
+    title: "Get Involved",
+    links: [
+      { label: "Membership", to: "/membership" },
+      { label: "Volunteer", to: "/about" },
+      { label: "Contact", to: "/contact" },
+    ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="relative bg-foreground text-background overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-5 sm:px-8 pt-20 pb-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+    <footer className="bg-secondary text-secondary-foreground">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8 pt-16 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <Logo className="h-16 w-16 object-contain" />
+              <div className="leading-tight">
+                <p className="font-display text-2xl">SFVGA</p>
+                <p className="font-body text-xs tracking-wide opacity-80">
+                  San Fernando Valley Gujarati Association
+                </p>
+              </div>
+            </div>
+            <p className="font-body text-sm opacity-80 max-w-sm leading-relaxed">
+              Preserving heritage and promoting culture since 1984. A vibrant
+              Gujarati community in the heart of Southern California.
+            </p>
+            <p className="font-body text-sm mt-4 opacity-80">
+              Email:{" "}
+              <a href="mailto:sfvgabod@gmail.com" className="underline hover:text-accent">
+                sfvgabod@gmail.com
+              </a>
+            </p>
+          </div>
+
           {GROUPS.map((g) => (
             <div key={g.title}>
-              <h4 className="font-mono text-[11px] tracking-[0.24em] uppercase text-accent mb-5">
+              <h4 className="font-body text-xs tracking-[0.18em] uppercase text-accent mb-4">
                 {g.title}
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {g.links.map((l) => (
-                  <li key={l}>
-                    <a
-                      href="#top"
-                      className="text-sm text-background/70 hover:text-background transition-colors"
+                  <li key={l.label}>
+                    <Link
+                      to={l.to}
+                      className="font-body text-sm opacity-80 hover:opacity-100 hover:text-accent transition-colors"
                     >
-                      {l}
-                    </a>
+                      {l.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -47,35 +69,14 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 mb-6">
-          <HorizonRule className="opacity-30" />
-        </div>
-
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <Logo className="h-8 w-8" variant="light" />
-            <span className="font-mono text-[12px] tracking-[0.3em]">SFVGA</span>
-          </div>
-          <p className="text-xs text-background/50 max-w-md leading-relaxed">
-            San Fernando Valley Green Alliance — a Southern California non-profit,
-            cultivating a living valley since 1978.
+        <div className="mt-12 pt-6 border-t border-secondary-foreground/15 flex flex-col sm:flex-row justify-between gap-3">
+          <p className="font-body text-xs opacity-60">
+            © {new Date().getFullYear()} San Fernando Valley Gujarati Association. All rights reserved.
           </p>
-          <div className="flex gap-5 font-mono text-[11px] tracking-[0.18em] uppercase text-background/50">
-            <a href="#top" className="hover:text-background">Privacy</a>
-            <a href="#top" className="hover:text-background">Terms</a>
-            <a href="#intel" className="hover:text-background">Contact</a>
-          </div>
+          <p className="font-body text-xs opacity-60">
+            Preserve Heritage &amp; Promote Culture
+          </p>
         </div>
-      </div>
-
-      {/* Oversized logotype mask */}
-      <div
-        className="pointer-events-none select-none px-5 sm:px-8 -mb-6 leading-none"
-        aria-hidden="true"
-      >
-        <span className="font-display text-[22vw] md:text-[18vw] tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-background/15 to-background/5">
-          SFVGA
-        </span>
       </div>
     </footer>
   );

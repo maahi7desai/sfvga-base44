@@ -6,7 +6,7 @@ import FloatingBioBar from "./FloatingBioBar";
 
 export default function Layout() {
   return (
-    <div id="top" className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <main className="flex-1">
         <Outlet />

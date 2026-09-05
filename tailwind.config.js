@@ -7,8 +7,8 @@ module.exports = {
   		opacity: Object.fromEntries(Array.from({ length: 101 }, (_, i) => [i, `${i / 100}`])),
   		borderRadius: {
   			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 1px)',
-  			sm: 'calc(var(--radius) - 2px)'
+  			md: 'calc(var(--radius) + 2px)',
+  			sm: 'calc(var(--radius) + 4px)'
   		},
   		colors: {
   			background: 'hsl(var(--background))',

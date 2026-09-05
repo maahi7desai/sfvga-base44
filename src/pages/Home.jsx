@@ -1,22 +1,18 @@
 import React from "react";
 import Hero from "@/components/home/Hero";
-import StatsBand from "@/components/home/StatsBand";
-import ImpactSection from "@/components/home/ImpactSection";
-import AllianceSection from "@/components/home/AllianceSection";
-import ActivateSection from "@/components/home/ActivateSection";
-import IntelSection from "@/components/home/IntelSection";
-import DonateCTA from "@/components/home/DonateCTA";
+import UpcomingEvents from "@/components/home/UpcomingEvents";
+import AboutTeaser from "@/components/home/AboutTeaser";
+import MembershipTeaser from "@/components/home/MembershipTeaser";
+import HowItWorks from "@/components/home/HowItWorks";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <StatsBand />
-      <ImpactSection />
-      <AllianceSection />
-      <ActivateSection />
-      <IntelSection />
-      <DonateCTA />
+      <UpcomingEvents />
+      <AboutTeaser />
+      <MembershipTeaser />
+      <HowItWorks />
     </>
   );
 }
