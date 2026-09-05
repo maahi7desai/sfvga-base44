@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { Image } from "@/components/ui/image";
 import { Mail, MapPin, Phone, Send, Users, HelpCircle, Scale } from "lucide-react";
 
 const BOARD = [
-  { role: "President", name: "—" },
-  { role: "Vice President", name: "—" },
-  { role: "Secretary", name: "—" },
-  { role: "Treasurer", name: "—" },
-  { role: "Board Member", name: "—" },
-  { role: "Board Member", name: "—" },
-  { role: "Board Member", name: "—" },
+  { role: "President", name: "Jaymeen Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/65ec64e6-bb01-4c9a-b080-75a8576e182d/WhatsApp+Image+2026-01-11+at+8.59.10+PM.jpeg" },
+  { role: "Vice President", name: "Monika Patel", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/9cd10f67-c5b8-4e93-a30b-a5db8f92303a/WhatsApp+Image+2026-01-11+at+8.55.58+PM.jpeg" },
+  { role: "Secretary", name: "Bhavin Shah", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/2cd5cdbd-d702-4dc7-8398-f7731d798ecf/WhatsApp+Image+2026-01-11+at+8.57.06+PM.jpeg" },
+  { role: "Treasurer", name: "Mayank Shah", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/f2447547-4095-48a0-964f-0715ad790187/WhatsApp+Image+2025-01-21+at+2.49.44+AM.jpeg" },
+  { role: "Youth Champion", name: "Pinal Kantawala", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a2c19622-2da2-48c3-98f5-61432a20ce6b/WhatsApp+Image+2026-01-11+at+10.47.52+PM.jpeg" },
+  { role: "Director", name: "Ami Dave", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/40ec5886-304c-45c4-96b2-ab8600eb3e5d/WhatsApp+Image+2025-05-07+at+11.27.40+AM.jpeg" },
+  { role: "Director", name: "Bhakti Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a73b9e08-af65-4723-8f0a-8548a73c438b/WhatsApp+Image+2026-01-12+at+5.13.52+AM.jpeg" },
+  { role: "Honorary CPA", name: "Mike Taylor", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636073183062-AVSVGQDQXUOZK7IN0QBM/Male+Stock+Anonymous.png" },
 ];
 
 const FAQS = [
@@ -198,19 +200,27 @@ export default function Contact() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {BOARD.map((b) => (
-              <div key={b.role} className="bg-card border border-border rounded-lg p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4 mx-auto">
-                  <Users className="h-7 w-7" />
+              <div
+                key={b.role + b.name}
+                className="bg-card border border-border rounded-lg p-6 text-center"
+              >
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-primary/10">
+                  <Image
+                    src={b.img}
+                    alt={b.name}
+                    className="w-full h-full"
+                    fittingType="fill"
+                  />
                 </div>
                 <p className="font-body text-xs tracking-wide uppercase text-accent font-medium mb-1">
                   {b.role}
                 </p>
-                <p className="font-body text-sm text-foreground/60">Committee Chair</p>
+                <p className="font-body text-sm font-medium text-foreground">{b.name}</p>
               </div>
             ))}
           </div>
           <p className="font-body text-xs text-foreground/50 text-center mt-8">
-            Board member names updated annually. Contact us for current committee chairs.
+            Board of Directors — 2026. The SFVGA is managed by a volunteer Board of Directors.
           </p>
         </div>
       </section>

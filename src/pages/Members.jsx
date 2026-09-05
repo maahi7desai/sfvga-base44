@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FileText, FileCheck, CreditCard, Users, UserCircle, RefreshCw, Heart, BookOpen } from "lucide-react";
+import { Users, UserCircle, RefreshCw, Heart, BookOpen } from "lucide-react";
 
 const PLANS = [
   { name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
@@ -10,48 +10,34 @@ const PLANS = [
   { name: "Student Membership Renewal", price: "$75", note: "With a valid student ID" },
 ];
 
-const STEPS = [
-  {
-    icon: FileText,
-    title: "Review & Accept",
-    desc: "Review the Association By-Laws and accept the terms.",
-  },
-  {
-    icon: FileCheck,
-    title: "Fill the Form",
-    desc: "Complete the SFVGA Membership Application Form (new and returning members).",
-  },
-  {
-    icon: CreditCard,
-    title: "Pay Dues via Zelle",
-    desc: "Send membership dues to sfvgabod@gmail.com through Zelle in your online banking.",
-  },
-];
-
 const DASHBOARD = [
   {
     icon: UserCircle,
     title: "Member Profile",
     desc: "Manage your account details, view membership status, and update family information.",
     cta: "Access Profile",
+    to: "/login",
   },
   {
     icon: RefreshCw,
-    title: "Renewal & Signup",
-    desc: "Renew your membership or sign up new members with our online payment gateway.",
+    title: "Membership Renewal",
+    desc: "Review the terms and conditions and renew your membership online.",
     cta: "Renew Membership",
+    to: "/renew",
   },
   {
     icon: Heart,
     title: "Youth & Volunteer Portal",
     desc: "Sign up for youth initiatives and volunteer for event committees.",
     cta: "Get Involved",
+    to: "/login",
   },
   {
     icon: BookOpen,
     title: "Community Directory",
     desc: "Connect with fellow members through our member-only networking directory.",
     cta: "View Directory",
+    to: "/login",
   },
 ];
 
@@ -82,32 +68,46 @@ export default function Members() {
         </div>
       </section>
 
-      {/* How to become a member */}
+      {/* Join or Renew */}
       <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-          <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-12">
-            To Become a Member
+        <div className="mx-auto max-w-[1000px] px-5 sm:px-8">
+          <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-4">
+            Join or Renew
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {STEPS.map((s) => (
-              <div
-                key={s.title}
-                className="bg-card border border-border rounded-lg p-8 text-center"
-              >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-5">
-                  <s.icon className="h-6 w-6" />
-                </div>
-                <h3 className="font-display text-2xl text-foreground mb-3">{s.title}</h3>
-                <p className="font-body text-sm text-foreground/70 leading-relaxed">
-                  {s.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className="font-body text-sm text-foreground/60 mt-8 text-center max-w-2xl mx-auto">
-            New Members: Please completely fill the application form then wait for
-            approval before sending the membership fees.
+          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
+            Whether you're a new or returning member, we welcome you to our community.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card border border-border rounded-lg p-8 flex flex-col">
+              <h3 className="font-display text-2xl text-foreground mb-3">New Members</h3>
+              <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
+                New members can apply using our membership application form on the
+                SFVGA website. Please fill the form completely and wait for approval
+                before sending membership fees.
+              </p>
+              <a
+                href="https://sfvga.org/membership"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
+              >
+                Apply on SFVGA.org →
+              </a>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-8 flex flex-col">
+              <h3 className="font-display text-2xl text-foreground mb-3">Renewing Members</h3>
+              <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
+                Already a member? Renew your membership online by reviewing the terms
+                and submitting your renewal request.
+              </p>
+              <Link
+                to="/renew"
+                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
+              >
+                Renew Online →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -168,7 +168,7 @@ export default function Members() {
                     {d.desc}
                   </p>
                   <Link
-                    to="/login"
+                    to={d.to}
                     className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
                   >
                     {d.cta} →
@@ -229,12 +229,22 @@ export default function Members() {
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
-          <a
-            href="mailto:sfvgabod@gmail.com"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors"
-          >
-            Email us to apply
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://sfvga.org/membership"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors"
+            >
+              New Member Application
+            </a>
+            <Link
+              to="/renew"
+              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors"
+            >
+              Renew Membership
+            </Link>
+          </div>
         </div>
       </section>
     </div>
