@@ -17,7 +17,7 @@ const FALLBACK_IMAGE_URL =
 const ImageWrapper = React.forwardRef(({ aspectRatio, className, style, children }, ref) =>
 <span
   ref={ref}
-  className={cn("inline-block relative hidden", className)}
+  className={cn("inline-block relative", className)}
   style={{ aspectRatio, ...style }}>
   
     {children}
