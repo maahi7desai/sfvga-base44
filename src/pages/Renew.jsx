@@ -21,14 +21,14 @@ export default function Renew() {
 
   return (
     <div className="pt-20">
-      <section className="bg-secondary text-secondary-foreground py-16 md:py-24 hidden">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-6xl mb-4">Membership Renewal</h1>
-          <p className="font-body text-lg opacity-85 max-w-2xl mx-auto">
-            Renew your SFVGA membership for 2026. Review the terms, agree, and submit.
-          </p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+      
 
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[600px] px-5 sm:px-8">
