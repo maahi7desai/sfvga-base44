@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/15">
-      <nav className="mx-auto max-w-[1200px] px-5 sm:px-8 h-20 flex items-center justify-between bg-[hsl(var(--background))]">
+      <nav className="mx-auto max-w-[1200px] px-5 sm:px-8 h-20 flex items-center justify-between bg-[hsl(var(--accent))]">
         <Link to="/" className="flex items-center gap-3">
           <Logo className="h-12 w-12 object-contain" />
           <span className="hidden sm:flex flex-col leading-tight">
