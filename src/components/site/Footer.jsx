@@ -24,7 +24,7 @@ const GROUPS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8 pt-16 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
@@ -70,7 +70,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-6 border-t border-secondary-foreground/15 flex flex-col sm:flex-row justify-between gap-3">
+        <div className="mt-12 pt-6 border-t border-primary-foreground/15 flex flex-col sm:flex-row justify-between gap-3">
           <p className="font-body text-xs opacity-60">
             © {new Date().getFullYear()} San Fernando Valley Gujarati Association. All rights reserved.
           </p>
