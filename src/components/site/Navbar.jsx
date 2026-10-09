@@ -27,9 +27,9 @@ export default function Navbar() {
           <Logo className="h-12 w-12 object-contain" />
           <span className="flex flex-col leading-tight">
             <span className="text-primary [font-family:'Alegreya',_serif] font-bold text-2xl sm:text-2xl">San Fernando Valley Gujarati Association</span>
-            <span className="font-body text-[9px] sm:text-[10px] tracking-[0.18em] uppercase text-foreground/60 hidden">
-              Est. 1978
-            </span>
+            
+
+            
           </span>
         </Link>
 
