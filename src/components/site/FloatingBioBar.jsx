@@ -12,12 +12,12 @@ const ITEMS = [
 export default function FloatingBioBar() {
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-t border-primary/15">
-      <div className="flex items-center justify-around py-2 bg-[hsl(var(--secondary))]">
+      <div className="flex items-center justify-around py-2 bg-[hsl(var(--accent))]">
         {ITEMS.map(({ icon: Icon, label, to }) =>
         <Link
           key={label}
           to={to}
-          className="flex flex-col items-center gap-1 px-4 py-1 text-accent">
+          className="flex flex-col items-center gap-1 px-4 py-1 text-primary">
           
             <Icon className="h-5 w-5" />
             <span className="font-body text-[10px] tracking-wide uppercase">
