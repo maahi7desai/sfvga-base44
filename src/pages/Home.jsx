@@ -4,15 +4,19 @@ import MissionStatement from "@/components/home/MissionStatement";
 import UpcomingEvents from "@/components/home/UpcomingEvents";
 import AnnouncementsBanner from "@/components/home/AnnouncementsBanner";
 import SponsorsCarousel from "@/components/home/SponsorsCarousel";
+import RotatingBackground from "@/components/home/RotatingBackground";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <MissionStatement />
-      <UpcomingEvents />
-      <AnnouncementsBanner />
-      <SponsorsCarousel />
-    </>
+    <div className="relative min-h-screen">
+      <RotatingBackground />
+      <div className="relative z-10">
+        <Hero />
+        <MissionStatement />
+        <UpcomingEvents />
+        <AnnouncementsBanner />
+        <SponsorsCarousel />
+      </div>
+    </div>
   );
 }
