@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-[1200px] w-full px-5 sm:px-8 py-24">
-        <div className="max-w-xl text-secondary-foreground animate-fade-in">
+        <div className="max-w-xl text-secondary-foreground animate-fade-in hidden">
           <Logo className="h-24 w-24 object-contain mb-6 drop-shadow-lg" />
           <h1 className="font-display text-5xl md:text-6xl leading-[1.05] text-balance">
             San Fernando Valley
