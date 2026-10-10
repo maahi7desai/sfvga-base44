@@ -14,14 +14,14 @@ import {
 const FALLBACK_IMAGE_URL =
 "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png";
 
-const ImageWrapper = React.forwardRef(({ aspectRatio, className, style, children }, ref) =>
-<span
-  ref={ref}
-  className={cn("inline-block relative hidden", className)}
-  style={{ aspectRatio, ...style }}>
-  
-    {children}
-  </span>
+const ImageWrapper = React.forwardRef(({ aspectRatio, className, style, children }, ref) => null
+
+
+
+
+
+
+
 );
 ImageWrapper.displayName = "ImageWrapper";
 
@@ -61,9 +61,9 @@ const ResponsiveImage = React.forwardRef(
     return (
       <ImageWrapper ref={wrapperRef} aspectRatio={aspectRatio} className={className} style={style}>
         {/* Tiny blurred placeholder (a few hundred bytes) covering the main
-              image's load time. Same crop shape and focal anchor as the main
-              image — fp_ is relative to the crop box, so a square or centered
-              placeholder would blur-preview a different region. */}
+               image's load time. Same crop shape and focal anchor as the main
+               image — fp_ is relative to the crop box, so a square or centered
+               placeholder would blur-preview a different region. */}
         {options && !loaded &&
         <img
           src={buildTransformUrl(parsed, {
