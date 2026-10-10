@@ -35,9 +35,9 @@ export default function ImageGallery() {
         <p className="font-body text-sm tracking-[0.2em] uppercase text-primary-foreground/70 text-center mb-2">
           Community Moments
         </p>
-        <h2 className="font-display text-2xl md:text-3xl text-primary-foreground text-center mb-6 hidden">
-          Glimpses of SFVGA
-        </h2>
+        
+
+        
 
         <div className="relative rounded-lg overflow-hidden shadow-xl">
           <div className="aspect-[16/10] relative">
