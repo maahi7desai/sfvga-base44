@@ -215,7 +215,16 @@ export default function Members() {
             </p>
           </div>
           <p className="font-body text-sm text-foreground/60 mt-6">
-            Please see the By-Laws for full details.
+            Please see the{" "}
+            <a
+              href="https://sfvga.org/s/BYLAWS.docx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-accent underline transition-colors"
+            >
+              By-Laws
+            </a>{" "}
+            for full details.
           </p>
         </div>
       </section>
