@@ -20,6 +20,14 @@ const GROUPS = [
       { label: "Volunteer", to: "/members" },
     ],
   },
+  {
+    title: "Board Meetings",
+    links: [
+      { label: "Roles & Responsibilities", href: "https://sfvga.org/roles-and-resp", external: true },
+      { label: "Association By Laws", href: "https://sfvga.org/s/BYLAWS.docx", external: true },
+      { label: "Meeting Minutes", href: "https://sfvga.org/board/meeting-minutes", external: true },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -57,12 +65,23 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {g.links.map((l) => (
                   <li key={l.label}>
-                    <Link
-                      to={l.to}
-                      className="font-body text-sm opacity-80 hover:opacity-100 hover:text-accent transition-colors"
-                    >
-                      {l.label}
-                    </Link>
+                    {l.external ? (
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-body text-sm opacity-80 hover:opacity-100 hover:text-accent transition-colors"
+                      >
+                        {l.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={l.to}
+                        className="font-body text-sm opacity-80 hover:opacity-100 hover:text-accent transition-colors"
+                      >
+                        {l.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

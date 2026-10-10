@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Image } from "@/components/ui/image";
-import { Mail, MapPin, Phone, Send, Users, HelpCircle, Scale } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Users, HelpCircle, ExternalLink, Scale } from "lucide-react";
 
 const BOARD = [
 { role: "President", name: "Jaymeen Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/65ec64e6-bb01-4c9a-b080-75a8576e182d/WhatsApp+Image+2026-01-11+at+8.59.10+PM.jpeg" },
@@ -36,13 +36,7 @@ const FAQS = [
 }];
 
 
-const BYLAWS = [
-"Association By-Laws govern the structure, elections, and operations of SFVGA.",
-"Seven board members are elected or nominated at the year-end general meeting.",
-"The board finalizes events, budget, and committees for the coming year.",
-"Every member family participates in at least one event committee.",
-"Membership is by referral and valid for the calendar year.",
-"General meetings and minutes are shared with members periodically."];
+
 
 
 export default function Contact() {
@@ -250,27 +244,26 @@ export default function Contact() {
 
       {/* Governance & By-Laws */}
       <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
-        <div className="mx-auto max-w-[800px] px-5 sm:px-8">
+        <div className="mx-auto max-w-[800px] px-5 sm:px-8 text-center">
           <div className="flex items-center gap-3 mb-3 justify-center">
             <Scale className="h-7 w-7 text-primary" />
             <h2 className="font-display text-3xl md:text-4xl text-foreground">
               Governance &amp; By-Laws
             </h2>
           </div>
-          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
-            Association by-laws and public meeting updates.
+          <p className="font-body text-foreground/70 text-center mb-8 max-w-xl mx-auto">
+            Association by-laws, meeting minutes, and governance details are
+            available on our legacy site.
           </p>
-          <ul className="space-y-4">
-            {BYLAWS.map((point) =>
-            <li
-              key={point}
-              className="flex items-start gap-3 font-body text-foreground/80 leading-relaxed">
-              
-                <span className="mt-2 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                {point}
-              </li>
-            )}
-          </ul>
+          <a
+            href="https://sfvga.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            Visit sfvga.org
+            <ExternalLink className="h-4 w-4" />
+          </a>
         </div>
       </section>
     </div>);
