@@ -1,10 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FloatingBioBar from "./FloatingBioBar";
+import ImageGallery from "@/components/home/ImageGallery";
 
 export default function Layout() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
@@ -12,6 +16,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      {isHome && <ImageGallery />}
       <FloatingBioBar />
     </div>
   );
