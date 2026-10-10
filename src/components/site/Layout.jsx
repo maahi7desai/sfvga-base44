@@ -12,11 +12,11 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
+      {isHome && <ImageGallery />}
       <main className="flex-1">
         <Outlet />
       </main>
       <Footer />
-      {isHome && <ImageGallery />}
       <FloatingBioBar />
     </div>
   );
