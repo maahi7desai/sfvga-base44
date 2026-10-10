@@ -26,7 +26,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Logo className="h-10 w-10 sm:h-12 sm:w-12 object-contain flex-shrink-0" />
           <span className="flex flex-col leading-tight min-w-0">
-            <span className="text-primary [font-family:'Alegreya',_serif] font-bold leading-tight text-lg sm:text-lg">San Fernando ValleyGujarati Association</span>
+            <span className="text-primary [font-family:'Alegreya',_serif] font-bold leading-tight text-2xl sm:text-2xl">San Fernando Valley Gujarati Association</span>
             
 
             
