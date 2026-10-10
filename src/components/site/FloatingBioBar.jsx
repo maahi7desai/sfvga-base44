@@ -20,7 +20,7 @@ export default function FloatingBioBar() {
           className="flex flex-col items-center gap-1 px-4 py-1 text-primary text-xs">
           
             <Icon className="h-5 w-5" />
-            <span className="tracking-wide uppercase text-sm font-bold [font-family:'Righteous',_system-ui]">
+            <span className="tracking-wide uppercase text-sm [font-family:'VAG_Rounded_Next',_sans-serif] font-[1000]">
               {label}
             </span>
           </Link>
