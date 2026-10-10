@@ -17,7 +17,7 @@ const FALLBACK_IMAGE_URL =
 const ImageWrapper = React.forwardRef(({ aspectRatio, className, style, children }, ref) =>
 <span
   ref={ref}
-  className={cn("inline-block relative", className)}
+  className={cn("inline-block relative hidden", className)}
   style={{ aspectRatio, ...style }}>
   
     {children}
@@ -61,9 +61,9 @@ const ResponsiveImage = React.forwardRef(
     return (
       <ImageWrapper ref={wrapperRef} aspectRatio={aspectRatio} className={className} style={style}>
         {/* Tiny blurred placeholder (a few hundred bytes) covering the main
-             image's load time. Same crop shape and focal anchor as the main
-             image — fp_ is relative to the crop box, so a square or centered
-             placeholder would blur-preview a different region. */}
+              image's load time. Same crop shape and focal anchor as the main
+              image — fp_ is relative to the crop box, so a square or centered
+              placeholder would blur-preview a different region. */}
         {options && !loaded &&
         <img
           src={buildTransformUrl(parsed, {
