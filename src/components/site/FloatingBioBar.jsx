@@ -17,10 +17,10 @@ export default function FloatingBioBar() {
         <Link
           key={label}
           to={to}
-          className="flex flex-col items-center gap-1 px-4 py-1 text-primary">
+          className="flex flex-col items-center gap-1 px-4 py-1 text-primary text-xs">
           
             <Icon className="h-5 w-5" />
-            <span className="font-body text-[10px] tracking-wide uppercase">
+            <span className="font-body tracking-wide uppercase text-sm">
               {label}
             </span>
           </Link>
