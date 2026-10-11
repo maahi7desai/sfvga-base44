@@ -90,26 +90,26 @@ export default function Contact() {
             </p>
             <a
               href="mailto:sfvgabod@gmail.com"
-              className="font-body text-sm text-primary hover:text-accent transition-colors"
-            >
+              className="font-body text-sm text-primary hover:text-accent transition-colors">
+              
               sfvgabod@gmail.com
             </a>
           </div>
 
           {/* Board Members List */}
           <div className="divide-y divide-border">
-            {BOARD.map((b) => (
-              <div
-                key={b.role + b.name}
-                className="flex items-center gap-4 py-5"
-              >
+            {BOARD.map((b) =>
+            <div
+              key={b.role + b.name}
+              className="flex items-center gap-4 py-5">
+              
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
                   <Image
-                    src={b.img}
-                    alt={b.name}
-                    className="w-full h-full rounded-full"
-                    fittingType="fill"
-                  />
+                  src={b.img}
+                  alt={b.name}
+                  className="w-full h-full rounded-full"
+                  fittingType="fill" />
+                
                 </div>
                 <div>
                   <p className="font-body text-xs tracking-[0.15em] uppercase text-accent mb-0.5">
@@ -120,7 +120,7 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -130,12 +130,12 @@ export default function Contact() {
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           {/* Header */}
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-              Leadership
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">ENABLERS
+
             </p>
             <div className="h-px w-12 bg-accent mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Extended Leadership
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">Supporting Team
+
             </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Dedicated community members who support SFVGA's mission through
@@ -145,18 +145,18 @@ export default function Contact() {
 
           {/* Members List */}
           <div className="divide-y divide-border">
-            {EXTENDED_LEADERSHIP.map((b) => (
-              <div
-                key={b.role + b.name}
-                className="flex items-center gap-4 py-5"
-              >
+            {EXTENDED_LEADERSHIP.map((b) =>
+            <div
+              key={b.role + b.name}
+              className="flex items-center gap-4 py-5">
+              
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
                   <Image
-                    src={b.img}
-                    alt={b.name}
-                    className="w-full h-full rounded-full"
-                    fittingType="fill"
-                  />
+                  src={b.img}
+                  alt={b.name}
+                  className="w-full h-full rounded-full"
+                  fittingType="fill" />
+                
                 </div>
                 <div>
                   <p className="font-body text-xs tracking-[0.15em] uppercase text-accent mb-0.5">
@@ -167,7 +167,7 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -333,8 +333,8 @@ export default function Contact() {
             href="https://sfvga.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
-          >
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+            
             Visit sfvga.org
             <ExternalLink className="h-4 w-4" />
           </a>
