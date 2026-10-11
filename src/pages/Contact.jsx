@@ -124,37 +124,48 @@ export default function Contact() {
       </section>
 
       {/* Extended Leadership */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-          <div className="flex items-center gap-3 mb-3 justify-center">
-            <Users className="h-7 w-7 text-primary" />
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
+      <section className="py-12 md:py-20">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          {/* Header */}
+          <div className="mb-8">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+              Leadership
+            </p>
+            <div className="h-px w-12 bg-accent mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
               Extended Leadership
             </h2>
+            <p className="font-body text-sm text-foreground/60 leading-relaxed">
+              Dedicated community members who support SFVGA's mission through
+              their specialized roles.
+            </p>
           </div>
-          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
-            Dedicated community members who support SFVGA's mission through their specialized roles.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {EXTENDED_LEADERSHIP.map((b) =>
-            <div
-              key={b.role + b.name}
-              className="bg-card border border-border rounded-lg p-6 text-center">
-              
-                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-primary/10">
+
+          {/* Members List */}
+          <div className="divide-y divide-border">
+            {EXTENDED_LEADERSHIP.map((b) => (
+              <div
+                key={b.role + b.name}
+                className="flex items-center gap-4 py-5"
+              >
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-border">
                   <Image
-                  src={b.img}
-                  alt={b.name}
-                  className="w-full h-full"
-                  fittingType="fill" />
-                
+                    src={b.img}
+                    alt={b.name}
+                    className="w-full h-full"
+                    fittingType="fill"
+                  />
                 </div>
-                <p className="font-body text-xs tracking-wide uppercase text-accent font-medium mb-1">
-                  {b.role}
-                </p>
-                <p className="font-body text-sm font-medium text-foreground">{b.name}</p>
+                <div>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-accent mb-0.5">
+                    {b.role}
+                  </p>
+                  <p className="font-display text-lg md:text-xl text-foreground">
+                    {b.name}
+                  </p>
+                </div>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </section>
