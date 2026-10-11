@@ -30,7 +30,7 @@ export default function ImageGallery() {
   }, []);
 
   return (
-    <section className="bg-primary py-10 md:py-14 flex items-center">
+    <section className="bg-primary py-10 md:py-14 pb-20 md:pb-28 flex items-center">
       <div className="mx-auto max-w-[900px] px-4 w-full">
         <p className="font-body text-sm tracking-[0.2em] uppercase text-primary-foreground/70 text-center mb-2">
           Community Moments
