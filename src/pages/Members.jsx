@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Users, UserCircle, RefreshCw, Heart, BookOpen } from "lucide-react";
+import { Users, UserCircle, RefreshCw, Heart, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 
 const PLANS = [
 { name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
@@ -226,6 +226,73 @@ export default function Members() {
             </a>{" "}
             for full details.
           </p>
+        </div>
+      </section>
+
+      {/* Youth Corner */}
+      <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
+        <div className="mx-auto max-w-[1000px] px-5 sm:px-8">
+          <div className="flex items-center gap-3 mb-3 justify-center">
+            <GraduationCap className="h-7 w-7 text-primary" />
+            <h2 className="font-display text-3xl md:text-4xl text-foreground">
+              Youth Corner
+            </h2>
+          </div>
+          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
+            SFVGA's youth initiatives build leadership, community service, and life skills.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
+              <div className="aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/020cd21f-9848-4317-aea3-8f4bf9fb04c4/IMG_1849.jpg"
+                  alt="SFVGA youth CPR training"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-display text-xl text-foreground mb-2">CPR Training</h3>
+                <p className="font-body text-sm text-foreground/70 leading-relaxed mb-4">
+                  CPR training organized by SFVGA, equipping our youth with life-saving skills.
+                </p>
+                <a
+                  href="https://photos.app.goo.gl/6acBJLs3ZWgcmQgm8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
+                >
+                  CPR Training Pictures
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
+              <div className="aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/5f9a1512-d0c4-4a69-aab2-195c39fd221f/CPRFULL.jpg"
+                  alt="SFVGA volunteer hours"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-display text-xl text-foreground mb-2">Volunteer Hours</h3>
+                <p className="font-body text-sm text-foreground/70 leading-relaxed mb-4">
+                  Track community service hours contributed by SFVGA youth members.
+                </p>
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1ta7e9CjXyIITVmewgA1Ft4Ez7Js-UKHkbDdKLUV72nQ/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
+                >
+                  Review Volunteer Hours Log
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
