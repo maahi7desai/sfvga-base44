@@ -5,20 +5,6 @@ import { CalendarDays, MapPin } from "lucide-react";
 
 const EVENTS = [
   {
-    name: "Sanskriti Divas",
-    date: "September 13, 2026",
-    location: "Chatsworth, CA",
-    desc: "Our flagship cultural night — performances, traditional food, and community celebration.",
-    img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/a26f38386_generated_image.png",
-  },
-  {
-    name: "Navratri & Garba",
-    date: "October 17, 2026",
-    location: "Chatsworth, CA",
-    desc: "Nine nights of Garba and Dandiya Raas under the stars in traditional festive attire.",
-    img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/fcc94dcaa_generated_image.png",
-  },
-  {
     name: "Dipotsav (Diwali)",
     date: "November 14, 2026",
     location: "Chatsworth, CA",
@@ -40,7 +26,7 @@ export default function UpcomingEvents() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-md md:max-w-lg mx-auto">
           {EVENTS.map((e) => (
             <article
               key={e.name}
