@@ -101,11 +101,11 @@ export default function Contact() {
                 key={b.role + b.name}
                 className="flex items-center gap-4 py-5"
               >
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-border">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
                   <Image
                     src={b.img}
                     alt={b.name}
-                    className="w-full h-full"
+                    className="w-full h-full rounded-full"
                     fittingType="fill"
                   />
                 </div>
@@ -148,11 +148,11 @@ export default function Contact() {
                 key={b.role + b.name}
                 className="flex items-center gap-4 py-5"
               >
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-border">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
                   <Image
                     src={b.img}
                     alt={b.name}
-                    className="w-full h-full"
+                    className="w-full h-full rounded-full"
                     fittingType="fill"
                   />
                 </div>
