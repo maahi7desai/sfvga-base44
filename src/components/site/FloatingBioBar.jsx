@@ -12,7 +12,7 @@ const ITEMS = [
 export default function FloatingBioBar() {
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-t border-primary/15">
-      <div className="flex items-center justify-around py-2 bg-[hsl(33_93%_72%)]">
+      <div className="flex items-center justify-around py-2 bg-[hsl(48_70%_88%)]">
         {ITEMS.map(({ icon: Icon, label, to }) =>
         <Link
           key={label}
