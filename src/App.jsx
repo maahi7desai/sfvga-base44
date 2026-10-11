@@ -12,6 +12,7 @@ import Events from './pages/Events';
 import Members from './pages/Members';
 import Renew from './pages/Renew';
 import Contact from './pages/Contact';
+import More from './pages/More';
 import Layout from '@/components/site/Layout';
 
 const AuthenticatedApp = () => {
@@ -47,6 +48,7 @@ const AuthenticatedApp = () => {
         <Route path="/members" element={<Members />} />
         <Route path="/renew" element={<Renew />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/more" element={<More />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

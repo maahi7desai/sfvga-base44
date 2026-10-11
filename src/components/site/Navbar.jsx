@@ -7,7 +7,8 @@ const NAV = [
 { label: "Home", to: "/" },
 { label: "Events", to: "/events" },
 { label: "Members", to: "/members" },
-{ label: "Contact", to: "/contact" }];
+{ label: "Contact", to: "/contact" },
+{ label: "More", to: "/more" }];
 
 
 const NOTIFICATIONS = [
