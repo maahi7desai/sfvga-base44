@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/15">
-      <nav className="mx-auto max-w-[1200px] px-5 sm:px-8 h-20 flex items-center justify-between bg-[hsl(48_70%_88%)]">
+      <nav className="mx-auto max-w-[1200px] px-5 sm:px-8 h-20 flex items-center justify-between bg-[hsl(40_50%_92%)]">
         <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Logo className="h-10 w-10 sm:h-12 sm:w-12 object-contain flex-shrink-0" />
           <span className="flex flex-col leading-tight min-w-0">
