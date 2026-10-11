@@ -15,7 +15,9 @@ const EXTENDED_LEADERSHIP = [
 { role: "Webmaster", name: "Namrata Shah", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/8b6708e28_Screenshot2026-10-11at35801PM.png" },
 { role: "Honorary CPA", name: "Mike Taylor", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/0c7a83221_Screenshot2026-10-11at35810PM.png" },
 { role: "Honorary CPA", name: "Vaishali Mehta", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/8eb5cad69_Screenshot2026-10-11at35817PM.png" },
-{ role: "App Developer", name: "Rahil Shah", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/5a82078b5_Screenshot2026-10-11at41024PM.png" }];
+{ role: "App Developer", name: "Rahil Shah", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/5a82078b5_Screenshot2026-10-11at41024PM.png" },
+{ role: "App Developer", name: "Maahi Desai", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/eb0731c9a_IMG_1113.JPG" },
+{ role: "App Developer", name: "Ansh Mehta", img: "" }];
 
 
 const FAQS = [
