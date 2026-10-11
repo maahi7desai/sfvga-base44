@@ -9,8 +9,12 @@ const BOARD = [
 { role: "Treasurer", name: "Mayank Shah", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/f2447547-4095-48a0-964f-0715ad790187/WhatsApp+Image+2025-01-21+at+2.49.44+AM.jpeg" },
 { role: "Youth Champion", name: "Pinal Kantawala", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a2c19622-2da2-48c3-98f5-61432a20ce6b/WhatsApp+Image+2026-01-11+at+10.47.52+PM.jpeg" },
 { role: "Director", name: "Ami Dave", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/40ec5886-304c-45c4-96b2-ab8600eb3e5d/WhatsApp+Image+2025-05-07+at+11.27.40+AM.jpeg" },
-{ role: "Director", name: "Bhakti Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a73b9e08-af65-4723-8f0a-8548a73c438b/WhatsApp+Image+2026-01-12+at+5.13.52+AM.jpeg" },
-{ role: "Honorary CPA", name: "Mike Taylor", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636073183062-AVSVGQDQXUOZK7IN0QBM/Male+Stock+Anonymous.png" }];
+{ role: "Director", name: "Bhakti Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/a73b9e08-af65-4723-8f0a-8548a73c438b/WhatsApp+Image+2026-01-12+at+5.13.52+AM.jpeg" }];
+
+const EXTENDED_LEADERSHIP = [
+{ role: "Webmaster", name: "Namrata Shah", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/8b6708e28_Screenshot2026-10-11at35801PM.png" },
+{ role: "Honorary CPA", name: "Mike Taylor", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/0c7a83221_Screenshot2026-10-11at35810PM.png" },
+{ role: "Honorary CPA", name: "Vaishali Mehta", img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/8eb5cad69_Screenshot2026-10-11at35817PM.png" }];
 
 
 const FAQS = [
@@ -64,7 +68,7 @@ export default function Contact() {
           <div className="flex items-center gap-3 mb-3 justify-center">
             <Users className="h-7 w-7 text-primary" />
             <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              Executive Board &amp; Leadership
+              Executive Board
             </h2>
           </div>
           <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
@@ -95,6 +99,42 @@ export default function Contact() {
           <p className="font-body text-xs text-foreground/50 text-center mt-8">
             Board of Directors — 2026. The SFVGA is managed by a volunteer Board of Directors.
           </p>
+        </div>
+      </section>
+
+      {/* Extended Leadership */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+          <div className="flex items-center gap-3 mb-3 justify-center">
+            <Users className="h-7 w-7 text-primary" />
+            <h2 className="font-display text-3xl md:text-4xl text-foreground">
+              Extended Leadership
+            </h2>
+          </div>
+          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
+            Dedicated community members who support SFVGA's mission through their specialized roles.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {EXTENDED_LEADERSHIP.map((b) =>
+            <div
+              key={b.role + b.name}
+              className="bg-card border border-border rounded-lg p-6 text-center">
+              
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-primary/10">
+                  <Image
+                  src={b.img}
+                  alt={b.name}
+                  className="w-full h-full"
+                  fittingType="fill" />
+                
+                </div>
+                <p className="font-body text-xs tracking-wide uppercase text-accent font-medium mb-1">
+                  {b.role}
+                </p>
+                <p className="font-body text-sm font-medium text-foreground">{b.name}</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
