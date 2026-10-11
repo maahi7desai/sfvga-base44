@@ -1,19 +1,7 @@
 import React from "react";
-import { Bell, Smartphone, PartyPopper } from "lucide-react";
+import { Bell } from "lucide-react";
 
 const UPDATES = [
-  {
-    icon: PartyPopper,
-    title: "Sanskriti Divas — Sept 13th",
-    text: "Our flagship cultural night is back. Performances, traditional food, and community.",
-    badge: "Festival",
-  },
-  {
-    icon: Smartphone,
-    title: "SFVGA Mobile App",
-    text: "Download the app for event reminders, RSVP, and member directory on the go.",
-    badge: "New",
-  },
   {
     icon: Bell,
     title: "Membership 2026 Open",
