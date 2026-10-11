@@ -15,7 +15,7 @@ const BOARD = [
 
 const FAQS = [
 {
-  q: "How do I become a member?",
+  q: "How can I become a member?",
   a: "SFVGA membership is available to anyone who is referred by an existing member. Review the by-laws, fill out the membership form, and send dues via Zelle to sfvgabod@gmail.com."
 },
 {
