@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </section>
       {/* Next Event */}
-      <section className="bg-primary/80 pattern-diya">
+      <section className="bg-primary/20 pattern-diya">
         <div className="mx-auto py-8 max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
