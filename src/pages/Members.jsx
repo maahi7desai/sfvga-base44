@@ -81,13 +81,13 @@ export default function Members() {
               href="https://sfvga.org/membership"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors">
-              New Member Application
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-background transition-colors">
+              New Application
             </a>
             <Link
               to="/renew"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors">
-              Renew Membership
+              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors">
+              Review Existing
             </Link>
           </div>
         </div>
