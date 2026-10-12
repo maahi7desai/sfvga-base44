@@ -156,55 +156,6 @@ export default function Members() {
         </div>
       </section>
 
-      {/* How SFVGA Works */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[900px] px-5 sm:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Users className="h-7 w-7 text-primary" />
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              How SFVGA Works
-            </h2>
-          </div>
-          <div className="font-body text-foreground/75 leading-relaxed space-y-4">
-            <p>
-              At the end of every year at the general meeting, we elect or nominate
-              seven board members. These board members finalize about 8 to 12 events
-              and the budget for the events for the coming year.
-            </p>
-            <p>
-              The board creates committees of members for these events. Depending on
-              the total number of members and events, there can be 5 to 10 members in
-              each committee. Each SFVGA member family becomes part of at least one
-              committee.
-            </p>
-            <p>
-              The committees are responsible to organize and manage their assigned
-              event. This way every family gets a chance to host and work alongside
-              other committee members for one event, and attend and enjoy the remaining
-              events in the year. The board provides help and liaison to each event
-              committee.
-            </p>
-            <p>
-              SFVGA membership is available to anyone who is referred by an existing
-              member. You can become a member any time of the year. Membership is valid
-              for the current calendar year.
-            </p>
-          </div>
-          <p className="font-body text-sm text-foreground/60 mt-6">
-            Please see the{" "}
-            <a
-              href="https://sfvga.org/s/BYLAWS.docx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:text-primary underline transition-colors"
-            >
-              By-Laws
-            </a>{" "}
-            for full details.
-          </p>
-        </div>
-      </section>
-
       {/* Youth Corner */}
       <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[1000px] px-5 sm:px-8">
