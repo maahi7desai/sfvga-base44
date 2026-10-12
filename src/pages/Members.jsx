@@ -59,7 +59,10 @@ export default function Members() {
             <span className="font-semibold text-primary bg-accent/15 px-1.5 py-0.5 rounded">
               sfvgabod@gmail.com
             </span>
-            . Zelle membership dues based on type below.
+            .
+          </p>
+          <p className="font-body text-sm text-foreground leading-relaxed">
+            Zelle membership dues based on type below.
           </p>
           <ul className="mt-3 space-y-1.5">
             {PLANS.map((p) =>
@@ -69,7 +72,7 @@ export default function Members() {
               </li>
             )}
           </ul>
-        </div>  
+        </div>
       </section>
       <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
