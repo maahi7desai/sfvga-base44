@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { CheckCircle, CreditCard, FileText } from "lucide-react";
 
 const PLAN_OPTIONS = [
-{ label: "Family Membership Renewal — $140", value: "family" },
-{ label: "Age 75+ Membership Renewal — $100", value: "senior" },
-{ label: "Individual Membership Renewal — $75", value: "individual" },
-{ label: "Student Membership Renewal — $75", value: "student" }];
+  { label: "Family Membership Renewal — $140", value: "family" },
+  { label: "Age 75+ Membership Renewal — $100", value: "senior" },
+  { label: "Individual Membership Renewal — $75", value: "individual" },
+  { label: "Student Membership Renewal — $75", value: "student" }];
 
 
 export default function Renew() {
@@ -28,12 +28,12 @@ export default function Renew() {
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
           <p className="font-body text-sm text-foreground leading-relaxed">
-            Renew your membership below if you are an existing member and there is no change to your information.  New members and members with updates please <a href="https://sfvga.org/membership">click here to apply</a> on sfvga.org website. 
+            Renew your membership below if you are an existing member and there is no change to your information.  New members and members with updates please <a href="https://sfvga.org/membership">click here to apply</a> on sfvga.org website.
           </p>
         </div>
         <div className="mx-auto max-w-[600px]">
           {submitted ?
-          <div>
+            <div>
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-5">
                 <CheckCircle className="h-8 w-8" />
               </div>
@@ -58,91 +58,91 @@ export default function Renew() {
                 </p>
               </div>
               <Link
-              to="/members"
-              className="font-body text-sm font-medium text-accent hover:text-primary">
-              
+                to="/members"
+                className="font-body text-sm font-medium text-accent hover:text-primary">
+
                 ← Back to Members
               </Link>
             </div> :
-          <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <form onSubmit={handleSubmit}>
-              <div>
-                <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                  Full Name
-                </label>
-                <input
-                required
-                type="text"
-                className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-              
-              </div>
-              <div>
-                <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                  Email
-                </label>
-                <input
-                required
-                type="email"
-                className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-              
-              </div>
-              <div>
-                <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                  Membership Type
-                </label>
-                <select
-                required
-                defaultValue=""
-                className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring">
-                
-                  <option value="" disabled>
-                    Select membership type
-                  </option>
-                  {PLAN_OPTIONS.map((o) =>
-                <option key={o.value} value={o.value}>
-                      {o.label}
-                    </option>
-                )}
-                </select>
-              </div>
+            <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+              <form onSubmit={handleSubmit}>
+                <div>
+                  <label className="font-body text-sm font-medium text-foreground block mb-1.5">
+                    Full Name
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
 
-              <div className="bg-muted/50 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <FileText className="h-4 w-4 text-primary" />
-                  <p className="font-body text-sm font-medium text-foreground">
-                    Terms &amp; Conditions
-                  </p>
                 </div>
-                <ul className="font-body text-xs text-foreground/70 space-y-1.5 list-disc pl-5">
-                  <li>Membership is valid for the current calendar year (2026).</li>
-                  <li>For renewals postmarked after Nov 30th, include an additional $25.</li>
-                  <li>No forms accepted after Dec 31st.</li>
-                  <li>Married children must obtain a separate membership.</li>
-                  <li>Payment via Zelle to sfvgabod@gmail.com.</li>
-                </ul>
-              </div>
+                <div>
+                  <label className="font-body text-sm font-medium text-foreground block mb-1.5">
+                    Email
+                  </label>
+                  <input
+                    required
+                    type="email"
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
 
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input
-                type="checkbox"
-                checked={agreed}
-                onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-1 h-4 w-4 rounded border-input text-primary focus:ring-ring" />
-              
-                <span className="font-body text-sm text-foreground/80">
-                  I have reviewed and agree to the SFVGA Association By-Laws and Terms
-                  &amp; Conditions.
-                </span>
-              </label>
+                </div>
+                <div>
+                  <label className="font-body text-sm font-medium text-foreground block mb-1.5">
+                    Membership Type
+                  </label>
+                  <select
+                    required
+                    defaultValue=""
+                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring">
 
-              <button
-              type="submit"
-              disabled={!agreed}
-              className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-              
-                Submit Renewal
-              </button>
-            </form>
+                    <option value="" disabled>
+                      Select membership type
+                    </option>
+                    {PLAN_OPTIONS.map((o) =>
+                      <option key={o.value} value={o.value}>
+                        {o.label}
+                      </option>
+                    )}
+                  </select>
+                </div>
+
+                <div className="bg-muted/50 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <FileText className="h-4 w-4 text-primary" />
+                    <p className="font-body text-sm font-medium text-foreground">
+                      Terms &amp; Conditions
+                    </p>
+                  </div>
+                  <ul className="font-body text-xs text-foreground/70 space-y-1.5 list-disc pl-5">
+                    <li>Membership is valid for the current calendar year (2026).</li>
+                    <li>For renewals postmarked after Nov 30th, include an additional $25.</li>
+                    <li>No forms accepted after Dec 31st.</li>
+                    <li>Married children must obtain a separate membership.</li>
+                    <li>Payment via Zelle to sfvgabod@gmail.com.</li>
+                  </ul>
+                </div>
+
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={(e) => setAgreed(e.target.checked)}
+                    className="mt-1 h-4 w-4 rounded border-input text-primary focus:ring-ring" />
+
+                  <span className="font-body text-sm text-foreground/80">
+                    I have reviewed and agree to the SFVGA Association By-Laws and Terms
+                    &amp; Conditions.
+                  </span>
+                </label>
+
+                <button
+                  type="submit"
+                  disabled={!agreed}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+
+                  Submit Renewal
+                </button>
+              </form>
             </div>
           }
         </div>
