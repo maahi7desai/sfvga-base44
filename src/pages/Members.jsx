@@ -87,16 +87,13 @@ export default function Members() {
               Membership Dues
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Membership Types &amp; Annual Dues
-            </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              Preferred payment method: Zelle to sfvgabod@gmail.com
+              Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Select membership type below. 
             </p>
           </div>
           <div className="divide-y divide-border">
             {PLANS.map((p) =>
-              <div key={p.name} className="py-5">
+              <div key={p.name} className="py-1">
                 <p className="font-display text-3xl text-primary mb-1">{p.price}</p>
                 <h3 className="font-body text-base font-medium text-foreground mb-1">
                   {p.name}
