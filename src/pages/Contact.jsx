@@ -75,7 +75,7 @@ export default function Contact() {
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              The Board
+              Board of Directors
             </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               The volunteers who plan the year, steward the funds, and answer the
@@ -130,11 +130,11 @@ export default function Contact() {
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           {/* Header */}
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">ENABLERS
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">SUPPORTING
 
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">Supporting Team
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">Executive Committee
 
             </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
