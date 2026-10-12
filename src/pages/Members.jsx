@@ -74,25 +74,7 @@ export default function Members() {
           </ul>
         </div>
       </section>
-      <section className="py-4 bg-primary text-primary-foreground text-center">
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="flex flex-row gap-4 justify-center">
-            <a
-              href="https://sfvga.org/membership"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-background transition-colors">
-              New
-            </a>
-            <Link
-              to="/renew"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-background transition-colors">
-              Renew
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      
       {/* Member Resources */}
       <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
