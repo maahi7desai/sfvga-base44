@@ -12,7 +12,25 @@ const UPDATES = [
 
 export default function AnnouncementsBanner() {
   return (
-    <section className="py-16 md:py-20 bg-muted/40 pattern-diya">
+    <section className="py-24 bg-muted/40 pattern-diya">
+      {/* Welcome */}
+      <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+        <div className="mb-8">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-accent mb-2">
+            Home
+          </p>
+          <div className="h-px w-16 bg-accent mb-4" />
+            <h4 className="font-display text-foreground mb-3">
+              One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley. 
+            </h4>
+          </div>
+          <div className="aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636077374216-2T3UGHN9QPDYT0KDUMRD/image-asset.jpeg"
+              className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+              fittingType="fill" />
+          </div>
+      </div>
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-10">
           <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
