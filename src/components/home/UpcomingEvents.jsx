@@ -24,16 +24,16 @@ export default function UpcomingEvents() {
             Home
           </p>
           <div className="h-px w-16 bg-accent mb-4" />
-            <h4 className="font-display text-foreground mb-3">
-              One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley. 
-            </h4>
-          </div>
-          <div className="aspect-[4/3] w-full overflow-hidden">
-            <Image
-              src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636077374216-2T3UGHN9QPDYT0KDUMRD/image-asset.jpeg"
-              className="w-full h-full transition-transform duration-500 group-hover:scale-105"
-              fittingType="fill" />
-          </div>
+          <h4 className="font-display text-foreground mb-3">
+            One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
+          </h4>
+        </div>
+        <div className="aspect-[4/3] w-full overflow-hidden">
+          <Image
+            src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636077374216-2T3UGHN9QPDYT0KDUMRD/image-asset.jpeg"
+            className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+            fittingType="fill" />
+        </div>
       </div>
 
       {/* Next Event */}
@@ -43,48 +43,45 @@ export default function UpcomingEvents() {
             Upcoming Event
           </p>
           <div className="h-px w-16 bg-accent mb-4" />
-            {EVENTS.map((e) =>
-                <div>
-                  <h4 className="font-display text-foreground mb-3">
-                    {e.title}
-                  </h4>
-                  <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
-                    <CalendarDays className="h-3.5 w-3.5" />
-                    <span className="font-body">{e.date}</span>
-                    <MapPin className="h-3.5 w-3.5" />
-                    <span className="font-body">{e.location}</span>
-                  </div>
-                  <h4 className="font-display text-foreground mb-3">
-                    {e.name}
-                  </h4>
-                  <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
-                    {e.desc}
-                  </p>
-                  <div className="aspect-[4/3] w-full overflow-hidden">
-                    <Image
-                      src={e.img}
-                      alt={e.name}
-                      className="w-full h-full transition-transform duration-500 group-hover:scale-105"
-                      fittingType="fill" />
-                  </div>
-                  <Link
-                    to="/events"
-                    className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
-                    Register / RSVP
-                  </Link>
-                </div>
-            )}
-          </div>
+          {EVENTS.map((e) =>
+            <div>
+              <h4 className="font-display text-foreground mb-3">
+                {e.name}
+              </h4>
+              <h4 className="font-display text-foreground mb-3">
+                {e.title}
+              </h4>
+              <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
+                <CalendarDays className="h-3.5 w-3.5" />
+                <span className="font-body">{e.date}</span>
+                <MapPin className="h-3.5 w-3.5" />
+                <span className="font-body">{e.location}</span>
+              </div>
+              <div className="aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src={e.img}
+                  alt={e.name}
+                  className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  fittingType="fill" />
+              </div>
+              <Link
+                to="/events"
+                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+                Register / RSVP
+              </Link>
+            </div>
+          )}
         </div>
+      </div>
 
-        <div className="text-center mt-12">
-          <Link
-            to="/events"
-            className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+      <div className="text-center mt-12">
+        <Link
+          to="/events"
+          className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
 
-            View all events →
-          </Link>
-        </div>
+          View all events →
+        </Link>
+      </div>
     </section>);
 
 }
