@@ -28,7 +28,7 @@ export default function Renew() {
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
           <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
-            Renew your membership below if you are an existing member and there is no change to your information.
+            Renew your membership below if you are an existing member and there is no change to your information.  New members and members with updates please <a href="https://sfvga.org/membership">click here to apply</a> on sfvga.org website. 
           </p>
         </div>
       </section>
