@@ -21,6 +21,17 @@ export default function Renew() {
 
   return (
     <div className="pt-20">
+      <section className="py-4 bg-primary/5 pattern-diya">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            Our Community
+          </p>
+          <div className="h-px w-16 bg-primary/80 mb-4" />
+          <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
+            One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
+          </p>
+        </div>
+      </section>
       <section className="py-4 md:py-24">
         <div className="mx-auto max-w-[600px] px-5 sm:px-8">
           {submitted ?
