@@ -19,6 +19,12 @@ export default function Home() {
               New Member Application
             </a>
           </div>
+                    <div className="aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636077374216-2T3UGHN9QPDYT0KDUMRD/image-asset.jpeg"
+              className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+              fittingType="fill" />
+          </div>
         </div>
       </section>
       <UpcomingEvents />
