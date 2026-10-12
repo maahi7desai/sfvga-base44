@@ -84,7 +84,7 @@ export default function Members() {
                   </p>
                   <Link
                     to={d.to}
-                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
+                    className="inline-flex items-center gap-2 font-body text-sm font-sm text-accent hover:text-primary transition-colors">
                     {d.cta} →
                   </Link>
                 </div>
