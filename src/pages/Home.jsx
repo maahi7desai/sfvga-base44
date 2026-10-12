@@ -1,5 +1,7 @@
 import React from "react";
 import { Image } from "@/components/ui/image";
+import { Link } from "react-router-dom";
+import { CalendarDays, MapPin } from "lucide-react";
 import AnnouncementsBanner from "@/components/home/AnnouncementsBanner";
 
 const EVENTS = [
