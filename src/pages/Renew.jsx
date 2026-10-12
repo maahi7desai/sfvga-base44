@@ -21,7 +21,7 @@ export default function Renew() {
 
   return (
     <div className="pt-20">
-      <section className="py-4 bg-primary/80 pattern-diya">
+      <section className="py-4 bg-primary/5 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
             RENEW MEMBERSHIP
