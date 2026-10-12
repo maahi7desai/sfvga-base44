@@ -36,7 +36,7 @@ export default function UpcomingEvents() {
       </div>
 
       {/* Next Event */}
-      <div className="mx-auto py-4 max-w-[700px] px-5 sm:px-8">
+      <div className="mx-auto py-8 max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
             Upcoming Event
