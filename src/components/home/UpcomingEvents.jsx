@@ -21,28 +21,18 @@ export default function UpcomingEvents() {
           <h2 className="font-display text-4xl md:text-5xl text-balance my-6">Celebrate with us throughout the year</h2>
         </div>
 
-        <div className="mb-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-            Upcoming Events
-          </p>
-        </div>
-
         <div className="flex justify-center">
           <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
             <article
               key={e.name}
               className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow flex flex-col">
-              
-                <div className="aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                  src={e.img}
-                  alt={e.name}
-                  className="w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  fittingType="fill" />
-                
-                </div>
                 <div className="p-5 flex flex-col flex-1">
+                  <div className="mb-8">
+                    <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+                      Upcoming Events
+                    </p>
+                  </div>
                   <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
                     <CalendarDays className="h-3.5 w-3.5" />
                     <span className="font-body">{e.date}</span>
@@ -51,6 +41,13 @@ export default function UpcomingEvents() {
                   <div className="flex items-center gap-1.5 text-xs text-foreground/60 mb-3">
                     <MapPin className="h-3.5 w-3.5" />
                     <span className="font-body">{e.location}</span>
+                  </div>
+                  <div className="aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src={e.img}
+                    alt={e.name}
+                    className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    fittingType="fill" />
                   </div>
                   <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
                     {e.desc}
