@@ -89,7 +89,7 @@ export default function Contact() {
                   required
                   type="text"
                   placeholder="Name"
-                  className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  className="w-full rounded-md border border-input bg-background/10 px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
               <div>
                 <input
