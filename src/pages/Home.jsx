@@ -30,7 +30,7 @@ export default function Home() {
             Our Community
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
-          <p className="font-body opacity-90 mb-4 max-w-xl mx-auto">
+          <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
             One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
           </p>
           <div className="aspect-[4/3] w-full overflow-hidden">
