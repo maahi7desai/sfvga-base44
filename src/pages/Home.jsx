@@ -73,7 +73,7 @@ export default function Home() {
               </div>
             )}
           </div>
-          <Link to="/events" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary/70 hover:text-primary transition-colors">
+          <Link to="/events" className="inline-flex items-center gap-2 font-body text-sm text-primary/70 hover:text-primary transition-colors">
             Register & View Details →
           </Link>
         </div>
