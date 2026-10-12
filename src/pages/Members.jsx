@@ -56,7 +56,6 @@ export default function Members() {
             </p>
           </div>
           <div className="space-y-5">
-            <div className="bg-card border border-border rounded-lg p-8 flex flex-col">
               <h3 className="font-display text-2xl text-foreground mb-3">New Members</h3>
               <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
                 New members can apply using our membership application form on the
@@ -84,7 +83,6 @@ export default function Members() {
               </Link>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Membership Types & Annual Dues */}
