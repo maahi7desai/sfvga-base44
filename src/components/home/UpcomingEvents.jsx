@@ -21,7 +21,7 @@ export default function UpcomingEvents() {
           
 
           
-          <h2 className="font-display text-4xl md:text-5xl text-foreground text-balance">
+          <h2 className="font-display text-4xl md:text-5xl text-balance my-6">
             Celebrate with us throughout the year
           </h2>
         </div>
