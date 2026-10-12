@@ -6,7 +6,7 @@ export default function MissionStatement() {
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-[1000px] px-5 sm:px-8 text-center">
-        <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-4">
+        <p className="font-body text-sm tracking-[0.2em] uppercase text-primary font-bold mb-4">
           Our Heritage
         </p>
         <h2 className="font-display text-4xl md:text-5xl text-foreground leading-tight mb-6 text-balance">

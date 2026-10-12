@@ -19,7 +19,7 @@ export default function AboutTeaser() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-primary font-bold mb-3">
               Welcome to SFVGA
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-foreground leading-tight mb-6 text-balance">

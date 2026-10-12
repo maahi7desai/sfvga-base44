@@ -23,7 +23,7 @@ export default function Renew() {
     <div className="pt-20">
       <section className="py-4 bg-background pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
             RENEW MEMBERSHIP
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />

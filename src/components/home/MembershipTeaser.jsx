@@ -15,7 +15,7 @@ export default function MembershipTeaser() {
     <section className="py-20 md:py-28 bg-secondary text-secondary-foreground">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-12">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
+          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary font-bold mb-3">
             Membership
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-balance">

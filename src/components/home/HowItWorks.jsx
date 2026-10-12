@@ -28,7 +28,7 @@ export default function HowItWorks() {
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-14">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
+          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary font-bold mb-3">
             How SFVGA Works
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-foreground text-balance">

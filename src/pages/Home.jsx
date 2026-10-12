@@ -26,7 +26,7 @@ export default function Home() {
       {/* Welcome */}
       <section className="py-4 bg-background pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
             Our Community
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
@@ -45,7 +45,7 @@ export default function Home() {
       <section className="py-4 bg-background pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
               Upcoming Event
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
@@ -83,7 +83,7 @@ export default function Home() {
       <section className="py-4 bg-background pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
               Latest Updates
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />

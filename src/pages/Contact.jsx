@@ -56,7 +56,7 @@ export default function Contact() {
       <section className="py-4 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
               Contact
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
@@ -123,7 +123,7 @@ export default function Contact() {
       <section className="py-12 md:py-20">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
               FAQs
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
@@ -146,7 +146,7 @@ export default function Contact() {
       <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
               Leadership
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
@@ -186,7 +186,7 @@ export default function Contact() {
       <section className="py-12 md:py-20">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
               Champions
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
