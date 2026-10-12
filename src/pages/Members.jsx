@@ -59,14 +59,10 @@ export default function Members() {
                 SFVGA website. Please fill the form completely and wait for approval
                 before sending membership fees.
             </p>
-            <Link
-              to="https://sfvga.org/membership"
+            <Link to="https://sfvga.org/membership"
               target="_blank"
-              className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+              className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
               Apply on SFVGA.org →
-            </Link>
-            <Link to="/events" className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
-              Register & View Details →
             </Link>
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
               Renewing Members
@@ -78,7 +74,7 @@ export default function Members() {
             </p>
             <Link
               to="/renew"
-              className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+              className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
               Renew Now →
             </Link>
             </div>
