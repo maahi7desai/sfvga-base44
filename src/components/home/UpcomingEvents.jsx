@@ -45,11 +45,11 @@ export default function UpcomingEvents() {
         </div>
       </div>
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-          <h4 className="font-display text-foreground mb-3">
-            Join for one of our flagship event to celebrate Diwali with the community. 
-          </h4>
           <div className="flex justify-center">
           <div className="w-full max-w-sm">
+            <h4 className="font-display text-foreground mb-3">
+              Join for one of our flagship event to celebrate Diwali with the community. 
+            </h4>
             {EVENTS.map((e) =>
               <article
                 key={e.name}
