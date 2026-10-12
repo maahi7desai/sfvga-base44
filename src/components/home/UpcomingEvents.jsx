@@ -18,15 +18,11 @@ export default function UpcomingEvents() {
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-14">
-          
-
-          
-          <h2 className="font-display text-4xl md:text-5xl text-balance my-6">Celebrate with us throughout the year
-
-          </h2>
+          <h2 className="font-display text-4xl md:text-5xl text-balance my-6">Celebrate with us throughout the year</h2>
         </div>
 
         <div className="flex justify-center">
+          <p>Board Correspondence<p>
           <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
             <article
