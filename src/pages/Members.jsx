@@ -7,9 +7,8 @@ const PLANS = [
   { name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
   { name: "Family Membership Renewal", price: "$140", note: "Annual renewal for existing families" },
   { name: "Age 75+ Membership Renewal", price: "$100", note: "For members aged 75 and above" },
-  { name: "Individual Membership Renewal", price: "$75", note: "For individual members" },
-  { name: "Student Membership Renewal", price: "$75", note: "With a valid student ID" }];
-
+  { name: "Individual/Student Renewal", price: "$75", note: "For individual members" }
+];
 const DASHBOARD = [
   {
     icon: UserCircle,
@@ -51,17 +50,17 @@ export default function Members() {
             Membership
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
-          <p className="flex items-center gap-2 text-sm text-foreground/60 mb-2">
+          <p className="flex items-center gap-2 text-sm text-foreground mb-2">
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
-          <p className="font-body text-sm text-foreground/60 leading-relaxed">
+          <p className="font-body text-sm text-foreground0 leading-relaxed">
             Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Zelle membership dues based on type below.
           </p>
           <div className="divide-y divide-border">
             {PLANS.map((p) =>
               <div key={p.name} className="py-1">
-                <p className="font-body text-xs text-foreground mb-1">{p.price} - {p.name}</p>
+                <p className="font-body text-sm text-foreground mb-2">{p.price} - {p.name}</p>
               </div>
             )}
           </div>
