@@ -20,7 +20,12 @@ export default function UpcomingEvents() {
         <div className="text-center mb-14">
           <h2 className="font-display text-4xl md:text-5xl text-balance my-6">Celebrate with us throughout the year</h2>
         </div>
-
+        <div className="mb-8">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+            Upcoming Events
+          </p>
+        </div>
+        
         <div className="flex justify-center">
           <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
@@ -28,11 +33,6 @@ export default function UpcomingEvents() {
               key={e.name}
               className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow flex flex-col">
                 <div className="p-5 flex flex-col flex-1">
-                  <div className="mb-8">
-                    <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">Upcoming Event
-
-                  </p>
-                  </div>
                   <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
                     <CalendarDays className="h-3.5 w-3.5" />
                     <span className="font-body">{e.date}</span>
