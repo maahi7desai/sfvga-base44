@@ -43,7 +43,25 @@ const DASHBOARD = [
 export default function Members() {
   return (
     <div className="pt-20">
-     <section className="py-4 bg-primary text-primary-foreground text-center">
+     {/* Welcome */}
+      <section className="py-4 bg-primary/5 pattern-diya">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            Our Community
+          </p>
+          <div className="h-px w-16 bg-primary/80 mb-4" />
+          <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
+            One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
+          </p>
+          <div className="aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636077374216-2T3UGHN9QPDYT0KDUMRD/image-asset.jpeg"
+              className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+              fittingType="fill" />
+          </div>
+        </div>
+      </section>
+      <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body opacity-90 mb-8 max-w-xl mx-auto">
             Current members are requested to be active and invite new members to
