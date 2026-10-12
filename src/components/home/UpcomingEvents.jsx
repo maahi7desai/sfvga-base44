@@ -22,7 +22,7 @@ export default function UpcomingEvents() {
         </div>
         <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-            Upcoming  Events
+            Upcoming  Event
           </p>
         </div>
         
