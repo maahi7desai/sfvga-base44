@@ -20,11 +20,12 @@ export default function UpcomingEvents() {
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-            Welcome home
+            Home
           </p>
           <div className="h-px w-12 bg-accent mb-4" />
-          <h4 className="font-display text-2xl md:text-3xl text-foreground mb-3">
-            Celebrate events with us throughout the year.
+          <h4 className="font-display text-xl md:text-xl text-foreground mb-3">
+            One place for the gatherings, people, and traditions that hold our communitiy 
+            together across the San Fernando Valley. 
           </h4>
         </div>
       </div>
