@@ -191,7 +191,6 @@ export default function Contact() {
                 </div> :
 
               <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
-                  <h2 className="font-display text-2xl text-foreground mb-2">Send a Message</h2>
                   <div>
                     <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                       Name
