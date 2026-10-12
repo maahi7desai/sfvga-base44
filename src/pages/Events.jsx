@@ -105,16 +105,16 @@ export default function Events() {
 
       <section className="py-16 bg-muted/40 text-center">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4 hidden">
             Want to attend our events?
           </h2>
-          <p className="font-body text-foreground/70 mb-8 max-w-xl mx-auto">
+          <p className="font-body text-foreground/70 mb-8 max-w-xl mx-auto hidden">
             Membership is required to participate. Become a member today and join
             the celebration.
           </p>
           <Link
             to="/members"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors hidden">
             
             Become a Member
           </Link>
