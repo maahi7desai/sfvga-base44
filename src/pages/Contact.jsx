@@ -73,7 +73,7 @@ export default function Contact() {
             <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
               Leadership
             </p>
-            <div className="h-px w-12 bg-accent mb-4" />
+            <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
               The Board
             </h2>
@@ -133,7 +133,7 @@ export default function Contact() {
             <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">ENABLERS
 
             </p>
-            <div className="h-px w-12 bg-accent mb-4" />
+            <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">Supporting Team
 
             </h2>

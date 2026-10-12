@@ -20,7 +20,7 @@ export default function AnnouncementsBanner() {
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
             Latest Updates 
           </p>
-          <div className="h-px w-16 bg-accent mb-4" />
+          <div className="h-px w-16 bg-primary/80 mb-4" />
           {UPDATES.map((u) => (
             <div>
               <h3 className="font-display text-lg text-foreground mb-2">{u.title}</h3>
