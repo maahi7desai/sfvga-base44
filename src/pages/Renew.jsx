@@ -105,23 +105,6 @@ export default function Renew() {
                     )}
                   </select>
                 </div>
-
-                <div className="bg-muted/50 rounded-lg p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <FileText className="h-4 w-4 text-primary" />
-                    <p className="font-body text-sm font-medium text-foreground">
-                      Terms &amp; Conditions
-                    </p>
-                  </div>
-                  <ul className="font-body text-xs text-foreground/70 space-y-1.5 list-disc pl-5">
-                    <li>Membership is valid for the current calendar year (2026).</li>
-                    <li>For renewals postmarked after Nov 30th, include an additional $25.</li>
-                    <li>No forms accepted after Dec 31st.</li>
-                    <li>Married children must obtain a separate membership.</li>
-                    <li>Payment via Zelle to sfvgabod@gmail.com.</li>
-                  </ul>
-                </div>
-
                 <label className="flex items-start gap-3 cursor-pointer">
                   <input
                     type="checkbox"
