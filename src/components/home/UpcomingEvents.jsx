@@ -20,7 +20,7 @@ export default function UpcomingEvents() {
       {/* Welcome */}
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-accent mb-2">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
             Home
           </p>
           <div className="h-px w-16 bg-accent mb-4" />
@@ -39,7 +39,7 @@ export default function UpcomingEvents() {
       {/* Next Event */}
       <div className="mx-auto py-8 max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-accent mb-2">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
             Upcoming Event
           </p>
           <div className="h-px w-16 bg-accent mb-4" />

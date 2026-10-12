@@ -78,7 +78,7 @@ export default function Events() {
                 
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <p className="font-body text-[11px] tracking-wide uppercase text-accent font-medium mb-1.5">
+                  <p className="font-body text-[11px] tracking-wide uppercase text-primary font-medium mb-1.5">
                     {e.tag}
                   </p>
                   <h2 className="font-display text-2xl text-foreground mb-2">{e.name}</h2>

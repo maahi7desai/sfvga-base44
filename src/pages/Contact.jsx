@@ -112,7 +112,7 @@ export default function Contact() {
                 
                 </div>
                 <div>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-accent mb-0.5">
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
                     {b.role}
                   </p>
                   <p className="font-display text-lg md:text-xl text-foreground">
@@ -159,7 +159,7 @@ export default function Contact() {
                 
                 </div>
                 <div>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-accent mb-0.5">
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
                     {b.role}
                   </p>
                   <p className="font-display text-lg md:text-xl text-foreground">

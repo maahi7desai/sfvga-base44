@@ -59,7 +59,7 @@ export default function Footer() {
 
           {GROUPS.map((g) => (
             <div key={g.title}>
-              <h4 className="font-body text-xs tracking-[0.18em] uppercase text-accent mb-4">
+              <h4 className="font-body text-xs tracking-[0.18em] uppercase text-primary mb-4">
                 {g.title}
               </h4>
               <ul className="space-y-2.5">

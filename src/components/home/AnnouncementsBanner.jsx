@@ -17,7 +17,7 @@ export default function AnnouncementsBanner() {
       {/* Announcements */}
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-accent mb-2">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
             Latest Updates 
           </p>
           <div className="h-px w-16 bg-accent mb-4" />
