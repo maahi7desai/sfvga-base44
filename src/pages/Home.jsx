@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </section>
       {/* Next Event */}
-      <section className="py-4 bg-primary/10 pattern-diya">
+      <section className="py-4 bg-primary/5 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
@@ -78,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* Announcements */}
-      <section className="py-4 bg-muted/40 pattern-diya">
+      <section className="py-4 bg-muted/60 pattern-diya">
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
