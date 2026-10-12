@@ -17,25 +17,6 @@ const EVENTS = [
 export default function UpcomingEvents() {
   return (
     <section className="py-24 bg-muted/40 pattern-diya">
-      {/* Welcome */}
-      <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-        <div className="mb-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-            Home
-          </p>
-          <div className="h-px w-16 bg-primary/80 mb-4" />
-            <h4 className="font-display text-foreground mb-3">
-              One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley. 
-            </h4>
-          </div>
-          <div className="aspect-[4/3] w-full overflow-hidden">
-            <Image
-              src="https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/1636077374216-2T3UGHN9QPDYT0KDUMRD/image-asset.jpeg"
-              className="w-full h-full transition-transform duration-500 group-hover:scale-105"
-              fittingType="fill" />
-          </div>
-      </div>
-
       {/* Next Event */}
       <div className="mx-auto py-8 max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
