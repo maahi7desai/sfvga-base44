@@ -82,12 +82,12 @@ export default function Members() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-background transition-colors">
-              New Application
+              New
             </a>
             <Link
               to="/renew"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-background transition-colors">
-              Review Existing
+              Renew
             </Link>
           </div>
         </div>
