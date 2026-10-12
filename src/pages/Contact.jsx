@@ -83,7 +83,7 @@ export default function Contact() {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
+            <form onSubmit={handleSubmit}>
               <div>
                 <input
                   required
