@@ -4,51 +4,51 @@ import { Link } from "react-router-dom";
 import { UserCircle, RefreshCw, Heart, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 
 const PLANS = [
-{ name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
-{ name: "Family Membership Renewal", price: "$140", note: "Annual renewal for existing families" },
-{ name: "Age 75+ Membership Renewal", price: "$100", note: "For members aged 75 and above" },
-{ name: "Individual Membership Renewal", price: "$75", note: "For individual members" },
-{ name: "Student Membership Renewal", price: "$75", note: "With a valid student ID" }];
+  { name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
+  { name: "Family Membership Renewal", price: "$140", note: "Annual renewal for existing families" },
+  { name: "Age 75+ Membership Renewal", price: "$100", note: "For members aged 75 and above" },
+  { name: "Individual Membership Renewal", price: "$75", note: "For individual members" },
+  { name: "Student Membership Renewal", price: "$75", note: "With a valid student ID" }];
 
 const DASHBOARD = [
-{
-  icon: UserCircle,
-  title: "Member Profile",
-  desc: "Manage your account details, view membership status, and update family information.",
-  cta: "Access Profile",
-  to: "/login"
-},
-{
-  icon: RefreshCw,
-  title: "Membership Renewal",
-  desc: "Review the terms and conditions and renew your membership online.",
-  cta: "Renew Membership",
-  to: "/renew"
-},
-{
-  icon: Heart,
-  title: "Youth & Volunteer Portal",
-  desc: "Sign up for youth initiatives and volunteer for event committees.",
-  cta: "Get Involved",
-  to: "/login"
-},
-{
-  icon: BookOpen,
-  title: "Community Directory",
-  desc: "Connect with fellow members through our member-only networking directory.",
-  cta: "View Directory",
-  to: "/login"
-}];
+  {
+    icon: UserCircle,
+    title: "Member Profile",
+    desc: "Manage your account details, view membership status, and update family information.",
+    cta: "Access Profile",
+    to: "/login"
+  },
+  {
+    icon: RefreshCw,
+    title: "Membership Renewal",
+    desc: "Review the terms and conditions and renew your membership online.",
+    cta: "Renew Membership",
+    to: "/renew"
+  },
+  {
+    icon: Heart,
+    title: "Youth & Volunteer Portal",
+    desc: "Sign up for youth initiatives and volunteer for event committees.",
+    cta: "Get Involved",
+    to: "/login"
+  },
+  {
+    icon: BookOpen,
+    title: "Community Directory",
+    desc: "Connect with fellow members through our member-only networking directory.",
+    cta: "View Directory",
+    to: "/login"
+  }];
 
 
 export default function Members() {
   return (
     <div className="pt-20">
-     {/* Welcome */}
+      {/* Welcome */}
       <section className="py-4 bg-primary/5 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-            Membership 
+            Membership
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
           <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
@@ -56,8 +56,15 @@ export default function Members() {
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
           <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Select membership type below. 
-            </p>
+            Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Select membership type below.
+          </p>
+        </div>
+        <div className="divide-y divide-border">
+          {PLANS.map((p) =>
+            <div key={p.name} className="py-1">
+              <p className="font-display text-xs text-foreground mb-1">{p.price} - {p.name}</p>
+            </div>
+          )}
         </div>
       </section>
       <section className="py-4 bg-primary text-primary-foreground text-center">
@@ -79,27 +86,9 @@ export default function Members() {
         </div>
       </section>
 
-      
 
-      {/* Membership Types & Annual Dues */}
-      <section className="py-8 md:py-20">
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Membership Dues
-            </p>
-            <div className="h-px w-16 bg-primary/80 mb-4" />
-            
-          </div>
-          <div className="divide-y divide-border">
-            {PLANS.map((p) =>
-              <div key={p.name} className="py-1">
-                <p className="font-display text-xs text-foreground mb-1">{p.price} - {p.name}</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+
+
 
       {/* Member Resources */}
       <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
