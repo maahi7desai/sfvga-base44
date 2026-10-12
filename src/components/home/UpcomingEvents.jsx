@@ -42,7 +42,7 @@ export default function UpcomingEvents() {
           <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
             Upcoming Event
           </p>
-          <div className="h-px w-12 bg-accent mb-4" />
+          <div className="h-px w-32 bg-accent mb-4" />
             {EVENTS.map((e) =>
                 <div className="p-5 flex flex-col flex-1">
                   <h4 className="font-display text-foreground mb-3">
