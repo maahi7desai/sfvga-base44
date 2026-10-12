@@ -17,12 +17,14 @@ export default function UpcomingEvents() {
   return (
     <section className="py-24 bg-muted/40 pattern-diya">
       {/* Welcome */}
+      <div className="mx-auto max-w-[700px] px-5 sm:px-8 center">
         <div className="mb-8">
           <div className="h-px w-12 bg-accent mb-4" />
           <h3 className="font-display text-xl md:text-xl text-foreground mb-3">
             One place for the gatherings, people, and traditions that holds our community together across the San Fernando Valley. 
           </h3>
         </div>
+      </div>
 
       {/* Next Event */}
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
