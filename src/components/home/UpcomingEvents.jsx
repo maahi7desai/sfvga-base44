@@ -22,7 +22,7 @@ export default function UpcomingEvents() {
         </div>
 
         <div className="flex justify-center">
-          <p>Board Correspondence<p>
+          <p>Board Correspondence</p>
           <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
             <article
