@@ -41,13 +41,13 @@ export default function UpcomingEvents() {
           <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
             Upcoming Event
           </p>
+          <div className="h-px w-12 bg-accent mb-4" />
+            <h4 className="font-display text-foreground mb-3">
+              Join for one of our flagship event to celebrate Diwali with the community. 
+            </h4>
           </div>
       </div>
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <div className="h-px w-12 bg-accent mb-4" />
-          <h4 className="font-display text-foreground mb-3">
-            Join for one of our flagship event to celebrate Diwali with the community. 
-          </h4>
         <div className="flex justify-center">
           <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
