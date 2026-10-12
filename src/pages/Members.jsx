@@ -61,7 +61,7 @@ export default function Members() {
               className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
               Apply on SFVGA.org →
             </Link>
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+            <p py-12 className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
               Renewing Members
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
