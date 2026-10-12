@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Image } from "@/components/ui/image";
-import { Mail, MapPin, Phone, Send, Users, HelpCircle, ExternalLink, Scale } from "lucide-react";
+import { Mail, MapPin, Phone, Send, HelpCircle, ExternalLink } from "lucide-react";
 
 const BOARD = [
 { role: "President", name: "Jaymeen Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/65ec64e6-bb01-4c9a-b080-75a8576e182d/WhatsApp+Image+2026-01-11+at+8.59.10+PM.jpeg" },
@@ -42,10 +42,6 @@ const FAQS = [
   a: "Seven board members are elected annually. They finalize 8–12 events and form committees of 5–10 members each. Every member family joins at least one committee."
 }];
 
-
-
-
-
 export default function Contact() {
   const [sent, setSent] = useState(false);
 
@@ -56,21 +52,11 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      
-
-
-
-
-
-
-      
-
-      {/* Executive Board */}
-      <section className="py-12 md:py-20">
+      {/* Board of Directors */}
+      <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          {/* Header */}
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
               Leadership
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
@@ -82,20 +68,15 @@ export default function Contact() {
               phone at 9pm.
             </p>
           </div>
-          {/* Board Members List */}
           <div className="divide-y divide-border">
             {BOARD.map((b) =>
-            <div
-              key={b.role + b.name}
-              className="flex items-center gap-4 py-5">
-              
+              <div key={b.role + b.name} className="flex items-center gap-4 py-5">
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
                   <Image
-                  src={b.img}
-                  alt={b.name}
-                  className="w-full h-full rounded-full"
-                  fittingType="fill" />
-                
+                    src={b.img}
+                    alt={b.name}
+                    className="w-full h-full rounded-full"
+                    fittingType="fill" />
                 </div>
                 <div>
                   <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
@@ -114,12 +95,10 @@ export default function Contact() {
       {/* Extended Leadership */}
       <section className="py-12 md:py-20">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          {/* Header */}
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">CHAMPIONS
-
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+              Champions
             </p>
-            
             <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
               Extended Leadership
@@ -129,21 +108,15 @@ export default function Contact() {
               their specialized roles.
             </p>
           </div>
-
-          {/* Members List */}
           <div className="divide-y divide-border">
             {EXTENDED_LEADERSHIP.map((b) =>
-            <div
-              key={b.role + b.name}
-              className="flex items-center gap-4 py-5">
-              
+              <div key={b.role + b.name} className="flex items-center gap-4 py-5">
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
                   <Image
-                  src={b.img}
-                  alt={b.name}
-                  className="w-full h-full rounded-full"
-                  fittingType="fill" />
-                
+                    src={b.img}
+                    alt={b.name}
+                    className="w-full h-full rounded-full"
+                    fittingType="fill" />
                 </div>
                 <div>
                   <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
@@ -160,113 +133,105 @@ export default function Contact() {
       </section>
 
       {/* Contact info + form */}
-
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          {/* Header */}
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-              CONTACT
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+              Contact
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
               Get in Touch
             </h2>
-            <div>
-              {sent ?
-              <div className="bg-card border border-border rounded-lg p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4">
-                    <Send className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-display text-2xl text-foreground mb-2">Thank you!</h3>
-                  <p className="font-body text-sm text-foreground/70">
-                    Your message has been received. We'll get back to you shortly.
-                  </p>
-                  <button
-                  onClick={() => setSent(false)}
-                  className="mt-6 font-body text-sm font-medium text-accent hover:text-primary">
-                  
-                    Send another message
-                  </button>
-                </div> :
-
-              <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
-                  <div>
-                    <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                      Name
-                    </label>
-                    <input
-                    required
-                    type="text"
-                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-                  
-                  </div>
-                  <div>
-                    <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                      Email
-                    </label>
-                    <input
-                    required
-                    type="email"
-                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-                  
-                  </div>
-                  <div>
-                    <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                      Subject
-                    </label>
-                    <input
-                    type="text"
-                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-                  
-                  </div>
-                  <div>
-                    <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                      Message
-                    </label>
-                    <textarea
-                    required
-                    rows={4}
-                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-                  
-                  </div>
-                  <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
-                  
-                    <Send className="h-4 w-4" />
-                    Send Message
-                  </button>
-                </form>
-              }
-            </div>
+            <p className="font-body text-sm text-foreground/60 leading-relaxed">
+              For membership &amp; general inquiries.
+            </p>
           </div>
+          {sent ? (
+            <div className="bg-card border border-border rounded-lg p-8 text-center">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4">
+                <Send className="h-6 w-6" />
+              </div>
+              <h3 className="font-display text-2xl text-foreground mb-2">Thank you!</h3>
+              <p className="font-body text-sm text-foreground/70">
+                Your message has been received. We'll get back to you shortly.
+              </p>
+              <button
+                onClick={() => setSent(false)}
+                className="mt-6 font-body text-sm font-medium text-accent hover:text-primary">
+                Send another message
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8 space-y-5">
+              <div>
+                <label className="font-body text-sm font-medium text-foreground block mb-1.5">
+                  Name
+                </label>
+                <input
+                  required
+                  type="text"
+                  className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              </div>
+              <div>
+                <label className="font-body text-sm font-medium text-foreground block mb-1.5">
+                  Email
+                </label>
+                <input
+                  required
+                  type="email"
+                  className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              </div>
+              <div>
+                <label className="font-body text-sm font-medium text-foreground block mb-1.5">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              </div>
+              <div>
+                <label className="font-body text-sm font-medium text-foreground block mb-1.5">
+                  Message
+                </label>
+                <textarea
+                  required
+                  rows={4}
+                  className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              </div>
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+                <Send className="h-4 w-4" />
+                Send Message
+              </button>
+            </form>
+          )}
         </div>
       </section>
 
       {/* FAQs */}
       <section className="py-12 md:py-20">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          {/* Header */}
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-              FAQS
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+              FAQs
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
               Common Questions
             </h2>
+          </div>
           <div className="space-y-4">
             {FAQS.map((f) =>
-            <div key={f.q} className="bg-card border border-border rounded-lg p-6">
+              <div key={f.q} className="bg-card border border-border rounded-lg p-6">
                 <h3 className="font-body font-medium text-foreground mb-2">{f.q}</h3>
                 <p className="font-body text-sm text-foreground/70 leading-relaxed">{f.a}</p>
               </div>
             )}
           </div>
         </div>
-        </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }
