@@ -17,17 +17,11 @@ export default function AnnouncementsBanner() {
         <p className="font-body text-sm tracking-[0.2em] uppercase text-primary-foreground/70 text-center mb-2">
           Community Moments
         </p>
+        <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
+          Latest Updates
+        </p>
       </div>
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <div className="text-center mb-10">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
-            Latest Updates
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground text-balance">
-            Announcements &amp; Community News
-          </h2>
-        </div>
-        <div className="flex justify-center">
+      <div className="flex justify-center">
           <div className="w-full max-w-md">
             {UPDATES.map((u) => (
               <div
@@ -50,7 +44,7 @@ export default function AnnouncementsBanner() {
             ))}
           </div>
         </div>
-      </div>
+      
     </section>
   );
 }
