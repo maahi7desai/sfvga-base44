@@ -51,15 +51,13 @@ export default function UpcomingEvents() {
                   <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
                     <CalendarDays className="h-3.5 w-3.5" />
                     <span className="font-body">{e.date}</span>
+                    <MapPin className="h-3.5 w-3.5" />
+                    <span className="font-body">{e.location}</span>
                   </div>
                   <h3 className="font-display text-xl text-foreground mb-2">{e.name}</h3>
                   <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
                     {e.desc}
                   </p>
-                  <div className="flex items-center gap-1.5 text-xs text-foreground/60 mb-3">
-                    <MapPin className="h-3.5 w-3.5" />
-                    <span className="font-body">{e.location}</span>
-                  </div>
                   <div className="aspect-[4/3] w-full overflow-hidden">
                     <Image
                       src={e.img}
