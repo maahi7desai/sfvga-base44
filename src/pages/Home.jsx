@@ -19,11 +19,6 @@ export default function Home() {
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors">
               New Member Application
             </a>
-            <Link
-              to="/renew"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors">
-              Renew Membership
-            </Link>
           </div>
         </div>
       </section>
