@@ -48,34 +48,36 @@ export default function Members() {
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Membership
+              New Membership
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Whether you're a new or returning member, we welcome you to our community.
             </p>
-          </div>
-          <div className="space-y-5">
-              <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
+            <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
                 New members can apply using our membership application form on the
                 SFVGA website. Please fill the form completely and wait for approval
                 before sending membership fees.
-              </p>
-              <Link to="https://sfvga.org/membership"
-                target="_blank"
-                className="mt-auto hover:text-accent">
-                Apply on SFVGA.org →
-              </Link>
-              <h3 className="font-display text-2xl text-foreground mb-3">Renewing Members</h3>
-              <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
-                Already a member? Renew your membership online by reviewing the terms
-                and submitting your renewal request.
-              </p>
-              <Link
-                to="/renew"
-                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
-                Renew Online →
-              </Link>
+            </p>
+            <Link
+              to="https://sfvga.org/membership"
+              target="_blank"
+              className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+              Apply on SFVGA.org →
+            </Link>
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+              Renewing Members
+            </p>
+            <div className="h-px w-16 bg-primary/80 mb-4" />
+            <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
+              Renew your membership online by reviewing the terms
+              and submitting your renewal request.
+            </p>
+            <Link
+              to="/renew"
+              className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
+              Renew Now →
+            </Link>
             </div>
           </div>
       </section>
