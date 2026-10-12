@@ -12,7 +12,7 @@ const UPDATES = [
 
 export default function AnnouncementsBanner() {
   return (
-    <section className="py-4 bg-muted/40 pattern-diya">
+    <section className="bg-muted/40 pattern-diya">
       {/* Announcements */}
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
