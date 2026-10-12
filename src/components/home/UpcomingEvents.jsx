@@ -16,16 +16,16 @@ const EVENTS = [
 export default function UpcomingEvents() {
   return (
     <section className="py-24 bg-muted/40 pattern-diya">
+      {/* Welcome */}
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-        {/* Welcome */}
         <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
             Welcome home
           </p>
           <div className="h-px w-12 bg-accent mb-4" />
-          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+          <h4 className="font-display text-2xl md:text-3xl text-foreground mb-3">
             Celebrate events with us throughout the year.
-          </h2>
+          </h4>
         </div>
       </div>
 
