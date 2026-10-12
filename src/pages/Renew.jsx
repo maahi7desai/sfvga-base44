@@ -31,7 +31,7 @@ export default function Renew() {
             Renew your membership below if you are an existing member and there is no change to your information.  New members and members with updates please <a href="https://sfvga.org/membership">click here to apply</a> on sfvga.org website. 
           </p>
         </div>
-        <div className="mx-auto max-w-[600px] px-5 sm:px-8">
+        <div className="mx-auto max-w-[600px]">
           {submitted ?
           <div>
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-5">
