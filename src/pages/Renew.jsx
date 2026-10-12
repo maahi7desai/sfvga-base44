@@ -64,7 +64,7 @@ export default function Renew() {
                 ← Back to Members
               </Link>
             </div> :
-
+          <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <form onSubmit={handleSubmit}>
               <div>
                 <label className="font-body text-sm font-medium text-foreground block mb-1.5">
@@ -143,6 +143,7 @@ export default function Renew() {
                 Submit Renewal
               </button>
             </form>
+            </div>
           }
         </div>
       </section>
