@@ -51,9 +51,6 @@ export default function Members() {
               Membership
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Join or Renew
-            </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Whether you're a new or returning member, we welcome you to our community.
             </p>
