@@ -65,9 +65,7 @@ export default function Renew() {
               </Link>
             </div> :
 
-          <form
-            onSubmit={handleSubmit}
-            className="bg-primary/5 p-8 space-y-5">
+          <form onSubmit={handleSubmit}>
               <div>
                 <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                   Full Name
