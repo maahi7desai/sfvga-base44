@@ -43,6 +43,32 @@ const DASHBOARD = [
 export default function Members() {
   return (
     <div className="pt-20">
+     <section className="py-16 bg-primary text-primary-foreground text-center">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          <h2 className="font-display text-3xl md:text-4xl mb-4">
+            Ready to join the SFVGA family?
+          </h2>
+          <p className="font-body opacity-90 mb-8 max-w-xl mx-auto">
+            Current members are requested to be active and invite new members to
+            enjoy the benefits of our culture, food, festivals, friendship, and fun.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://sfvga.org/membership"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors">
+              New Member Application
+            </a>
+            <Link
+              to="/renew"
+              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors">
+              Renew Membership
+            </Link>
+          </div>
+        </div>
+      </section>
+      
       {/* Join or Renew */}
       <section className="py-4 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
@@ -106,12 +132,9 @@ export default function Members() {
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Resources
+              Member Resources
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Member Resources
-            </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Manage your membership, get involved, and connect with the community.
             </p>
@@ -144,12 +167,9 @@ export default function Members() {
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Youth
+              Youth Corner
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Youth Corner
-            </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               SFVGA's youth initiatives build leadership, community service, and life skills.
             </p>
@@ -205,33 +225,6 @@ export default function Members() {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-16 bg-primary text-primary-foreground text-center">
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-4">
-            Ready to join the SFVGA family?
-          </h2>
-          <p className="font-body opacity-90 mb-8 max-w-xl mx-auto">
-            Current members are requested to be active and invite new members to
-            enjoy the benefits of our culture, food, festivals, friendship, and fun.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://sfvga.org/membership"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors">
-              New Member Application
-            </a>
-            <Link
-              to="/renew"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors">
-              Renew Membership
-            </Link>
           </div>
         </div>
       </section>
