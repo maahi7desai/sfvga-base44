@@ -21,16 +21,7 @@ export default function Renew() {
 
   return (
     <div className="pt-20">
-      
-
-
-
-
-
-
-      
-
-      <section className="py-16 md:py-24">
+      <section className="py-4 md:py-24">
         <div className="mx-auto max-w-[600px] px-5 sm:px-8">
           {submitted ?
           <div className="bg-card border border-border rounded-lg p-8 text-center">
