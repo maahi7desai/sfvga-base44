@@ -91,7 +91,7 @@ export default function Members() {
       </section>
 
       {/* Member Resources */}
-      <section className="py-8 md:py-20">
+      <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
