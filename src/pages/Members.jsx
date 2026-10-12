@@ -56,12 +56,12 @@ export default function Members() {
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
           <p className="font-body text-sm text-foreground/60 leading-relaxed">
-            Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Select membership type below.
+            Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Zelle membership dues based on type below.
           </p>
           <div className="divide-y divide-border">
             {PLANS.map((p) =>
               <div key={p.name} className="py-1">
-                <p className="font-display text-xs text-foreground mb-1">{p.price} - {p.name}</p>
+                <p className="font-body text-xs text-foreground mb-1">{p.price} - {p.name}</p>
               </div>
             )}
           </div>
