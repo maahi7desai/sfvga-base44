@@ -47,7 +47,7 @@ export default function Members() {
       <section className="py-4 bg-primary/5 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-            Membership
+            Member Resources
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
           <p className="font-body text-sm text-foreground leading-relaxed">
@@ -66,21 +66,6 @@ export default function Members() {
               </li>
             )}
           </ul>
-        </div>
-      </section>
-      
-      {/* Member Resources */}
-      <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Member Resources
-            </p>
-            <div className="h-px w-16 bg-primary/80 mb-4" />
-            <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              Manage your membership, get involved, and connect with the community.
-            </p>
-          </div>
           <div className="divide-y divide-border">
             {DASHBOARD.map((d) =>
               <div key={d.title} className="flex items-start gap-4 py-5">
