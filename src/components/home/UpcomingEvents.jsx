@@ -24,11 +24,8 @@ export default function UpcomingEvents() {
             </p>
             <div className="h-px w-12 bg-accent mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Announcements
-            </h2>
-            <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Celebrate events with us throughout the year.
-            </p>
+            </h2>
           </div>
         </div>  
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
