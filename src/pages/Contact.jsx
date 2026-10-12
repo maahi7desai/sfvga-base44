@@ -116,12 +116,16 @@ export default function Contact() {
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           {/* Header */}
           <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-              CHAMPIONS
-            </p>            
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">CHAMPIONS
+
+            </p>
+            
             <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Honorary Committee
+              Extended Leadership
+            </h2>
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+              Board of Directors
             </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Dedicated community members who support SFVGA's mission through
