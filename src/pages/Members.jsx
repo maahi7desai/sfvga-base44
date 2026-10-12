@@ -52,8 +52,7 @@ export default function Members() {
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
             <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
-                New members can apply using our membership application form on the
-                SFVGA website. Please fill the form completely and wait for approval
+                New members please fill the form completely and wait for approval
                 before sending membership fees.
             </p>
             <Link to="https://sfvga.org/membership"
