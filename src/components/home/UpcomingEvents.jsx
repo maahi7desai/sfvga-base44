@@ -42,10 +42,7 @@ export default function UpcomingEvents() {
             Upcoming Event
           </p>
           <div className="h-px w-12 bg-accent mb-4" />
-            <h4 className="font-display text-foreground mb-3">
-              Join for one of our flagship event to celebrate Diwali with the community. 
-            </h4>
-          </div>
+        </div>
       </div>
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="flex justify-center">
