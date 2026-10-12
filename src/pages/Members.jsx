@@ -169,7 +169,7 @@ export default function Members() {
                   </p>
                   <Link
                   to={d.to}
-                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
                   
                     {d.cta} →
                   </Link>
@@ -220,7 +220,7 @@ export default function Members() {
               href="https://sfvga.org/s/BYLAWS.docx"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-accent underline transition-colors"
+              className="text-accent hover:text-primary underline transition-colors"
             >
               By-Laws
             </a>{" "}
@@ -260,7 +260,7 @@ export default function Members() {
                   href="https://photos.app.goo.gl/6acBJLs3ZWgcmQgm8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
+                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
                 >
                   CPR Training Pictures
                   <ExternalLink className="h-4 w-4" />
@@ -285,7 +285,7 @@ export default function Members() {
                   href="https://docs.google.com/spreadsheets/d/1ta7e9CjXyIITVmewgA1Ft4Ez7Js-UKHkbDdKLUV72nQ/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
+                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
                 >
                   Review Volunteer Hours Log
                   <ExternalLink className="h-4 w-4" />

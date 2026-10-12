@@ -67,7 +67,7 @@ export default function UpcomingEvents() {
                 </div>
             )}
           </div>
-          <Link to="/events" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+          <Link to="/events" className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
             Register & View Details →
           </Link>
         </div>

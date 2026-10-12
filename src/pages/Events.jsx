@@ -91,7 +91,7 @@ export default function Events() {
                   </p>
                   <Link
                   to="/events"
-                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
                   
                     View Details
                     <ArrowRight className="h-4 w-4" />

@@ -68,6 +68,13 @@
     background: hsl(var(--accent));
     color: hsl(var(--foreground));
   }
+
+  a {
+    color: hsl(var(--accent));
+  }
+  a:hover {
+    color: hsl(var(--primary));
+  }
 }
 
 @layer utilities {

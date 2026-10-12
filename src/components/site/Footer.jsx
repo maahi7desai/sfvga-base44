@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
             <p className="font-body text-sm mt-4 opacity-80">
               Email:{" "}
-              <a href="mailto:sfvgabod@gmail.com" className="underline hover:text-accent">
+              <a href="mailto:sfvgabod@gmail.com" className="underline text-accent hover:text-primary">
                 sfvgabod@gmail.com
               </a>
             </p>
@@ -70,14 +70,14 @@ export default function Footer() {
                         href={l.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-body text-sm opacity-80 hover:opacity-100 hover:text-accent transition-colors"
+                        className="font-body text-sm opacity-80 hover:opacity-100 text-accent hover:text-primary transition-colors"
                       >
                         {l.label}
                       </a>
                     ) : (
                       <Link
                         to={l.to}
-                        className="font-body text-sm opacity-80 hover:opacity-100 hover:text-accent transition-colors"
+                        className="font-body text-sm opacity-80 hover:opacity-100 text-accent hover:text-primary transition-colors"
                       >
                         {l.label}
                       </Link>

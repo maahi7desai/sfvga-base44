@@ -90,7 +90,7 @@ export default function Contact() {
             </p>
             <a
               href="mailto:sfvgabod@gmail.com"
-              className="font-body text-sm text-primary hover:text-accent transition-colors">
+              className="font-body text-sm text-accent hover:text-primary transition-colors">
               
               sfvgabod@gmail.com
             </a>
@@ -185,7 +185,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-body font-medium text-foreground">Email</h3>
-                    <a href="mailto:sfvgabod@gmail.com" className="font-body text-sm text-primary hover:text-accent">
+                    <a href="mailto:sfvgabod@gmail.com" className="font-body text-sm text-accent hover:text-primary">
                       sfvgabod@gmail.com
                     </a>
                     <p className="font-body text-xs text-foreground/60 mt-1">
@@ -232,7 +232,7 @@ export default function Contact() {
                   </p>
                   <button
                   onClick={() => setSent(false)}
-                  className="mt-6 font-body text-sm font-medium text-primary hover:text-accent">
+                  className="mt-6 font-body text-sm font-medium text-accent hover:text-primary">
                   
                     Send another message
                   </button>

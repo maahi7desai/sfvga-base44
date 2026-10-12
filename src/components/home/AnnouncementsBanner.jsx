@@ -29,7 +29,7 @@ export default function AnnouncementsBanner() {
               </p>
             </div>
           ))}
-            <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+            <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
               Renew Membership →
             </Link>
           </div>

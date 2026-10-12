@@ -352,7 +352,7 @@ export default function More() {
             href="https://sfvga.org/board/meeting-minutes-archive"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
           >
             View Archives
             <ExternalLink className="h-4 w-4" />

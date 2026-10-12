@@ -37,7 +37,7 @@ export default function AboutTeaser() {
             </p>
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
             >
               Learn more about us →
             </Link>

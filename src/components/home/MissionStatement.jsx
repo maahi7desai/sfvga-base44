@@ -24,7 +24,7 @@ export default function MissionStatement() {
         </p>
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors mt-8"
+          className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors mt-8"
         >
           Learn more about us
           <ArrowRight className="h-4 w-4" />

@@ -59,7 +59,7 @@ export default function Renew() {
               </div>
               <Link
               to="/members"
-              className="font-body text-sm font-medium text-primary hover:text-accent">
+              className="font-body text-sm font-medium text-accent hover:text-primary">
               
                 ← Back to Members
               </Link>
