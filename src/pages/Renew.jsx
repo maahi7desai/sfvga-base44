@@ -66,35 +66,21 @@ export default function Renew() {
             </div> :
             <div className="mx-auto max-w-[700px] px-5 sm:px-8 py-4">
               <form onSubmit={handleSubmit}>
-                <div>
-                  <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                    Full Name
-                  </label>
+                <div className="space-y-4">
                   <input
                     required
                     type="text"
+                    placeholder="Full Name"
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-
-                </div>
-                <div className="py-4">
-                  <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                    Email
-                  </label>
                   <input
                     required
-                    type="email" 
+                    type="email"
+                    placeholder="Email"
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-
-                </div>
-                <div>
-                  <label className="font-body text-sm font-medium text-foreground block mb-1.5">
-                    Membership Type
-                  </label>
                   <select
                     required
                     defaultValue=""
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring">
-
                     <option value="" disabled>
                       Select membership type
                     </option>
