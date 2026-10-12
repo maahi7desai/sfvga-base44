@@ -54,8 +54,10 @@ export default function UpcomingEvents() {
                     <MapPin className="h-3.5 w-3.5" />
                     <span className="font-body">{e.location}</span>
                   </div>
-                  <h3 className="font-display text-xl text-foreground mb-2">{e.name}</h3>
-                  <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
+                  <h4 className="font-display text-foreground mb-3">
+                    {e.name}
+                  </h4>
+                  <p className="font-body">
                     {e.desc}
                   </p>
                   <div className="aspect-[4/3] w-full overflow-hidden">
