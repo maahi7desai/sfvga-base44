@@ -29,10 +29,10 @@ export default function AnnouncementsBanner() {
               </p>
             </div>
           ))}
+            <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+              Renew Membership →
+            </Link>
           </div>
-          <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
-            Renew Membership →
-          </Link>
         </div>
     </section>
   );
