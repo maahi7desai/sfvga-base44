@@ -54,21 +54,26 @@ export default function Members() {
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
-          <p className="font-body text-sm text-foreground0 leading-relaxed">
-            Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Zelle membership dues based on type below.
+          <p className="font-body text-sm text-foreground leading-relaxed">
+            Membership annual Dues preferred payment method is Zelle to{" "}
+            <span className="font-semibold text-primary bg-accent/15 px-1.5 py-0.5 rounded">
+              sfvgabod@gmail.com
+            </span>
+            . Zelle membership dues based on type below.
           </p>
-          <div className="divide-y divide-border">
+          <ul className="mt-3 space-y-1.5">
             {PLANS.map((p) =>
-              <div key={p.name} className="py-1">
-                <p className="font-body text-sm text-foreground mb-2">{p.price} - {p.name}</p>
-              </div>
+              <li key={p.name} className="font-body text-sm text-foreground flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><span className="font-medium">{p.price}</span> - {p.name}</span>
+              </li>
             )}
-          </div>
+          </ul>
         </div>  
       </section>
       <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="flex flex-col sm:flex-col gap-4 justify-center">
+          <div className="flex flex-row gap-4 justify-center">
             <a
               href="https://sfvga.org/membership"
               target="_blank"
