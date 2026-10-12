@@ -165,48 +165,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h2 className="font-display text-3xl text-foreground mb-6">Get in Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
-                    <Mail className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-body font-medium text-foreground">Email</h3>
-                    <a href="mailto:sfvgabod@gmail.com" className="font-body text-sm text-accent hover:text-primary">
-                      sfvgabod@gmail.com
-                    </a>
-                    <p className="font-body text-xs text-foreground/60 mt-1">
-                      For membership &amp; general inquiries
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
-                    <Phone className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-body font-medium text-foreground">Zelle Payments</h3>
-                    <p className="font-body text-sm text-primary">sfvgabod@gmail.com</p>
-                    <p className="font-body text-xs text-foreground/60 mt-1">
-                      Available in your online banking
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary flex-shrink-0">
-                    <MapPin className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-body font-medium text-foreground">Mailing Address</h3>
-                    <p className="font-body text-sm text-foreground/70">Chatsworth, CA</p>
-                    <p className="font-body text-xs text-foreground/60 mt-1">
-                      San Fernando Valley, Southern California
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
-
             <div>
               {sent ?
               <div className="bg-card border border-border rounded-lg p-8 text-center">
