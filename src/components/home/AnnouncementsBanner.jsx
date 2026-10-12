@@ -30,8 +30,8 @@ export default function AnnouncementsBanner() {
             </div>
           ))}
           </div>
-          <Link to="/events" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
-            Register & View Details →
+          <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
+            Renew Membership →
           </Link>
         </div>
     </section>
