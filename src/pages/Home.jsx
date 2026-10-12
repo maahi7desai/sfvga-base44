@@ -4,10 +4,10 @@ import UpcomingEvents from "@/components/home/UpcomingEvents";
 import AnnouncementsBanner from "@/components/home/AnnouncementsBanner";
 export default function Home() {
   return (
-    <>
+    <div className="pt-20">
       <Hero />
       <UpcomingEvents />
       <AnnouncementsBanner />
-    </>
+    </div>
   );
 }
