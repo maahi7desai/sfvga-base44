@@ -160,12 +160,18 @@ export default function Contact() {
       </section>
 
       {/* Contact info + form */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="font-display text-3xl text-foreground mb-6">Get in Touch</h2>
-            </div>
+
+      <section className="py-12 md:py-20">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          {/* Header */}
+          <div className="mb-8">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+              CONTACT
+            </p>
+            <div className="h-px w-12 bg-primary/80 mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+              Get in Touch
+            </h2>
             <div>
               {sent ?
               <div className="bg-card border border-border rounded-lg p-8 text-center">
