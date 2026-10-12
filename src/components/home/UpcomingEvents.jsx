@@ -23,7 +23,7 @@ export default function UpcomingEvents() {
           <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
             Home
           </p>
-          <div className="h-px w-12 bg-accent mb-4" />
+          <div className="h-px w-120 bg-accent mb-4" />
             <h4 className="font-display text-foreground mb-3">
               One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley. 
             </h4>
