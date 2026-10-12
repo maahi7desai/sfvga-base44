@@ -43,7 +43,6 @@ export default function UpcomingEvents() {
             Upcoming Event
           </p>
           <div className="h-px w-12 bg-accent mb-4" />
-          <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
                 <div className="p-5 flex flex-col flex-1">
                   <h4 className="font-display text-foreground mb-3">
@@ -87,7 +86,6 @@ export default function UpcomingEvents() {
             View all events →
           </Link>
         </div>
-      </div>
     </section>);
 
 }
