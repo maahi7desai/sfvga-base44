@@ -82,20 +82,6 @@ export default function Contact() {
               phone at 9pm.
             </p>
           </div>
-
-          {/* Board Correspondence */}
-          <div className="mb-8 pb-6 border-b border-border">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-1">
-              Board Correspondence
-            </p>
-            <a
-              href="mailto:sfvgabod@gmail.com"
-              className="font-body text-sm text-accent hover:text-primary transition-colors">
-              
-              sfvgabod@gmail.com
-            </a>
-          </div>
-
           {/* Board Members List */}
           <div className="divide-y divide-border">
             {BOARD.map((b) =>
@@ -133,9 +119,13 @@ export default function Contact() {
             <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">CHAMPIONS
 
             </p>
+            
             <div className="h-px w-12 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">Honorary Committee
 
+            </h2>
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+              Board of Directors
             </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Dedicated community members who support SFVGA's mission through
