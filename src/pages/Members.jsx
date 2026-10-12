@@ -51,21 +51,21 @@ export default function Members() {
             Membership
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
-          <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
+          <p className="flex items-center gap-2 text-sm text-foreground/60 mb-2">
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
           <p className="font-body text-sm text-foreground/60 leading-relaxed">
             Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Select membership type below.
           </p>
-        </div>
-        <div className="divide-y divide-border">
-          {PLANS.map((p) =>
-            <div key={p.name} className="py-1">
-              <p className="font-display text-xs text-foreground mb-1">{p.price} - {p.name}</p>
-            </div>
-          )}
-        </div>
+          <div className="divide-y divide-border">
+            {PLANS.map((p) =>
+              <div key={p.name} className="py-1">
+                <p className="font-display text-xs text-foreground mb-1">{p.price} - {p.name}</p>
+              </div>
+            )}
+          </div>
+        </div>  
       </section>
       <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
