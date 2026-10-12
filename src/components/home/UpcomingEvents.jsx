@@ -8,6 +8,7 @@ const EVENTS = [
     name: "Diwali Dipotsav",
     date: "November 14, 2026",
     location: "Chatsworth, CA",
+    title: "Join for one of our flagship event to celebrate Diwali with the community.",
     desc: "The festival of lights — diyas, dhol, rangoli, and community feasts.",
     img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/8d8ad67f5_generated_image.png"
   }];
@@ -47,14 +48,14 @@ export default function UpcomingEvents() {
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
           <div className="flex justify-center">
           <div className="w-full max-w-sm">
-            <h4 className="font-display text-foreground mb-3">
-              Join for one of our flagship event to celebrate Diwali with the community. 
-            </h4>
             {EVENTS.map((e) =>
               <article
                 key={e.name}
                 className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow flex flex-col">
                 <div className="p-5 flex flex-col flex-1">
+                  <h4 className="font-display text-foreground mb-3">
+                    {e.title}
+                  </h4>
                   <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
                     <CalendarDays className="h-3.5 w-3.5" />
                     <span className="font-body">{e.date}</span>
