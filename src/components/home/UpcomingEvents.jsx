@@ -57,7 +57,7 @@ export default function UpcomingEvents() {
                   <h4 className="font-display text-foreground mb-3">
                     {e.name}
                   </h4>
-                  <p className="font-body">
+                  <p className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
                     {e.desc}
                   </p>
                   <div className="aspect-[4/3] w-full overflow-hidden">
