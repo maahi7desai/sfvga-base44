@@ -80,11 +80,11 @@ export default function Members() {
       </section>
 
       {/* Membership Types & Annual Dues */}
-      <section className="py-12 md:py-20">
+      <section className="py-8 md:py-20">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Dues
+              Membership Dues
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
