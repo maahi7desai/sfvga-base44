@@ -21,10 +21,13 @@ export default function UpcomingEvents() {
           <h2 className="font-display text-4xl md:text-5xl text-balance my-6">Celebrate with us throughout the year</h2>
         </div>
 
-        <div className="flex justify-center">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-1">
-              Upcoming Events
+        <div className="mb-8">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+            Upcoming Events
           </p>
+        </div>
+
+        <div className="flex justify-center">
           <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
             <article
