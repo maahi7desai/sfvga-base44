@@ -51,9 +51,6 @@ export default function Members() {
               New Membership
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
-            <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              Whether you're a new or returning member, we welcome you to our community.
-            </p>
             <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
                 New members can apply using our membership application form on the
                 SFVGA website. Please fill the form completely and wait for approval
