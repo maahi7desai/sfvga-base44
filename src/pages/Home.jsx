@@ -1,15 +1,13 @@
 import React from "react";
 import { Image } from "@/components/ui/image";
 import { Link } from "react-router-dom";
-import { Bell, CalendarDays, MapPin } from "lucide-react";
+import { CalendarDays, MapPin } from "lucide-react";
 import AnnouncementsBanner from "@/components/home/AnnouncementsBanner";
 
 const UPDATES = [
   {
-    icon: Bell,
     title: "Membership 2026 Open",
-    text: "Renew your membership or invite new members to join our vibrant community.",
-    badge: "Reminder",
+    text: "Renew your membership or invite new members to join our vibrant community."
   },
 ];
 const EVENTS = [
@@ -26,7 +24,7 @@ export default function Home() {
   return (
     <div className="pt-20">
       {/* Welcome */}
-      <section className="py-4 bg-primary/10 text-center pattern-diya">
+      <section className="py-4 bg-primary/5 text-center pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body opacity-90 mb-4 max-w-xl mx-auto">
             One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
@@ -40,7 +38,7 @@ export default function Home() {
         </div>
       </section>
       {/* Next Event */}
-      <section className="py-4 bg-primary/5 pattern-diya">
+      <section className="py-4 bg-primary/10 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
@@ -78,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Announcements */}
-      <section className="py-4 bg-primary/10 pattern-diya">
+      <section className="py-4 bg-primary/5 pattern-diya">
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
