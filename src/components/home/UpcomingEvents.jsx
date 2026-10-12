@@ -16,7 +16,36 @@ const EVENTS = [
 export default function UpcomingEvents() {
   return (
     <section className="py-16 md:py-20 bg-muted/40 pattern-diya">
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+      <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          {/* Header */}
+          <div className="mb-8">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+              Leadership
+            </p>
+            <div className="h-px w-12 bg-accent mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+              The Board
+            </h2>
+            <p className="font-body text-sm text-foreground/60 leading-relaxed">
+              The volunteers who plan the year, steward the funds, and answer the
+              phone at 9pm.
+            </p>
+          </div>
+
+          {/* Board Correspondence */}
+          <div className="mb-8 pb-6 border-b border-border">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-1">
+              Board Correspondence
+            </p>
+            <a
+              href="mailto:sfvgabod@gmail.com"
+              className="font-body text-sm text-primary hover:text-accent transition-colors">
+              
+              sfvgabod@gmail.com
+            </a>
+          </div>
+        </div>  
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-10">
           <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
             Celebrate with us throughout the year! 
