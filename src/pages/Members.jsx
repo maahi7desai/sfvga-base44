@@ -55,14 +55,13 @@ export default function Members() {
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
-          
+          <p className="font-body text-sm text-foreground/60 leading-relaxed">
+              Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Select membership type below. 
+            </p>
         </div>
       </section>
       <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <p className="font-body opacity-90 mb-8 max-w-xl mx-auto">
-            
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://sfvga.org/membership"
@@ -90,9 +89,7 @@ export default function Members() {
               Membership Dues
             </p>
             <div className="h-px w-16 bg-primary/80 mb-4" />
-            <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              Membership annual Dues preferred payment method is Zelle to sfvgabod@gmail.com.  Select membership type below. 
-            </p>
+            
           </div>
           <div className="divide-y divide-border">
             {PLANS.map((p) =>
