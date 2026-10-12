@@ -23,10 +23,10 @@ export default function UpcomingEvents() {
             Home
           </p>
           <div className="h-px w-12 bg-accent mb-4" />
-          <h4 className="font-display text-foreground mb-3">
-            One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley. 
-          </h4>
-        </div>
+            <h4 className="font-display text-foreground mb-3">
+              One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley. 
+            </h4>
+          </div>
       </div>
 
       {/* Next Event */}
@@ -36,10 +36,10 @@ export default function UpcomingEvents() {
             Upcoming Event
           </p>
           <div className="h-px w-12 bg-accent mb-4" />
-          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-            Diwali Dipotsav
-          </h2>
-        </div>
+            <h4 className="font-display text-foreground mb-3">
+              Join for one of our flagship event to celebrate Diwali with the community. 
+            </h4>
+          </div>
       </div>
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="flex justify-center">
