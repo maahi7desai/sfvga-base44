@@ -50,11 +50,11 @@ export default function Members() {
             Membership
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
-          <p className="flex items-center gap-2 text-sm text-foreground mb-2">
+          <p className="flex text-sm text-foreground mb-2">
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
-          <p className="flex items-center gap-2 text-sm text-foreground mb-2">
+          <p className="flex text-sm text-foreground mb-2">
             Membership annual Dues preferred payment method is Zelle to{" "}
             <span className="font-semibold text-primary bg-accent/15 px-1.5 py-0.5 rounded">
               sfvgabod@gmail.com
