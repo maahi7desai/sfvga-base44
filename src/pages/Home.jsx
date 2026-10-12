@@ -25,13 +25,11 @@ export default function Home() {
     <div className="pt-20">
       {/* Welcome */}
       <section className="py-4 bg-primary/5 pattern-diya">
-        <div className="mb-8">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
             Our Community
           </p>
           <div className="h-px w-16 bg-primary/80 mb-4" />
-        </div>
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body opacity-90 mb-4 max-w-xl mx-auto">
             One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
           </p>
