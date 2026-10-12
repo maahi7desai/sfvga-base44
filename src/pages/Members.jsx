@@ -68,7 +68,7 @@ export default function Members() {
       </section>
       <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-col gap-4 justify-center">
             <a
               href="https://sfvga.org/membership"
               target="_blank"
@@ -84,10 +84,6 @@ export default function Members() {
           </div>
         </div>
       </section>
-
-
-
-
 
       {/* Member Resources */}
       <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
