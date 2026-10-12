@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "@/components/ui/image";
 import { Link } from "react-router-dom";
 import { UserCircle, RefreshCw, Heart, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 
