@@ -13,14 +13,6 @@ const UPDATES = [
 export default function AnnouncementsBanner() {
   return (
     <section className="py-16 md:py-20 bg-muted/40 pattern-diya">
-      <div className="mx-auto max-w-[900px] px-4 w-full">
-        <p className="font-body text-sm tracking-[0.2em] uppercase text-primary-foreground/70 text-center mb-2">
-          Community Moments
-        </p>
-        <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
-          Latest Updates
-        </p>
-      </div>
       <div className="flex justify-center">
           <div className="w-full max-w-md">
             {UPDATES.map((u) => (
