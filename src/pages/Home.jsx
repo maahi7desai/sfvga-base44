@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="pt-20">
       {/* Welcome */}
-      <section className="py-4 bg-primary text-primary-foreground text-center">
+      <section className="py-4 bg-muted/60  text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body opacity-90 mb-4 max-w-xl mx-auto">
             One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
