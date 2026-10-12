@@ -54,14 +54,14 @@ export default function Members() {
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
           </p>
-          <p className="font-body text-sm text-foreground leading-relaxed">
+          <p className="flex items-center gap-2 text-sm text-foreground mb-2">
             Membership annual Dues preferred payment method is Zelle to{" "}
             <span className="font-semibold text-primary bg-accent/15 px-1.5 py-0.5 rounded">
               sfvgabod@gmail.com
             </span>
             .
           </p>
-          <p className="font-body text-sm text-foreground leading-relaxed">
+          <p className="flex items-center gap-2 text-sm text-foreground mb-2">
             Zelle membership dues based on type below.
           </p>
           <ul className="mt-3 space-y-1.5">
