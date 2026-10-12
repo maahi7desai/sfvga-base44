@@ -76,7 +76,7 @@ export default function UpcomingEvents() {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center py-4 mt-12">
           <Link
             to="/events"
             className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary hover:text-accent transition-colors">
