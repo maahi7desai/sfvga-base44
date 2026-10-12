@@ -1,9 +1,17 @@
 import React from "react";
 import { Image } from "@/components/ui/image";
 import { Link } from "react-router-dom";
-import { CalendarDays, MapPin } from "lucide-react";
+import { Bell, CalendarDays, MapPin } from "lucide-react";
 import AnnouncementsBanner from "@/components/home/AnnouncementsBanner";
 
+const UPDATES = [
+  {
+    icon: Bell,
+    title: "Membership 2026 Open",
+    text: "Renew your membership or invite new members to join our vibrant community.",
+    badge: "Reminder",
+  },
+];
 const EVENTS = [
   {
     name: "Diwali Dipotsav",
