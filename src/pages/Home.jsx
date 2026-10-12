@@ -19,7 +19,7 @@ export default function Home() {
     <div className="pt-20">
       <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <p className="font-body opacity-90 mb-8 max-w-xl mx-auto">
+          <p className="font-body opacity-90 mb-4 max-w-xl mx-auto">
             One place for the gatherings, people, and traditions that hold our community together across the San Fernando Valley.
           </p>
           <div className="aspect-[4/3] w-full overflow-hidden">
