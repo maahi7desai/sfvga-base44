@@ -53,6 +53,9 @@ export default function UpcomingEvents() {
                     <span className="font-body">{e.date}</span>
                   </div>
                   <h3 className="font-display text-xl text-foreground mb-2">{e.name}</h3>
+                  <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
+                    {e.desc}
+                  </p>
                   <div className="flex items-center gap-1.5 text-xs text-foreground/60 mb-3">
                     <MapPin className="h-3.5 w-3.5" />
                     <span className="font-body">{e.location}</span>
@@ -64,13 +67,9 @@ export default function UpcomingEvents() {
                       className="w-full h-full transition-transform duration-500 group-hover:scale-105"
                       fittingType="fill" />
                   </div>
-                  <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
-                    {e.desc}
-                  </p>
                   <Link
                     to="/events"
                     className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
-
                     Register / RSVP
                   </Link>
                 </div>
