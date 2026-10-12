@@ -33,7 +33,7 @@ export default function Renew() {
         </div>
         <div className="mx-auto max-w-[600px] px-5 sm:px-8">
           {submitted ?
-          <div className="bg-card border border-border rounded-lg p-8 text-center">
+          <div>
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-5">
                 <CheckCircle className="h-8 w-8" />
               </div>
@@ -67,11 +67,7 @@ export default function Renew() {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-card border border-border rounded-lg p-8 space-y-5">
-            
-              <h2 className="font-display text-2xl text-foreground mb-2">
-                Renew Your Membership
-              </h2>
+            className="bg-primary/5 p-8 space-y-5">
               <div>
                 <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                   Full Name
