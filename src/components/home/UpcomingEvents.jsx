@@ -16,7 +16,7 @@ const EVENTS = [
 
 export default function UpcomingEvents() {
   return (
-    <section className="py-4 bg-muted/40 pattern-diya">
+    <section className="bg-muted/40 pattern-diya">
       {/* Next Event */}
       <div className="mx-auto py-8 max-w-[700px] px-5 sm:px-8">
         <div className="mb-8">
