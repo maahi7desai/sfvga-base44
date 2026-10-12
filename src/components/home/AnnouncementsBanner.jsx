@@ -21,18 +21,7 @@ export default function AnnouncementsBanner() {
           </p>
           <div className="h-px w-16 bg-accent mb-4" />
           {UPDATES.map((u) => (
-            <div
-              key={u.title}
-              className="bg-card border border-border rounded-lg p-6 flex flex-col"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-primary/10 text-primary">
-                  <u.icon className="h-5 w-5" />
-                </div>
-                <span className="font-body text-[10px] tracking-wide uppercase font-medium text-accent bg-accent/10 px-2.5 py-1 rounded-full">
-                  {u.badge}
-                </span>
-              </div>
+            <div>
               <h3 className="font-display text-lg text-foreground mb-2">{u.title}</h3>
               <p className="font-body text-sm text-foreground/70 leading-relaxed">
                 {u.text}
