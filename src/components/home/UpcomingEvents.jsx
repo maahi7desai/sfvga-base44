@@ -5,7 +5,7 @@ import { CalendarDays, MapPin } from "lucide-react";
 
 const EVENTS = [
   {
-    name: "Dipotsav (Diwali)",
+    name: "Diwali Dipotsav",
     date: "November 14, 2026",
     location: "Chatsworth, CA",
     desc: "The festival of lights — diyas, dhol, rangoli, and community feasts.",
