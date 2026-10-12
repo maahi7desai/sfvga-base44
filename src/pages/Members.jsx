@@ -44,30 +44,6 @@ const DASHBOARD = [
 export default function Members() {
   return (
     <div className="pt-20">
-      
-
-
-
-
-
-
-
-      
-
-      {/* Value Proposition */}
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-[1000px] px-5 sm:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6 text-balance">
-            Be part of a vibrant community
-          </h2>
-          <p className="font-body text-foreground/75 leading-relaxed max-w-2xl mx-auto">
-            Current members are requested to be active within the association and
-            invite new members to have their families enjoy the benefits of our
-            culture, food, festivals, friendship, and fun with us.
-          </p>
-        </div>
-      </section>
-
       {/* Join or Renew */}
       <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[1000px] px-5 sm:px-8">
