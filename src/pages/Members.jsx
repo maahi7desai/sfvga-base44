@@ -95,7 +95,6 @@ export default function Members() {
             {PLANS.map((p) =>
               <div key={p.name} className="py-1">
                 <p className="font-display text-xs text-foreground mb-1">{p.price} - {p.name}</p>
-                <p className="font-body text-xs text-foreground/60">{p.note}</p>
               </div>
             )}
           </div>
