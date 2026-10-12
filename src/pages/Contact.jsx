@@ -245,17 +245,17 @@ export default function Contact() {
       </section>
 
       {/* FAQs */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[800px] px-5 sm:px-8">
-          <div className="flex items-center gap-3 mb-3 justify-center">
-            <HelpCircle className="h-7 w-7 text-primary" />
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              FAQs &amp; Guidelines
+      <section className="py-12 md:py-20">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          {/* Header */}
+          <div className="mb-8">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+              FAQS
+            </p>
+            <div className="h-px w-12 bg-primary/80 mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+              Common Questions
             </h2>
-          </div>
-          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
-            Common questions regarding membership, event rules, and tickets.
-          </p>
           <div className="space-y-4">
             {FAQS.map((f) =>
             <div key={f.q} className="bg-card border border-border rounded-lg p-6">
@@ -265,30 +265,6 @@ export default function Contact() {
             )}
           </div>
         </div>
-      </section>
-
-      {/* Governance & By-Laws */}
-      <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
-        <div className="mx-auto max-w-[800px] px-5 sm:px-8 text-center">
-          <div className="flex items-center gap-3 mb-3 justify-center">
-            <Scale className="h-7 w-7 text-primary" />
-            <h2 className="font-display text-3xl md:text-4xl text-foreground">
-              Governance &amp; By-Laws
-            </h2>
-          </div>
-          <p className="font-body text-foreground/70 text-center mb-8 max-w-xl mx-auto">
-            Association by-laws, meeting minutes, and governance details are
-            available on our legacy site.
-          </p>
-          <a
-            href="https://sfvga.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
-            
-            Visit sfvga.org
-            <ExternalLink className="h-4 w-4" />
-          </a>
         </div>
       </section>
     </div>);
