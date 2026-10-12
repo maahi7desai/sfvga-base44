@@ -18,15 +18,11 @@ export default function UpcomingEvents() {
     <section className="py-16 md:py-20 bg-muted/40 pattern-diya">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-10">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
-            Latest Updates
+          <p>
+            Celebrate with us throughout the year! 
           </p>
-        </div>
-      </div>
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <div className="text-center mb-10">
           <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
-            Latest Updates
+            Next Event
           </p>
         </div>
         <div className="flex justify-center">
