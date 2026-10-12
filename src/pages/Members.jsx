@@ -43,11 +43,8 @@ const DASHBOARD = [
 export default function Members() {
   return (
     <div className="pt-20">
-     <section className="py-16 bg-primary text-primary-foreground text-center">
+     <section className="py-4 bg-primary text-primary-foreground text-center">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <h2 className="font-display text-3xl md:text-4xl mb-4">
-            Ready to join the SFVGA family?
-          </h2>
           <p className="font-body opacity-90 mb-8 max-w-xl mx-auto">
             Current members are requested to be active and invite new members to
             enjoy the benefits of our culture, food, festivals, friendship, and fun.
@@ -68,42 +65,8 @@ export default function Members() {
           </div>
         </div>
       </section>
+
       
-      {/* Join or Renew */}
-      <section className="py-4 md:py-20 bg-muted/40 pattern-diya">
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              New Membership
-            </p>
-            <div className="h-px w-16 bg-primary/80 mb-4" />
-            <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
-                New members please fill the form completely and wait for approval
-                before sending membership fees.
-            </p>
-            <Link to="https://sfvga.org/membership"
-              target="_blank"
-              className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
-              Apply on SFVGA.org →
-            </Link>
-          </div>
-          <div className="py-4">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Renewing Members
-            </p>
-            <div className="h-px w-16 bg-primary/80 mb-4" />
-            <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
-              Renew your membership online by reviewing the terms
-              and submitting your renewal request.
-            </p>
-            <Link
-              to="/renew"
-              className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
-              Renew Now →
-            </Link>
-            </div>
-          </div>
-      </section>
 
       {/* Membership Types & Annual Dues */}
       <section className="py-8 md:py-20">
