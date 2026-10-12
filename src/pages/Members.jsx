@@ -62,7 +62,7 @@ export default function Members() {
               Apply on SFVGA.org →
             </Link>
           </div>
-          <div className="py-12">
+          <div className="py-4">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
               Renewing Members
             </p>
