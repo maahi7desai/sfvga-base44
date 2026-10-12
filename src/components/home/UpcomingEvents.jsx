@@ -18,7 +18,7 @@ export default function UpcomingEvents() {
     <section className="py-16 md:py-20 bg-muted/40 pattern-diya">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-10">
-          <p>
+          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
             Celebrate with us throughout the year! 
           </p>
           <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
