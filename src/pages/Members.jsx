@@ -25,15 +25,15 @@ const DASHBOARD = [
     desc: "Review the terms and conditions and renew your membership online.",
     cta: "Renew Membership",
     to: "/renew"
-  },
+  }
+  /*,
   {
     icon: Heart,
     title: "Youth & Volunteer Portal",
     desc: "Sign up for youth initiatives and volunteer for event committees.",
     cta: "Get Involved",
     to: "/login"
-  }
-  /*,
+  },
   {
     icon: BookOpen,
     title: "Community Directory",
