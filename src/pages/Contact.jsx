@@ -52,86 +52,6 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
-      {/* Board of Directors */}
-      <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Leadership
-            </p>
-            <div className="h-px w-12 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Board of Directors
-            </h2>
-            <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              The volunteers who plan the year, steward the funds, and answer the
-              phone at 9pm.
-            </p>
-          </div>
-          <div className="divide-y divide-border">
-            {BOARD.map((b) =>
-              <div key={b.role + b.name} className="flex items-center gap-4 py-5">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
-                  <Image
-                    src={b.img}
-                    alt={b.name}
-                    className="w-full h-full rounded-full"
-                    fittingType="fill" />
-                </div>
-                <div>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
-                    {b.role}
-                  </p>
-                  <p className="font-display text-lg md:text-xl text-foreground">
-                    {b.name}
-                  </p>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Extended Leadership */}
-      <section className="py-12 md:py-20">
-        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
-          <div className="mb-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
-              Champions
-            </p>
-            <div className="h-px w-12 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Extended Leadership
-            </h2>
-            <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              Dedicated community members who support SFVGA's mission through
-              their specialized roles.
-            </p>
-          </div>
-          <div className="divide-y divide-border">
-            {EXTENDED_LEADERSHIP.map((b) =>
-              <div key={b.role + b.name} className="flex items-center gap-4 py-5">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
-                  <Image
-                    src={b.img}
-                    alt={b.name}
-                    className="w-full h-full rounded-full"
-                    fittingType="fill" />
-                </div>
-                <div>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
-                    {b.role}
-                  </p>
-                  <p className="font-display text-lg md:text-xl text-foreground">
-                    {b.name}
-                  </p>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Contact info + form */}
       <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
@@ -227,6 +147,86 @@ export default function Contact() {
               <div key={f.q} className="bg-card border border-border rounded-lg p-6">
                 <h3 className="font-body font-medium text-foreground mb-2">{f.q}</h3>
                 <p className="font-body text-sm text-foreground/70 leading-relaxed">{f.a}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Board of Directors */}
+      <section className="py-12 md:py-20 bg-muted/40 pattern-diya">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          <div className="mb-8">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+              Leadership
+            </p>
+            <div className="h-px w-12 bg-primary/80 mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+              Board of Directors
+            </h2>
+            <p className="font-body text-sm text-foreground/60 leading-relaxed">
+              The volunteers who plan the year, steward the funds, and answer the
+              phone at 9pm.
+            </p>
+          </div>
+          <div className="divide-y divide-border">
+            {BOARD.map((b) =>
+              <div key={b.role + b.name} className="flex items-center gap-4 py-5">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
+                  <Image
+                    src={b.img}
+                    alt={b.name}
+                    className="w-full h-full rounded-full"
+                    fittingType="fill" />
+                </div>
+                <div>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
+                    {b.role}
+                  </p>
+                  <p className="font-display text-lg md:text-xl text-foreground">
+                    {b.name}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Extended Leadership */}
+      <section className="py-12 md:py-20">
+        <div className="mx-auto max-w-[700px] px-5 sm:px-8">
+          <div className="mb-8">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-primary mb-2">
+              Champions
+            </p>
+            <div className="h-px w-12 bg-primary/80 mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+              Extended Leadership
+            </h2>
+            <p className="font-body text-sm text-foreground/60 leading-relaxed">
+              Dedicated community members who support SFVGA's mission through
+              their specialized roles.
+            </p>
+          </div>
+          <div className="divide-y divide-border">
+            {EXTENDED_LEADERSHIP.map((b) =>
+              <div key={b.role + b.name} className="flex items-center gap-4 py-5">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary p-0.5">
+                  <Image
+                    src={b.img}
+                    alt={b.name}
+                    className="w-full h-full rounded-full"
+                    fittingType="fill" />
+                </div>
+                <div>
+                  <p className="font-body text-xs tracking-[0.15em] uppercase text-primary mb-0.5">
+                    {b.role}
+                  </p>
+                  <p className="font-display text-lg md:text-xl text-foreground">
+                    {b.name}
+                  </p>
+                </div>
               </div>
             )}
           </div>
