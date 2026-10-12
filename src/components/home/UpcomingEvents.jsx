@@ -17,14 +17,6 @@ export default function UpcomingEvents() {
   return (
     <section className="py-16 md:py-20 bg-muted/40 pattern-diya">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <div className="text-center mb-10">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
-            Latest Updates
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground text-balance">
-            Announcements &amp; Community News
-          </h2>
-        </div>
         <div className="flex justify-center">
           <div className="w-full max-w-sm">
             {EVENTS.map((e) =>
