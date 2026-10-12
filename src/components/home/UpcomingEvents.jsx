@@ -15,7 +15,7 @@ const EVENTS = [
 
 export default function UpcomingEvents() {
   return (
-    <section className="bg-muted/40 pattern-diya">
+    <section className="py-16 md:py-80 bg-muted/40 pattern-diya">
       <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           {/* Header */}
           <div className="mb-8">
