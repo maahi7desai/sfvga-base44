@@ -47,12 +47,6 @@ export default function Members() {
       {/* Join or Renew */}
       <section className="py-16 md:py-24 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[1000px] px-5 sm:px-8">
-          <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-4">
-            Join or Renew
-          </h2>
-          <p className="font-body text-foreground/70 text-center mb-12 max-w-xl mx-auto">
-            Whether you're a new or returning member, we welcome you to our community.
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-card border border-border rounded-lg p-8 flex flex-col">
               <h3 className="font-display text-2xl text-foreground mb-3">New Members</h3>
@@ -109,13 +103,6 @@ export default function Members() {
                 </h3>
               </div>
             )}
-          </div>
-          <div className="mt-10 max-w-2xl mx-auto bg-card border border-border rounded-lg p-6 text-sm text-foreground/70 space-y-2">
-            <p>• For membership form/dues postmarked after Nov 30th, include an additional $25.</p>
-            <p>• No forms will be accepted after Dec 31st.</p>
-            <p>• Married children must obtain a separate Membership.</p>
-            <p>• Unmarried children are considered part of Membership.</p>
-            <p>• Parents and unmarried family members living under the same roof are part of Membership.</p>
           </div>
         </div>
       </section>
