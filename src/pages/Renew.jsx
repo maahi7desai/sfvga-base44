@@ -76,7 +76,7 @@ export default function Renew() {
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
 
                 </div>
-                <div>
+                <div className="py-80">
                   <label className="font-body text-sm font-medium text-foreground block mb-1.5">
                     Email
                   </label>
