@@ -26,42 +26,44 @@ export default function UpcomingEvents() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-md md:max-w-lg mx-auto">
-          {EVENTS.map((e) => (
-            <article
-              key={e.name}
-              className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow flex flex-col"
-            >
-              <div className="aspect-[4/3] w-full overflow-hidden">
-                <Image
-                  src={e.img}
-                  alt={e.name}
-                  className="w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  fittingType="fill"
-                />
-              </div>
-              <div className="p-5 flex flex-col flex-1">
-                <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
-                  <CalendarDays className="h-3.5 w-3.5" />
-                  <span className="font-body">{e.date}</span>
+        <div className="flex justify-center">
+          <div className="w-full max-w-sm">
+            {EVENTS.map((e) => (
+              <article
+                key={e.name}
+                className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-shadow flex flex-col"
+              >
+                <div className="aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src={e.img}
+                    alt={e.name}
+                    className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    fittingType="fill"
+                  />
                 </div>
-                <h3 className="font-display text-xl text-foreground mb-2">{e.name}</h3>
-                <div className="flex items-center gap-1.5 text-xs text-foreground/60 mb-3">
-                  <MapPin className="h-3.5 w-3.5" />
-                  <span className="font-body">{e.location}</span>
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex items-center gap-2 text-xs text-foreground/60 mb-2">
+                    <CalendarDays className="h-3.5 w-3.5" />
+                    <span className="font-body">{e.date}</span>
+                  </div>
+                  <h3 className="font-display text-xl text-foreground mb-2">{e.name}</h3>
+                  <div className="flex items-center gap-1.5 text-xs text-foreground/60 mb-3">
+                    <MapPin className="h-3.5 w-3.5" />
+                    <span className="font-body">{e.location}</span>
+                  </div>
+                  <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
+                    {e.desc}
+                  </p>
+                  <Link
+                    to="/events"
+                    className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    Register / RSVP
+                  </Link>
                 </div>
-                <p className="font-body text-sm text-foreground/70 leading-relaxed mb-5">
-                  {e.desc}
-                </p>
-                <Link
-                  to="/events"
-                  className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
-                >
-                  Register / RSVP
-                </Link>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-12">
