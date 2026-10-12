@@ -20,38 +20,21 @@ export default function UpcomingEvents() {
           {/* Header */}
           <div className="mb-8">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
-              Leadership
+              Welcome home
             </p>
             <div className="h-px w-12 bg-accent mb-4" />
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              The Board
+              Announcements
             </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              The volunteers who plan the year, steward the funds, and answer the
-              phone at 9pm.
+              Celebrate events with us throughout the year.
             </p>
-          </div>
-
-          {/* Board Correspondence */}
-          <div className="mb-8 pb-6 border-b border-border">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-1">
-              Board Correspondence
-            </p>
-            <a
-              href="mailto:sfvgabod@gmail.com"
-              className="font-body text-sm text-primary hover:text-accent transition-colors">
-              
-              sfvgabod@gmail.com
-            </a>
           </div>
         </div>  
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center mb-10">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
-            Celebrate with us throughout the year! 
-          </p>
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3">
-            Next Event
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/40 mb-2">
+            Welcome home
           </p>
         </div>
         <div className="flex justify-center">
