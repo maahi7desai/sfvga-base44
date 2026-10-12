@@ -86,7 +86,7 @@ export default function Members() {
             </a>
             <Link
               to="/renew"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/50 text-primary-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-primary-foreground/10 transition-colors">
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground font-body font-xs px-8 py-3.5 rounded-full hover:bg-background transition-colors">
               Review Existing
             </Link>
           </div>
