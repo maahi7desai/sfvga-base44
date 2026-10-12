@@ -60,11 +60,8 @@ export default function Contact() {
               Contact
             </p>
             <div className="h-px w-12 bg-primary/80 mb-4" />
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Get in Touch
-            </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
-              For membership &amp; general inquiries.
+              Review the FAQ below and contact us for membership &amp; general inquiries.
             </p>
           </div>
           {sent ? (
@@ -89,7 +86,7 @@ export default function Contact() {
                   required
                   type="text"
                   placeholder="Name"
-                  className="w-full rounded-md border border-input bg-background/10 px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
               <div>
                 <input
