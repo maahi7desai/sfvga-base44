@@ -63,7 +63,7 @@ export default function Members() {
               </p>
               <Link to="https://sfvga.org/membership"
                 target="_blank"
-                className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium hover:bg-accent hover:text-accent-foreground transition-colors">
+                className="mt-auto hover:bg-accent hover:text-accent-foreground">
                 Apply on SFVGA.org →
               </Link>
               <h3 className="font-display text-2xl text-foreground mb-3">Renewing Members</h3>
