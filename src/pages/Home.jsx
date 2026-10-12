@@ -97,7 +97,7 @@ export default function Home() {
               </div>
             ))}
             <br />
-            <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm text-primary/70 hover:text-primary transition-colors">
+            <Link to="/renew" className="inline-flex items-center gap-2 font-body text-sm text-primary/70 hover:text-primary transition-colors">
               Renew Membership →
             </Link>
           </div>
