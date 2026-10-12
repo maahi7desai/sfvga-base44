@@ -93,9 +93,11 @@ export default function Home() {
                 <p className="font-body text-sm text-foreground/70 leading-relaxed">
                   {u.text}
                 </p>
+
               </div>
             ))}
-            <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
+            <br />
+            <Link to="/members" className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary/70 hover:text-primary transition-colors">
               Renew Membership →
             </Link>
           </div>
