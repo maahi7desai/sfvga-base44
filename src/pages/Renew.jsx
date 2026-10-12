@@ -105,7 +105,7 @@ export default function Renew() {
                     )}
                   </select>
                 </div>
-                <label className="py-8 flex items-start gap-3 cursor-pointer">
+                <label className="py-4 flex items-start gap-3 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={agreed}
