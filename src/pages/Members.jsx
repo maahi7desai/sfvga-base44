@@ -10,6 +10,7 @@ const PLANS = [
   { name: "Individual/Student Renewal", price: "$75", note: "For individual members" }
 ];
 const DASHBOARD = [
+  /*
   {
     icon: UserCircle,
     title: "Member Profile",
@@ -17,6 +18,7 @@ const DASHBOARD = [
     cta: "Access Profile",
     to: "/login"
   },
+  */
   {
     icon: RefreshCw,
     title: "Membership Renewal",
@@ -30,14 +32,17 @@ const DASHBOARD = [
     desc: "Sign up for youth initiatives and volunteer for event committees.",
     cta: "Get Involved",
     to: "/login"
-  },
+  }
+  /*,
   {
     icon: BookOpen,
     title: "Community Directory",
     desc: "Connect with fellow members through our member-only networking directory.",
     cta: "View Directory",
     to: "/login"
-  }];
+  }
+  */
+  ];
 
 
 export default function Members() {
