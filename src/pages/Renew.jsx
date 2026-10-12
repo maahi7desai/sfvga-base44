@@ -121,7 +121,7 @@ export default function Renew() {
                 <button
                   type="submit"
                   disabled={!agreed}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                  className="py-4 w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
 
                   Submit Renewal
                 </button>
