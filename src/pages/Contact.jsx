@@ -124,9 +124,6 @@ export default function Contact() {
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
               Extended Leadership
             </h2>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
-              Board of Directors
-            </h2>
             <p className="font-body text-sm text-foreground/60 leading-relaxed">
               Dedicated community members who support SFVGA's mission through
               their specialized roles.
