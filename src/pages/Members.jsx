@@ -56,21 +56,16 @@ export default function Members() {
             </p>
           </div>
           <div className="space-y-5">
-              <h3 className="font-display text-2xl text-foreground mb-3">New Members</h3>
               <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
                 New members can apply using our membership application form on the
                 SFVGA website. Please fill the form completely and wait for approval
                 before sending membership fees.
               </p>
-              <a
-                href="https://sfvga.org/membership"
+              <Link to="https://sfvga.org/membership"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="mt-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body font-medium px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors">
                 Apply on SFVGA.org →
-              </a>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-8 flex flex-col">
+              </Link>
               <h3 className="font-display text-2xl text-foreground mb-3">Renewing Members</h3>
               <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
                 Already a member? Renew your membership online by reviewing the terms
