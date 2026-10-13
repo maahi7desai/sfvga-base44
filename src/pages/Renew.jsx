@@ -99,9 +99,9 @@ export default function Renew() {
                     className="mt-1 h-4 w-4 rounded border-input text-primary focus:ring-ring" />
 
                   <span className="font-body text-sm text-foreground/80">
-                    I have reviewed and agree to the SFVGA Association By-Laws and Terms
+                    I have reviewed and agree to the SFVGA Association <a href="https://sfvga.org/s/BYLAWS.docx">By-Laws</a> and Terms
                     &amp; Conditions.
-                    <a href="https://sfvga.org/s/BYLAWS.docx">as</a>
+                    
                   </span>
                 </label>
 
