@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="pt-20">
       {/* Welcome */}
-      <section className="py-4 bg-background pattern-diya">
+      <section className="py-4 bg-background/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">
             Our Community
