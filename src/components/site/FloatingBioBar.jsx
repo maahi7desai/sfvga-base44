@@ -20,7 +20,7 @@ export default function FloatingBioBar() {
           <Link
             key={label}
             to={to}
-            className={`flex flex-col items-center gap-1 px-4 py-1 text-xs transition-colors ${active ? "text-primary font-bold" : "text-accent/80 font-normal"}`}>
+            className={`flex flex-col items-center gap-1 px-4 py-1 text-xs transition-colors ${active ? "text-primary font-bold" : "text-accent font-normal"}`}>
           
             <Icon className="h-5 w-5" />
             <span className={`tracking-wide uppercase text-sm [font-family:'VAG_Rounded_Next',_sans-serif] ${active ? "font-[1000]" : "font-normal"}`}>
