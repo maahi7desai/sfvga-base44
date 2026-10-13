@@ -101,6 +101,7 @@ export default function Renew() {
                   <span className="font-body text-sm text-foreground/80">
                     I have reviewed and agree to the SFVGA Association By-Laws and Terms
                     &amp; Conditions.
+                    <a href="https://sfvga.org/s/BYLAWS.docx">as</a>
                   </span>
                 </label>
 
