@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Home, CalendarDays, UserPlus, Phone } from "lucide-react";
 
 const ITEMS = [
@@ -10,21 +10,25 @@ const ITEMS = [
 
 
 export default function FloatingBioBar() {
+  const { pathname } = useLocation();
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-t border-primary/15">
       <div className="flex items-center justify-around py-2 bg-background">
-        {ITEMS.map(({ icon: Icon, label, to }) =>
-        <Link
-          key={label}
-          to={to}
-          className="flex flex-col items-center gap-1 px-4 py-1 text-primary text-xs">
+        {ITEMS.map(({ icon: Icon, label, to }) => {
+          const active = pathname === to;
+          return (
+          <Link
+            key={label}
+            to={to}
+            className={`flex flex-col items-center gap-1 px-4 py-1 text-xs transition-colors ${active ? "text-accent" : "text-primary/60"}`}>
           
             <Icon className="h-5 w-5" />
             <span className="tracking-wide uppercase text-sm [font-family:'VAG_Rounded_Next',_sans-serif] font-[1000]">
               {label}
             </span>
           </Link>
-        )}
+          );
+        })}
       </div>
     </div>);
 
