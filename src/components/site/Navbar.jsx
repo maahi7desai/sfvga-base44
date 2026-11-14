@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Bell } from "lucide-react";
 import Logo from "./Logo";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const NAV = [
 { label: "Home", to: "/" },
@@ -20,6 +22,7 @@ const NOTIFICATIONS = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/15 pt-safe">
@@ -56,7 +59,7 @@ export default function Navbar() {
               <Bell className="h-5 w-5 text-foreground/70" />
               <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-accent" />
             </button>
-            {notifOpen &&
+            {!isMobile && notifOpen &&
             <>
                 <div className="fixed inset-0 z-40" onClick={() => setNotifOpen(false)} />
                 <div className="absolute right-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-xl z-50 overflow-hidden">
@@ -101,16 +104,28 @@ export default function Navbar() {
           
         </div>
 
-        <button
-          className="md:hidden p-2 -mr-2 text-foreground"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu">
-          
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="md:hidden flex items-center">
+          <button
+            className="p-2 text-foreground"
+            onClick={() => setNotifOpen((v) => !v)}
+            aria-label="Notifications">
+
+            <span className="relative inline-flex">
+              <Bell className="h-5 w-5 text-foreground/70" />
+              <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-accent" />
+            </span>
+          </button>
+          <button
+            className="p-2 -mr-2 text-foreground"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu">
+
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
-      {open &&
+      {!isMobile && open &&
       <div className="md:hidden bg-background border-t border-primary/10">
           <div className="px-5 py-4 flex flex-col">
             {NAV.map((item) =>
@@ -139,6 +154,80 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
+      }
+
+      {isMobile &&
+      <>
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetContent
+            side="bottom"
+            className="md:hidden pb-[calc(env(safe-area-inset-bottom)+1rem)]">
+            
+              <SheetHeader className="text-center">
+                <SheetTitle className="font-body text-sm uppercase tracking-[0.2em] text-primary">
+                  Menu
+                </SheetTitle>
+              </SheetHeader>
+              <div className="px-1 py-2 flex flex-col">
+                {NAV.map((item) =>
+              <Link
+                key={item.label}
+                to={item.to}
+                onClick={() => setOpen(false)}
+                className="py-3 font-body text-base font-medium text-foreground/80 border-b border-primary/5">
+                
+                    {item.label}
+                  </Link>
+              )}
+                <Link
+                to="/login"
+                onClick={() => setOpen(false)}
+                className="mt-4 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full text-center">
+                
+                  Member Login
+                </Link>
+                <Link
+                to="/settings"
+                onClick={() => setOpen(false)}
+                className="mt-1 py-3 font-body text-sm font-medium text-foreground/70 text-center">
+                
+                  Account Settings
+                </Link>
+              </div>
+            </SheetContent>
+          </Sheet>
+
+          <Sheet open={notifOpen} onOpenChange={setNotifOpen}>
+            <SheetContent
+            side="bottom"
+            className="md:hidden pb-[calc(env(safe-area-inset-bottom)+1rem)]">
+            
+              <SheetHeader className="text-center">
+                <SheetTitle className="font-body text-sm uppercase tracking-[0.2em] text-primary">
+                  Notifications
+                </SheetTitle>
+              </SheetHeader>
+              <ul className="max-h-[55vh] overflow-y-auto overscroll-contain">
+                {NOTIFICATIONS.map((n) =>
+              <li key={n.title} className="px-1 py-3 border-b border-border/50">
+                    <div className="flex justify-between items-start">
+                      <p className="font-body text-sm font-medium text-foreground">{n.title}</p>
+                      <span className="font-body text-xs text-foreground/50">{n.date}</span>
+                    </div>
+                    <p className="font-body text-xs text-foreground/70 mt-1">{n.text}</p>
+                  </li>
+              )}
+              </ul>
+              <Link
+              to="/events"
+              onClick={() => setNotifOpen(false)}
+              className="block px-1 py-3 text-center font-body text-xs font-medium text-primary">
+              
+                View all updates
+              </Link>
+            </SheetContent>
+          </Sheet>
+        </>
       }
     </header>);
 

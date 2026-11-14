@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Check, ChevronsUpDown, Copy, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import { Drawer, DrawerContent } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import { Label } from "@/components/ui/label";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { loadSignInOptions } from "@/lib/authMfaFlow";
 import { safeReturnTo } from "@/lib/authReturnTo";
@@ -119,44 +118,81 @@ const matchesSearch = (code, search) => {
 // A searchable list of dial codes. Typing narrows it, and closing it with one match left picks that one.
 function DialCodePicker({ value, onChange }) {
   const [open, setOpen] = useState(false);
-  const search = useRef("");
+  const [search, setSearch] = useState("");
+  const trigger = useRef(null);
+  const matches = DIAL_CODES.filter((code) => matchesSearch(code, search));
 
   const handleOpenChange = (next) => {
-    if (!next && search.current) {
-      const matches = DIAL_CODES.filter((code) => matchesSearch(code, search.current));
-      if (matches.length === 1) onChange(`+${matches[0]}`);
-      search.current = "";
+    if (!next) {
+      // A search narrowed to one code picks it, as the combobox always did.
+      if (search && matches.length === 1) onChange(`+${matches[0]}`);
+      setSearch("");
+      trigger.current?.focus();
     }
     setOpen(next);
   };
 
   return (
-    <Popover open={open} onOpenChange={handleOpenChange} modal>
-      <PopoverTrigger asChild>
-        <Button type="button" variant="outline" role="combobox" aria-expanded={open} aria-label="Country code"
-          className="h-10 w-[100px] justify-between px-2.5 font-normal shadow-none">
-          {value}
-          <ChevronsUpDown className="ml-1 h-3.5 w-3.5 shrink-0 opacity-50" aria-hidden="true" />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-[140px] p-0" align="start" side="bottom" avoidCollisions={false}>
-        <Command filter={(item, text) => (matchesSearch(item, text) ? 1 : 0)}>
-          <CommandInput placeholder="Search..." className="h-9" onValueChange={(text) => { search.current = text; }} />
-          <CommandList>
-            <CommandEmpty>No match</CommandEmpty>
-            <CommandGroup>
-              {DIAL_CODES.map((code) => (
-                <CommandItem key={code} value={code} onSelect={() => { onChange(`+${code}`); search.current = ""; setOpen(false); }}>
-                  +{code}
-                  <Check className={cn("ml-auto h-3.5 w-3.5", value === `+${code}` ? "opacity-100" : "opacity-0")} aria-hidden="true" />
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          </CommandList>
-        </Command>
-      </PopoverContent>
-    </Popover>
-  );
+    <>
+      <Button
+        ref={trigger}
+        type="button"
+        variant="outline"
+        role="combobox"
+        aria-expanded={open}
+        aria-label="Country code"
+        onClick={() => setOpen(true)}
+        className="h-10 w-[100px] justify-between px-2.5 font-normal shadow-none">
+        
+        {value}
+        <ChevronsUpDown className="ml-1 h-3.5 w-3.5 shrink-0 opacity-50" aria-hidden="true" />
+      </Button>
+      <Drawer open={open} onOpenChange={handleOpenChange}>
+        <DrawerContent className="pb-[calc(env(safe-area-inset-bottom)+0.5rem)]">
+          <div className="px-4 pt-2">
+            <Input
+              placeholder="Search..."
+              aria-label="Search country codes"
+              className="h-9"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)} />
+            
+          </div>
+          <div
+            role="listbox"
+            aria-label="Country codes"
+            className="mt-2 max-h-[50vh] overflow-y-auto overscroll-contain px-2 pb-2">
+            
+            {matches.length === 0 ?
+            <p className="px-3 py-6 text-center text-sm text-muted-foreground">No match</p> :
+            matches.map((code) =>
+            <button
+              key={code}
+              type="button"
+              role="option"
+              aria-selected={value === `+${code}`}
+              onClick={() => {
+                onChange(`+${code}`);
+                setSearch("");
+                setOpen(false);
+              }}
+              className="flex w-full min-h-[44px] items-center rounded-md px-3 text-left text-sm text-foreground hover:bg-muted">
+              
+                +{code}
+                <Check
+                className={cn(
+                  "ml-auto h-3.5 w-3.5 text-primary",
+                  value === `+${code}` ? "opacity-100" : "opacity-0"
+                )}
+                aria-hidden="true" />
+              
+              </button>
+            )}
+          </div>
+        </DrawerContent>
+      </Drawer>
+    </>);
+
 }
 
 // Dial code picker plus the number (digits only, 15 at most). Once 4 digits are in, a number that can't

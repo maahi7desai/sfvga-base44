@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 import { base44 } from "@/api/base44Client";
 import { CheckCircle, CreditCard } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue } from
-"@/components/ui/select";
+import PlanPicker from "@/components/renew/PlanPicker";
 
 const PLAN_OPTIONS = [
   { label: "Family Membership Renewal — $140", value: "family" },
@@ -125,18 +119,11 @@ export default function Renew() {
                     inputMode="email"
                     placeholder="Email"
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-                  <Select value={plan} onValueChange={setPlan}>
-                    <SelectTrigger className="w-full h-auto rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:ring-2 focus:ring-ring">
-                      <SelectValue placeholder="Select membership type" />
-                    </SelectTrigger>
-                    <SelectContent className="z-[60]">
-                      {PLAN_OPTIONS.map((o) =>
-                      <SelectItem key={o.value} value={o.value}>
-                        {o.label}
-                      </SelectItem>
-                      )}
-                    </SelectContent>
-                  </Select>
+                  <PlanPicker
+                    options={PLAN_OPTIONS}
+                    value={plan}
+                    onValueChange={setPlan}
+                    placeholder="Select membership type" />
                 </div>
                 <label className="py-4 flex items-start gap-3 cursor-pointer">
                   <input
