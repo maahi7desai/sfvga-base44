@@ -84,7 +84,7 @@ export default function Members() {
                   </p>
                   <Link
                     to={d.to}
-                    className="inline-flex items-center gap-2 font-body text-sm font-sm text-accent hover:text-primary transition-colors">
+                    className="tap-target inline-flex items-center gap-2 font-body text-sm font-sm text-accent hover:text-primary transition-colors">
                     {d.cta} →
                   </Link>
                 </div>
@@ -125,7 +125,7 @@ export default function Members() {
                   href="https://photos.app.goo.gl/6acBJLs3ZWgcmQgm8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
+                  className="tap-target mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
                 >
                   CPR Training Pictures
                   <ExternalLink className="h-4 w-4" />
@@ -150,7 +150,7 @@ export default function Members() {
                   href="https://docs.google.com/spreadsheets/d/1ta7e9CjXyIITVmewgA1Ft4Ez7Js-UKHkbDdKLUV72nQ/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
+                  className="tap-target mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
                 >
                   Review Volunteer Hours Log
                   <ExternalLink className="h-4 w-4" />

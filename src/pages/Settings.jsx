@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
+import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { AlertTriangle, Loader2, Mail, UserRound } from "lucide-react";
+
+const errorMessage = (err) =>
+  err?.response?.data?.error ||
+  err?.message ||
+  "We could not delete your account. Please try again.";
 
 export default function Settings() {
   const [user, setUser] = useState(null);
@@ -10,29 +17,47 @@ export default function Settings() {
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
 
   useEffect(() => {
     base44.auth.me().then(setUser).catch(() => setUser(null));
   }, []);
 
-  const handleDelete = async (e) => {
-    e.preventDefault();
-    if (text.trim().toUpperCase() !== "DELETE") return;
-    setBusy(true);
-    setError("");
-    try {
+  const deleteAccount = useMutation({
+    mutationFn: async () => {
       const res = await base44.functions.invoke("deleteAccount", { confirm: "DELETE" });
       if (res.data?.error) throw new Error(res.data.error);
+      return res.data;
+    },
+    // Show the deleting state straight away.
+    onMutate: async () => {
+      await queryClient.cancelQueries({ queryKey: ["user"] });
+      setBusy(true);
+      setError("");
+    },
+    onSuccess: async () => {
       await base44.auth.logout();
       window.location.href = "/login";
-    } catch (err) {
-      setError(
-        err?.response?.data?.error ||
-        err?.message ||
-        "We could not delete your account. Please try again.");
-      
+    },
+    onError: (err) => {
       setBusy(false);
+      setError(errorMessage(err));
+      toast({
+        title: "Account not deleted",
+        description: errorMessage(err),
+        variant: "destructive"
+      });
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ["user"] });
     }
+  });
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    if (text.trim().toUpperCase() !== "DELETE") return;
+    deleteAccount.mutate();
   };
 
   return (

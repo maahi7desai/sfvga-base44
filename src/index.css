@@ -147,6 +147,13 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  /* iOS WebView: inline CTAs keep a 44x44 touch target */
+  .tap-target {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
   .pt-safe {
     padding-top: env(safe-area-inset-top);
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useOutlet } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FloatingBioBar from "./FloatingBioBar";
@@ -22,6 +22,7 @@ export default function Layout() {
       <BackButton />
       <main className="flex-1 pb-20 md:pb-0">
         <PullToRefresh>
+          <MotionConfig reducedMotion="user">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={location.pathname}
@@ -33,6 +34,7 @@ export default function Layout() {
               {outlet}
             </motion.div>
           </AnimatePresence>
+          </MotionConfig>
         </PullToRefresh>
       </main>
       {isHome && <ImageGallery />}

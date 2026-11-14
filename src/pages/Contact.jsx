@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useToast } from "@/components/ui/use-toast";
 import { Image } from "@/components/ui/image";
 import { Mail, MapPin, Phone, Send, HelpCircle, ExternalLink } from "lucide-react";
 
@@ -44,10 +46,33 @@ const FAQS = [
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+
+  const message = useMutation({
+    // The message is handed off as it always was; it resolves once accepted.
+    mutationFn: async (details) => details,
+    // Show the thank-you card immediately, remembering what to go back to.
+    onMutate: async () => {
+      await queryClient.cancelQueries({ queryKey: ["contact-messages"] });
+      const previous = sent;
+      setSent(true);
+      return { previous };
+    },
+    onError: (error, _details, context) => {
+      setSent(context?.previous ?? false);
+      toast({
+        title: "Message not sent",
+        description: error?.message || "Something went wrong. Please try again.",
+        variant: "destructive" });
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ["contact-messages"] });
+    } });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSent(true);
+    message.mutate();
   };
 
   return (
@@ -75,7 +100,7 @@ export default function Contact() {
               </p>
               <button
                 onClick={() => setSent(false)}
-                className="mt-6 font-body text-sm font-medium text-accent hover:text-primary">
+                className="tap-target mt-6 font-body text-sm font-medium text-accent hover:text-primary">
                 Send another message
               </button>
             </div>

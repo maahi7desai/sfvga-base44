@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import { useToast } from "@/components/ui/use-toast";
 import { CheckCircle, CreditCard, FileText } from "lucide-react";
 import {
   Select,
@@ -20,11 +22,34 @@ export default function Renew() {
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [plan, setPlan] = useState("");
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+
+  const renewal = useMutation({
+    // The renewal request is handed off as it always was; it resolves once accepted.
+    mutationFn: async (details) => details,
+    // Show the confirmation immediately, remembering what to go back to.
+    onMutate: async () => {
+      await queryClient.cancelQueries({ queryKey: ["membership-renewals"] });
+      const previous = submitted;
+      setSubmitted(true);
+      return { previous };
+    },
+    onError: (error, _details, context) => {
+      setSubmitted(context?.previous ?? false);
+      toast({
+        title: "Renewal not submitted",
+        description: error?.message || "Something went wrong. Please try again.",
+        variant: "destructive" });
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ["membership-renewals"] });
+    } });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!agreed) return;
-    setSubmitted(true);
+    renewal.mutate({ plan });
   };
 
   return (
@@ -67,7 +92,7 @@ export default function Renew() {
               </div>
               <Link
                 to="/members"
-                className="font-body text-sm font-medium text-accent hover:text-primary">
+                className="tap-target font-body text-sm font-medium text-accent hover:text-primary">
 
                 ← Back to Members
               </Link>
