@@ -15,6 +15,7 @@ const Members = lazy(() => import('./pages/Members'));
 const Renew = lazy(() => import('./pages/Renew'));
 const Contact = lazy(() => import('./pages/Contact'));
 const More = lazy(() => import('./pages/More'));
+const About = lazy(() => import('./pages/About'));
 const Settings = lazy(() => import('./pages/Settings'));
 const Login = lazy(() => import('./pages/Login'));
 const Register = lazy(() => import('./pages/Register'));
@@ -67,6 +68,7 @@ const AuthenticatedApp = () => {
           <Route path="/renew" element={<Renew />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/more" element={<More />} />
+          <Route path="/about" element={<About />} />
           <Route
             element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
             

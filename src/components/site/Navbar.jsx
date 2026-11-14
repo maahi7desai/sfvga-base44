@@ -125,37 +125,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {!isMobile && open &&
-      <div className="md:hidden bg-background border-t border-primary/10">
-          <div className="px-5 py-4 flex flex-col">
-            {NAV.map((item) =>
-          <Link
-            key={item.label}
-            to={item.to}
-            onClick={() => setOpen(false)}
-            className="py-3 font-body text-base font-medium text-foreground/80 border-b border-primary/5">
-            
-                {item.label}
-              </Link>
-          )}
-            <Link
-            to="/login"
-            onClick={() => setOpen(false)}
-            className="mt-4 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full text-center">
-            
-              Member Login
-            </Link>
-            <Link
-            to="/settings"
-            onClick={() => setOpen(false)}
-            className="mt-1 py-3 font-body text-sm font-medium text-foreground/70 text-center">
-            
-              Account Settings
-            </Link>
-          </div>
-        </div>
-      }
-
       {isMobile &&
       <>
           <Sheet open={open} onOpenChange={setOpen}>
