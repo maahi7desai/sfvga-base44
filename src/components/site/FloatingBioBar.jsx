@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Home, CalendarDays, UserPlus, Phone, Menu } from "lucide-react";
-import { tabRootFor } from "@/lib/tabs";
+import { TAB_ROOTS, tabRootFor, readTabStack, writeTabStack } from "@/lib/tabs";
 
 const ITEMS = [
 { icon: Home, label: "Home", to: "/" },
@@ -12,14 +12,19 @@ const ITEMS = [
 
 // Each tab keeps its own last location so switching tabs restores that stack.
 
+const initialStacks = () =>
+TAB_ROOTS.reduce((acc, root) => ({ ...acc, [root]: readTabStack(root) }), {});
+
 export default function FloatingBioBar() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const stacks = useRef({});
+  const [stacks, setStacks] = useState(initialStacks);
 
   useEffect(() => {
     const root = tabRootFor(pathname);
-    if (root) stacks.current[root] = pathname;
+    if (!root) return;
+    writeTabStack(root, pathname);
+    setStacks((prev) => prev[root] === pathname ? prev : { ...prev, [root]: pathname });
   }, [pathname]);
 
   const handleTab = (e, to) => {
@@ -29,7 +34,7 @@ export default function FloatingBioBar() {
       navigate(to, { replace: true });
       return;
     }
-    navigate(stacks.current[to] || to);
+    navigate(stacks[to] || to);
   };
 
   return (

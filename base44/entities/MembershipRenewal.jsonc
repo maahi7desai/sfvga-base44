@@ -1,0 +1,75 @@
+{
+  "name": "MembershipRenewal",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "plan": {
+      "type": "string",
+      "enum": [
+        "family",
+        "senior",
+        "individual",
+        "student"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "green",
+        "yellow"
+      ]
+    },
+    "agreed_to_terms": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "paid",
+        "cancelled"
+      ],
+      "default": "submitted",
+      "enumColors": [
+        "yellow",
+        "green",
+        "gray"
+      ]
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "plan"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

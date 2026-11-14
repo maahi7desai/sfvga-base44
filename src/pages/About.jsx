@@ -20,7 +20,7 @@ const MISSION_POINTS = [
 
 export default function About() {
   return (
-    <div className="pt-20">
+    <div>
       <section className="bg-secondary text-secondary-foreground py-16 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8 text-center">
           <h1 className="font-display text-4xl md:text-6xl mb-4">About Us</h1>

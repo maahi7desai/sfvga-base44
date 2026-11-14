@@ -22,7 +22,7 @@ const EVENTS = [
 
 export default function Home() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Welcome */}
       <section className="py-4 bg-background/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">

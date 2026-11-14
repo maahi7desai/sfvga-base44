@@ -180,7 +180,7 @@ export default function More() {
   const minutesGroups = [...new Set(MINUTES.map((m) => m.group))];
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Header */}
       <section className="py-12 md:py-16 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[900px] px-5 sm:px-8 text-center">

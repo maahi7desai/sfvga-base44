@@ -19,8 +19,8 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-background pt-safe">
       <Navbar />
-      <BackButton />
-      <main className="flex-1 pb-20 md:pb-0">
+      <main className="flex-1 pt-20 pb-20 md:pb-0">
+        <BackButton />
         <PullToRefresh>
           <MotionConfig reducedMotion="user">
           <AnimatePresence mode="wait" initial={false}>

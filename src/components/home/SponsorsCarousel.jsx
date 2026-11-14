@@ -18,7 +18,7 @@ export default function SponsorsCarousel() {
         <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-8">
           Community Sponsors &amp; Supporters
         </p>
-        <div className="flex overflow-x-auto gap-4 md:gap-6 pb-2 snap-x snap-mandatory">
+        <div className="flex overflow-x-auto overscroll-contain gap-4 md:gap-6 pb-2 snap-x snap-mandatory">
           {SPONSORS.map((name) =>
           <div
             key={name}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/components/ui/use-toast";
 import { Image } from "@/components/ui/image";
+import { base44 } from "@/api/base44Client";
 import { Mail, MapPin, Phone, Send, HelpCircle, ExternalLink } from "lucide-react";
 
 const BOARD = [
@@ -51,7 +52,7 @@ export default function Contact() {
 
   const message = useMutation({
     // The message is handed off as it always was; it resolves once accepted.
-    mutationFn: async (details) => details,
+    mutationFn: async (details) => base44.entities.ContactMessage.create(details),
     // Show the thank-you card immediately, remembering what to go back to.
     onMutate: async () => {
       await queryClient.cancelQueries({ queryKey: ["contact-messages"] });
@@ -72,11 +73,18 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    message.mutate();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    message.mutate({
+      name: String(data.get("name") || "").trim(),
+      email: String(data.get("email") || "").trim(),
+      subject: String(data.get("subject") || "").trim(),
+      message: String(data.get("message") || "").trim()
+    });
   };
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Contact info + form */}
       <section className="py-4 md:py-20 bg-muted/40 pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">

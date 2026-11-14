@@ -47,7 +47,7 @@ const DASHBOARD = [
 
 export default function Members() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Welcome */}
       <section className="py-4 bg-background pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">

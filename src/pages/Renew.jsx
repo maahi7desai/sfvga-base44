@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
+import { base44 } from "@/api/base44Client";
 import { CheckCircle, CreditCard, FileText } from "lucide-react";
 import {
   Select,
@@ -27,7 +28,7 @@ export default function Renew() {
 
   const renewal = useMutation({
     // The renewal request is handed off as it always was; it resolves once accepted.
-    mutationFn: async (details) => details,
+    mutationFn: async (details) => base44.entities.MembershipRenewal.create(details),
     // Show the confirmation immediately, remembering what to go back to.
     onMutate: async () => {
       await queryClient.cancelQueries({ queryKey: ["membership-renewals"] });
@@ -49,7 +50,14 @@ export default function Renew() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!agreed) return;
-    renewal.mutate({ plan });
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    renewal.mutate({
+      full_name: String(data.get("name") || "").trim(),
+      email: String(data.get("email") || "").trim(),
+      plan,
+      agreed_to_terms: agreed
+    });
   };
 
   return (
