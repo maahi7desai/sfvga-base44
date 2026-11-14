@@ -7,6 +7,8 @@ import {
   Scale,
   ExternalLink,
   FileText,
+  UserRound,
+  ChevronRight,
 } from "lucide-react";
 
 const MISSION_POINTS = [
@@ -197,6 +199,21 @@ export default function More() {
       {/* Quick links */}
       <section className="py-10 md:py-14">
         <div className="mx-auto max-w-[900px] px-5 sm:px-8">
+          <Link
+            to="/settings"
+            className="flex items-center justify-between bg-card border border-border rounded-lg p-4 mb-4 hover:shadow-md transition-shadow">
+            
+            <div className="flex items-center gap-3">
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary flex-shrink-0">
+                <UserRound className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="font-body text-sm font-medium text-foreground">Account Settings</p>
+                <p className="font-body text-xs text-foreground/60">Manage your account</p>
+              </div>
+            </div>
+            <ChevronRight className="h-5 w-5 text-foreground/40" />
+          </Link>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {SECTIONS.map((s) => (
               <a

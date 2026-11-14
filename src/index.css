@@ -53,6 +53,46 @@
     --sidebar-border: 196 30% 25%;
     --sidebar-ring: 33 93% 62%;
   }
+
+  .dark {
+    --background: 196 32% 8%;
+    --foreground: 33 40% 96%;
+    --card: 196 28% 11%;
+    --card-foreground: 33 40% 96%;
+    --popover: 196 28% 11%;
+    --popover-foreground: 33 40% 96%;
+    --primary: 350 62% 60%;
+    --primary-foreground: 196 40% 9%;
+    --secondary: 186 55% 48%;
+    --secondary-foreground: 196 40% 9%;
+    --muted: 196 22% 16%;
+    --muted-foreground: 33 22% 72%;
+    --accent: 30 85% 58%;
+    --accent-foreground: 196 40% 9%;
+    --destructive: 0 64% 54%;
+    --destructive-foreground: 33 40% 96%;
+    --border: 196 20% 24%;
+    --input: 196 20% 26%;
+    --ring: 30 85% 58%;
+    --chart-1: 350 62% 62%;
+    --chart-2: 186 55% 52%;
+    --chart-3: 30 85% 62%;
+    --chart-4: 33 22% 72%;
+    --chart-5: 280 55% 70%;
+    --radius: 0.125rem;
+    --font-heading: "Poppins", ui-serif, Georgia, serif;
+    --font-body: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Poppins", ui-serif, Georgia, serif;
+    --font-mono: "Poppins", ui-monospace, monospace;
+    --sidebar-background: 196 30% 10%;
+    --sidebar-foreground: 33 40% 96%;
+    --sidebar-primary: 30 85% 58%;
+    --sidebar-primary-foreground: 196 40% 9%;
+    --sidebar-accent: 350 50% 40%;
+    --sidebar-accent-foreground: 33 40% 96%;
+    --sidebar-border: 196 20% 24%;
+    --sidebar-ring: 30 85% 58%;
+  }
 }
 
 @layer base {
@@ -91,6 +131,28 @@
     background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.08) 1px, transparent 0);
     background-size: 24px 24px;
   }
+
+  /* iOS WebView: never render supporting text below 14px */
+  .text-xs {
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  /* Keep inner scrollers from dragging the whole page */
+  .overflow-y-auto,
+  .overflow-y-scroll,
+  .overflow-auto,
+  .overflow-scroll {
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 @keyframes fade-in {
@@ -107,4 +169,46 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   color: hsl(var(--primary));
+}
+
+/* iOS WebView behaviour */
+html {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+button,
+[role="button"],
+nav a,
+.no-select,
+svg {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+[role="button"],
+nav a,
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Icon-only controls keep a 44x44 minimum hit area */
+button[aria-label],
+a[aria-label] {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }

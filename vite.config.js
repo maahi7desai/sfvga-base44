@@ -15,5 +15,16 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          media: ['jspdf', 'html2canvas'],
+          charts: ['recharts'],
+        },
+      },
+    },
+  },
 });

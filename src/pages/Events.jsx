@@ -1,72 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Image } from "@/components/ui/image";
-import { Calendar, MapPin, ArrowRight } from "lucide-react";
-
-const CATEGORIES = [
-{
-  name: "Sanskriti Divas",
-  tag: "Flagship Cultural Night",
-  desc: "Our signature evening of Gujarati music, dance, and heritage. Members and guests gather for performances, traditional food, and community celebration.",
-  img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/a26f38386_generated_image.png",
-  next: "September 13, 2026"
-},
-{
-  name: "Navratri & Garba",
-  tag: "Schedule • Venue Rules • Pass Bookings",
-  desc: "Nine nights of Garba and Dandiya Raas. Join hundreds of members dancing under the stars in traditional festive attire. Pass bookings now open.",
-  img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/fcc94dcaa_generated_image.png",
-  next: "October 17, 2026"
-},
-{
-  name: "Dipotsav / Diwali",
-  tag: "Festival of Lights",
-  desc: "The festival of lights — diyas, dhol, rangoli, and community feasts celebrating the triumph of light over darkness.",
-  img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/8d8ad67f5_generated_image.png",
-  next: "November 14, 2026"
-},
-{
-  name: "Rammat-Gammat",
-  tag: "Sports • Games • Outdoor Picnics",
-  desc: "Sports Day, kite flying, hiking, and family picnics — sharpening sportsmanship for all ages with outdoor fun and games.",
-  img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/9c038fad4_generated_image.png",
-  next: "Spring 2026"
-},
-{
-  name: "Chalo Manek Chowk",
-  tag: "Food • Music • Street-Style Socials",
-  desc: "A taste of home — street-style food, music, and social gatherings reminiscent of Ahmedabad's famous Manek Chowk.",
-  img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/fc5c7eb38_generated_image.png",
-  next: "Summer 2026"
-},
-{
-  name: "Event Media Gallery",
-  tag: "Photos • Recap Videos",
-  desc: "Relive the magic — browse past event photos and recap videos from our community celebrations over the years.",
-  img: "https://media.base44.com/images/public/6a9ca2f5e4aceea1e9c56b3b/aaef9c9c3_generated_image.png",
-  next: "Past Events"
-}];
-
+import { Calendar, ArrowRight } from "lucide-react";
+import { EVENTS } from "@/data/events";
 
 export default function Events() {
   return (
     <div className="pt-20">
-      
-
-
-
-
-
-
-
-      
-
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CATEGORIES.map((e) =>
+            {EVENTS.map((e) =>
             <article
-              key={e.name}
+              key={e.slug}
               className="group rounded-lg overflow-hidden bg-card border border-border shadow-sm hover:shadow-lg transition-shadow flex flex-col">
               
                 <div className="aspect-[4/3] w-full overflow-hidden">
@@ -78,7 +24,7 @@ export default function Events() {
                 
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <p className="font-body text-[11px] tracking-wide uppercase text-primary font-medium mb-1.5">
+                  <p className="font-body text-xs tracking-wide uppercase text-primary font-medium mb-1.5">
                     {e.tag}
                   </p>
                   <h2 className="font-display text-2xl text-foreground mb-2">{e.name}</h2>
@@ -90,8 +36,8 @@ export default function Events() {
                     {e.desc}
                   </p>
                   <Link
-                  to="/events"
-                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors">
+                  to={`/events/${e.slug}`}
+                  className="mt-auto inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors min-h-[44px]">
                   
                     View Details
                     <ArrowRight className="h-4 w-4" />
@@ -104,21 +50,7 @@ export default function Events() {
       </section>
 
       <section className="py-16 bg-muted/40 text-center">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-          
-
-          
-          
-
-
-          
-          
-
-
-
-
-          
-        </div>
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8"></div>
       </section>
     </div>);
 

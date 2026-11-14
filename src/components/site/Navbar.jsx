@@ -22,7 +22,7 @@ export default function Navbar() {
   const [notifOpen, setNotifOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/15">
+    <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/15 pt-safe">
       <nav className="mx-auto max-w-[1200px] px-5 sm:px-8 h-20 flex items-center justify-between bg-background">
         <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Logo className="h-10 w-10 sm:h-12 sm:w-12 object-contain flex-shrink-0" />
@@ -73,7 +73,7 @@ export default function Navbar() {
                           <p className="font-body text-sm font-medium text-foreground">
                             {n.title}
                           </p>
-                          <span className="font-body text-[10px] text-foreground/50">
+                          <span className="font-body text-xs text-foreground/50">
                             {n.date}
                           </span>
                         </div>
@@ -129,6 +129,13 @@ export default function Navbar() {
             className="mt-4 bg-primary text-primary-foreground font-body text-sm font-medium px-6 py-3 rounded-full text-center">
             
               Member Login
+            </Link>
+            <Link
+            to="/settings"
+            onClick={() => setOpen(false)}
+            className="mt-1 py-3 font-body text-sm font-medium text-foreground/70 text-center">
+            
+              Account Settings
             </Link>
           </div>
         </div>

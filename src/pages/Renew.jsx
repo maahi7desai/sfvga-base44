@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, CreditCard, FileText } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue } from
+"@/components/ui/select";
 
 const PLAN_OPTIONS = [
   { label: "Family Membership Renewal — $140", value: "family" },
@@ -12,6 +19,7 @@ const PLAN_OPTIONS = [
 export default function Renew() {
   const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [plan, setPlan] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,19 +85,18 @@ export default function Renew() {
                     type="email"
                     placeholder="Email"
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-                  <select
-                    required
-                    defaultValue=""
-                    className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring">
-                    <option value="" disabled>
-                      Select membership type
-                    </option>
-                    {PLAN_OPTIONS.map((o) =>
-                      <option key={o.value} value={o.value}>
+                  <Select value={plan} onValueChange={setPlan}>
+                    <SelectTrigger className="w-full h-auto rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:ring-2 focus:ring-ring">
+                      <SelectValue placeholder="Select membership type" />
+                    </SelectTrigger>
+                    <SelectContent className="z-[60]">
+                      {PLAN_OPTIONS.map((o) =>
+                      <SelectItem key={o.value} value={o.value}>
                         {o.label}
-                      </option>
-                    )}
-                  </select>
+                      </SelectItem>
+                      )}
+                    </SelectContent>
+                  </Select>
                 </div>
                 <label className="py-4 flex items-start gap-3 cursor-pointer">
                   <input
