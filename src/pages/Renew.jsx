@@ -28,7 +28,7 @@ export default function Renew() {
   };
 
   return (
-    <div className="pt-20">
+    <div>
       <section className="py-4 bg-background pattern-diya">
         <div className="mx-auto max-w-[700px] px-5 sm:px-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-primary font-bold mb-2">

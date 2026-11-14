@@ -26,7 +26,11 @@ export default function Settings() {
       await base44.auth.logout();
       window.location.href = "/login";
     } catch (err) {
-      setError(err.message || "We could not delete your account. Please try again.");
+      setError(
+        err?.response?.data?.error ||
+        err?.message ||
+        "We could not delete your account. Please try again.");
+      
       setBusy(false);
     }
   };

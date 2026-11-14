@@ -12,7 +12,18 @@ export default async function (req) {
       return Response.json({ error: 'Confirmation required' }, { status: 400 });
     }
 
-    await base44.asServiceRole.entities.User.delete(user.id);
+    try {
+      await base44.asServiceRole.entities.User.delete(user.id);
+    } catch (deleteError) {
+      // The app owner account is protected by the platform.
+      if (String(deleteError?.message || '').toLowerCase().includes('owner')) {
+        return Response.json(
+          { error: 'The app owner account cannot be deleted from inside the app.' },
+          { status: 403 },
+        );
+      }
+      throw deleteError;
+    }
     return Response.json({ success: true });
   } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });

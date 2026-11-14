@@ -192,7 +192,9 @@ svg {
 button,
 [role="button"],
 nav a,
-.no-select {
+.tab-bar a,
+.no-select,
+svg {
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;

@@ -34,7 +34,7 @@ export default function FloatingBioBar() {
 
   return (
     <div
-      className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-t border-primary/15"
+      className="tab-bar md:hidden fixed bottom-0 inset-x-0 z-50 bg-background/90 backdrop-blur-md border-t border-primary/15"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}>
       
       <div className="flex items-center justify-around py-2 bg-background">
