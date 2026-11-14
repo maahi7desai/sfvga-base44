@@ -89,7 +89,7 @@ export default function About() {
             We invite you to become a part of our extended family!
           </h2>
           <Link
-            to="/membership"
+            to="/members"
             className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-background transition-colors"
           >
             Join Us

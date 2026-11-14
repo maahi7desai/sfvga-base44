@@ -42,7 +42,7 @@ export default function MembershipTeaser() {
 
         <div className="text-center mt-12">
           <Link
-            to="/membership"
+            to="/members"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body font-medium px-8 py-3.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
           >
             Become a Member

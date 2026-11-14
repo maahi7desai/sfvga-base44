@@ -102,12 +102,19 @@ export default function Renew() {
                 <div className="space-y-4">
                   <input
                     required
+                    name="name"
                     type="text"
+                    aria-label="Full Name"
+                    autoComplete="name"
                     placeholder="Full Name"
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
                   <input
                     required
+                    name="email"
                     type="email"
+                    aria-label="Email"
+                    autoComplete="email"
+                    inputMode="email"
                     placeholder="Email"
                     className="w-full rounded-md border border-input bg-background px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
                   <Select value={plan} onValueChange={setPlan}>

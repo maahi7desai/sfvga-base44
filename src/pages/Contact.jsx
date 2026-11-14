@@ -109,26 +109,38 @@ export default function Contact() {
               <div>
                 <input
                   required
+                  name="name"
                   type="text"
+                  aria-label="Name"
+                  autoComplete="name"
                   placeholder="Name"
                   className="w-full rounded-md border border-input text-foreground/70 px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
               <div>
                 <input
                   required
+                  name="email"
                   type="email"
+                  aria-label="Email"
+                  autoComplete="email"
+                  inputMode="email"
                   placeholder="Email"
                   className="w-full rounded-md border border-input text-foreground/70 px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
               <div>
                 <input
+                  name="subject"
                   type="text"
+                  aria-label="Subject"
+                  autoComplete="off"
                   placeholder="Subject"
                   className="w-full rounded-md border border-input text-foreground/70 px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
               </div>
               <div>
                 <textarea
                   required
+                  name="message"
+                  aria-label="Message"
                   rows={4}
                   placeholder="Message"
                   className="w-full rounded-md border border-input text-foreground/70 px-4 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-ring" />

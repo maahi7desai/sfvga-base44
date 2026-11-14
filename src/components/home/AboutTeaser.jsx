@@ -36,7 +36,7 @@ export default function AboutTeaser() {
               people living in Southern California — since 1978.
             </p>
             <Link
-              to="/about"
+              to="/contact"
               className="inline-flex items-center gap-2 font-body text-sm font-medium text-accent hover:text-primary transition-colors"
             >
               Learn more about us →
