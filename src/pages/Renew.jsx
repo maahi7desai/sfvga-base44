@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 import { base44 } from "@/api/base44Client";
-import { CheckCircle, CreditCard, FileText } from "lucide-react";
+import { CheckCircle, CreditCard } from "lucide-react";
 import {
   Select,
   SelectContent,

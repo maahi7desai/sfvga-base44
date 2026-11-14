@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/components/ui/use-toast";
 import { Image } from "@/components/ui/image";
 import { base44 } from "@/api/base44Client";
-import { Mail, MapPin, Phone, Send, HelpCircle, ExternalLink } from "lucide-react";
+import { Send } from "lucide-react";
 
 const BOARD = [
 { role: "President", name: "Jaymeen Desai", img: "https://images.squarespace-cdn.com/content/v1/6182dd41e5fdbc615031592a/65ec64e6-bb01-4c9a-b080-75a8576e182d/WhatsApp+Image+2026-01-11+at+8.59.10+PM.jpeg" },

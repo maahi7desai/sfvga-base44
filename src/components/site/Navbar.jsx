@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Bell, User } from "lucide-react";
+import { Menu, X, Bell } from "lucide-react";
 import Logo from "./Logo";
 
 const NAV = [

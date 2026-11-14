@@ -8,11 +8,13 @@ import BackButton from "./BackButton";
 import PullToRefresh from "./PullToRefresh";
 import ImageGallery from "@/components/home/ImageGallery";
 import { isTabRoot } from "@/lib/tabs";
+import useReducedMotion from "@/hooks/use-reduced-motion";
 
 export default function Layout() {
   const location = useLocation();
   const outlet = useOutlet();
   const isHome = location.pathname === "/";
+  const reducedMotion = useReducedMotion();
   // Tab roots fade, anything deeper slides like an iOS push.
   const isChild = !isTabRoot(location.pathname);
 
@@ -26,10 +28,10 @@ export default function Layout() {
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={location.pathname}
-              initial={isChild ? { x: 32, opacity: 0 } : { opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={isChild ? { x: -24, opacity: 0 } : { opacity: 0 }}
-              transition={{ duration: 0.22, ease: [0.32, 0.72, 0, 1] }}>
+              initial={reducedMotion ? false : isChild ? { x: 32, opacity: 0 } : { opacity: 0 }}
+              animate={reducedMotion ? {} : { x: 0, opacity: 1 }}
+              exit={reducedMotion ? {} : isChild ? { x: -24, opacity: 0 } : { opacity: 0 }}
+              transition={reducedMotion ? { duration: 0 } : { duration: 0.22, ease: [0.32, 0.72, 0, 1] }}>
               
               {outlet}
             </motion.div>

@@ -71,7 +71,7 @@ export default function PullToRefresh({ children }) {
   return (
     <div ref={ref} className="relative">
       <div
-        className="fixed inset-x-0 z-30 flex justify-center pointer-events-none"
+        className="fixed inset-x-0 z-40 flex justify-center pointer-events-none"
         style={{
           top: "calc(env(safe-area-inset-top) + 4.5rem)",
           opacity: pull > 4 ? 1 : 0,

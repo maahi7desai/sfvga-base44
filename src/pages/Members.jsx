@@ -1,7 +1,6 @@
 import React from "react";
-import { Image } from "@/components/ui/image";
 import { Link } from "react-router-dom";
-import { UserCircle, RefreshCw, Heart, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
+import { RefreshCw, ExternalLink } from "lucide-react";
 
 const PLANS = [
   { name: "New Family Membership", price: "$200", note: "For new families joining SFVGA" },
